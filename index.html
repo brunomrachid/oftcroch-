@@ -633,13 +633,11 @@ a{text-decoration:none;color:inherit}
 .guarantee{background:var(--warm);padding:88px 24px;border-top:1px solid var(--border)}
 .guar-inner{max-width:640px;margin:0 auto;text-align:center}
 .guar-badge{
-  width:90px;height:90px;
-  background:var(--green-light);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 24px;
-  font-size:38px;
-  box-shadow:0 0 0 12px rgba(46,107,53,0.08);
+  width:160px;height:160px;
+  margin:0 auto 28px;
+  display:block;
+  filter:drop-shadow(0 8px 28px rgba(212,130,10,0.35));
+  animation:float 3s ease-in-out infinite;
 }
 .guar-inner h2{font-size:34px;color:var(--wine-dark);margin-bottom:16px}
 .guar-inner p{font-size:16px;color:var(--text-muted);line-height:1.8;max-width:520px;margin:0 auto}
@@ -831,7 +829,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .guarantee{padding:52px 18px}
   .guar-inner h2{font-size:26px}
   .guar-inner p{font-size:14px}
-  .guar-badge{width:72px;height:72px;font-size:32px}
+  .guar-badge{width:130px;height:130px}
 
   /* FAQ */
   .faq{padding:52px 18px}
@@ -1363,7 +1361,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
 <!-- GUARANTEE -->
 <section class="guarantee">
   <div class="guar-inner fade-up">
-    <div class="guar-badge">🛡️</div>
+    <img class="guar-badge" src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/garantia.webp" alt="7 dias de garantia" loading="lazy">
     <h2>Fique Tranquilo, Sua Compra é Segura</h2>
     <p>O Código de Defesa do Consumidor garante 7 dias para solicitar reembolso. Nós confiamos tanto no nosso conteúdo que garantimos <strong>15 dias de garantia incondicional</strong>. Se não ficar satisfeita por qualquer motivo, devolvemos 100% do valor pago. Sem burocracia e sem perguntas.</p>
   </div>
