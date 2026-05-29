@@ -4,1310 +4,534 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crochê de Mesa — Aprenda e Lucre</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#E8887A;
+  --rose-dark:#C96B5D;
+  --rose-light:#FDF0EE;
+  --rose-mid:#F2A99E;
+  --cream:#FFF9F7;
+  --warm:#FEF3F0;
+  --sand:#F7EDE8;
+  --sand-dark:#EDD8D0;
+  --brown:#7A4A3A;
+  --brown-dark:#4A2318;
+  --text:#2D1810;
+  --text-muted:#8B5E52;
+  --text-light:#BFA09A;
+  --border:rgba(232,136,122,0.18);
+  --border-mid:rgba(232,136,122,0.3);
+  --gold:#C9924A;
+  --gold-light:#FDF5EA;
+  --green:#5A7A4A;
+  --green-light:#EDF3E8;
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow:0 4px 28px rgba(122,74,58,0.08);
+  --shadow-lg:0 16px 56px rgba(122,74,58,0.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.2}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
 
-  :root {
-    --cream: #FAF8F5;
-    --warm-white: #FFFEFB;
-    --sand: #F2EDE4;
-    --sand-dark: #E8DED1;
-    --brown: #8B6F5E;
-    --brown-dark: #5C4033;
-    --espresso: #2C1A12;
-    --green: #4A6741;
-    --green-light: #EAF0E8;
-    --green-mid: #3D5A35;
-    --rose: #C4796A;
-    --rose-light: #FAF0EE;
-    --gold: #B8955A;
-    --gold-light: #FBF6EE;
-    --text: #1E1410;
-    --text-muted: #7A6156;
-    --text-light: #A89186;
-    --border: rgba(139,111,94,0.15);
-    --border-mid: rgba(139,111,94,0.25);
-    --radius: 14px;
-    --radius-sm: 8px;
-    --shadow: 0 4px 24px rgba(44,26,18,0.07);
-    --shadow-lg: 0 12px 48px rgba(44,26,18,0.12);
-  }
+/* URGENCY */
+.urgency{background:var(--brown-dark);color:#fff;padding:10px 20px;text-align:center;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.urgency .hi{color:#FFD4A8}
+.cd{display:flex;gap:5px;align-items:center}
+.cd-b{background:rgba(255,255,255,0.15);border-radius:6px;padding:3px 9px;font-weight:800;font-size:15px;min-width:34px;text-align:center;font-variant-numeric:tabular-nums}
+.cd-s{opacity:.5;font-weight:700}
 
-  html { scroll-behavior: smooth; }
+/* HERO */
+.hero{background:var(--warm);padding:56px 24px 64px;text-align:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--border-mid);color:var(--rose-dark);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:6px 16px;border-radius:40px;margin-bottom:22px;box-shadow:var(--shadow)}
+.hero h1{font-size:clamp(32px,5.5vw,58px);color:var(--brown-dark);max-width:760px;margin:0 auto 10px;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--text-muted);max-width:580px;margin:0 auto 28px;font-weight:400;line-height:1.75}
+.hero-sub strong{color:var(--brown-dark);font-weight:700}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+/* VSL — HERO */
+.vsl-wrap{max-width:720px;margin:0 auto 28px;position:relative}
+.vsl-box{position:relative;width:100%;padding-top:56.25%;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);background:#1a0a06}
+.vsl-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.vsl-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(135deg,#3D1A0E 0%,#1a0a06 100%);cursor:pointer}
+.vsl-play{width:72px;height:72px;background:var(--rose);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 12px rgba(232,136,122,0.2);transition:all .2s}
+.vsl-placeholder:hover .vsl-play{transform:scale(1.08);box-shadow:0 0 0 16px rgba(232,136,122,0.15)}
+.vsl-placeholder p{color:rgba(255,255,255,0.7);font-size:14px;font-weight:500}
+.vsl-caption{font-size:13px;color:var(--text-muted);text-align:center;margin-top:12px;font-style:italic}
 
-  h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+/* CTA BTN */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--rose);color:#fff;font-family:'Nunito',sans-serif;font-size:16px;font-weight:700;padding:17px 40px;border-radius:50px;border:none;cursor:pointer;transition:all .22s;box-shadow:0 6px 28px rgba(232,136,122,0.4);text-decoration:none;letter-spacing:.01em}
+.btn:hover{background:var(--rose-dark);transform:translateY(-2px);box-shadow:0 10px 36px rgba(232,136,122,0.45)}
+.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.3);color:rgba(255,255,255,.8);box-shadow:none}
+.btn-ghost:hover{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.05);transform:none}
+.btn-dark{background:var(--brown-dark);box-shadow:0 6px 28px rgba(74,35,24,0.3)}
+.btn-dark:hover{background:#3a1a0e;box-shadow:0 10px 36px rgba(74,35,24,0.35)}
+.hero-note{margin-top:14px;font-size:12px;color:var(--text-light)}
 
-  img { max-width: 100%; display: block; }
+/* STATS */
+.stats{background:#fff;padding:44px 24px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-inner{max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.stat{background:#fff;padding:26px 16px;text-align:center}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;color:var(--rose);line-height:1;margin-bottom:5px}
+.stat-l{font-size:13px;color:var(--text-muted);font-weight:500}
 
-  a { color: inherit; text-decoration: none; }
+/* SECTION HEADER */
+.sh{text-align:center;max-width:620px;margin:0 auto 48px}
+.sh-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;padding:4px 14px;background:var(--rose-light);border-radius:20px}
+.sh h2{font-size:clamp(28px,4vw,44px);color:var(--brown-dark);margin-bottom:12px}
+.sh p{font-size:16px;color:var(--text-muted);font-weight:400;line-height:1.7}
 
-  /* ── URGENCY BAR ── */
-  .urgency-bar {
-    background: var(--espresso);
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .urgency-bar span.highlight { color: #F5C674; font-weight: 600; }
-  .countdown { display: flex; gap: 6px; align-items: center; }
-  .cd-block {
-    background: rgba(255,255,255,0.12);
-    border-radius: 5px;
-    padding: 2px 7px;
-    font-weight: 700;
-    font-size: 14px;
-    min-width: 30px;
-    text-align: center;
-  }
-  .cd-sep { opacity: 0.6; font-weight: 700; }
+/* FOR WHOM */
+.forwhom{background:var(--sand);padding:80px 24px}
+.fw-grid{max-width:940px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fw-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.fw-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--rose-mid),var(--rose))}
+.fw-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.fw-icon{font-size:28px;margin-bottom:14px}
+.fw-card h3{font-size:19px;color:var(--brown-dark);margin-bottom:10px}
+.fw-card p{font-size:14px;color:var(--text-muted);line-height:1.7}
 
-  /* ── HERO ── */
-  .hero {
-    background: var(--warm-white);
-    padding: 72px 24px 64px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(184,149,90,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -40px; left: -40px;
-    width: 250px; height: 250px;
-    background: radial-gradient(circle, rgba(74,103,65,0.07) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--gold-light);
-    border: 1px solid rgba(184,149,90,0.3);
-    color: var(--gold);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 30px;
-    margin-bottom: 24px;
-  }
-  .hero h1 {
-    font-size: clamp(30px, 5vw, 52px);
-    color: var(--espresso);
-    max-width: 720px;
-    margin: 0 auto 20px;
-    font-weight: 700;
-  }
-  .hero h1 em { font-style: normal; color: var(--green); }
-  .hero-sub {
-    font-size: clamp(15px, 2vw, 18px);
-    color: var(--text-muted);
-    max-width: 560px;
-    margin: 0 auto 36px;
-    font-weight: 300;
-    line-height: 1.7;
-  }
-  .hero-sub strong { color: var(--espresso); font-weight: 600; }
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--green);
-    color: #fff;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 16px 36px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(74,103,65,0.3);
-    text-decoration: none;
-  }
-  .btn-primary:hover {
-    background: var(--green-mid);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(74,103,65,0.35);
-  }
-  .btn-primary svg { width: 18px; height: 18px; }
-  .hero-note {
-    margin-top: 14px;
-    font-size: 12px;
-    color: var(--text-light);
-  }
+/* GALLERY */
+.gallery{background:var(--warm);padding:80px 24px}
+.gal-grid{max-width:940px;margin:0 auto;columns:3;gap:14px}
+@media(max-width:600px){.gal-grid{columns:2}}
+.gal-item{break-inside:avoid;margin-bottom:14px;border-radius:var(--radius-sm);overflow:hidden;position:relative;background:var(--sand)}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.gal-item:hover img{transform:scale(1.05)}
 
-  /* ── VIDEO SECTION ── */
-  .video-section {
-    background: var(--sand);
-    padding: 60px 24px;
-    text-align: center;
-  }
-  .video-wrapper {
-    max-width: 680px;
-    margin: 0 auto;
-  }
-  .video-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brown);
-    margin-bottom: 12px;
-  }
-  .video-title {
-    font-size: clamp(22px, 3vw, 30px);
-    color: var(--espresso);
-    margin-bottom: 28px;
-  }
-  .video-container {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    background: var(--espresso);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-  }
-  .video-container iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-  .video-placeholder {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: rgba(255,255,255,0.6);
-    font-size: 14px;
-    cursor: pointer;
-  }
-  .video-placeholder .play-btn {
-    width: 64px; height: 64px;
-    background: rgba(255,255,255,0.15);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(255,255,255,0.3);
-    transition: all 0.2s;
-  }
-  .video-placeholder:hover .play-btn {
-    background: rgba(255,255,255,0.25);
-    transform: scale(1.05);
-  }
-  .video-caption {
-    margin-top: 16px;
-    font-size: 13px;
-    color: var(--text-muted);
-    font-style: italic;
-  }
+/* LEARN */
+.learn{background:var(--sand);padding:80px 24px}
+.learn-inner{max-width:940px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:720px){.learn-inner{grid-template-columns:1fr}}
+.learn h2{font-size:clamp(26px,3.5vw,40px);color:var(--brown-dark);margin-bottom:24px}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+.check-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--text);font-weight:500}
+.check-list li .ck{width:22px;height:22px;min-width:22px;background:var(--rose-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;font-size:12px;color:var(--rose)}
+.learn-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;background:var(--brown-dark);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:rgba(255,255,255,.4);font-size:14px;text-align:center}
 
-  /* ── STATS ── */
-  .stats-section {
-    background: var(--warm-white);
-    padding: 48px 24px;
-  }
-  .stats-grid {
-    max-width: 860px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  .stat-item {
-    background: var(--warm-white);
-    padding: 28px 20px;
-    text-align: center;
-  }
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--espresso);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-number span { color: var(--green); }
-  .stat-label {
-    font-size: 13px;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
+/* TESTIMONIALS */
+.testi{background:#fff;padding:80px 24px}
+.testi-grid{max-width:940px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:var(--warm);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.testi-top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.testi-av{width:40px;height:40px;border-radius:50%;background:var(--sand-dark);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--brown);flex-shrink:0}
+.testi-name{font-size:14px;font-weight:700;color:var(--brown-dark)}
+.testi-stars{color:var(--gold);font-size:12px}
+.testi-badge{display:inline-block;background:var(--green-light);color:var(--green);font-size:11px;font-weight:700;padding:3px 11px;border-radius:20px;margin-bottom:10px}
+.testi-txt{font-size:13px;color:var(--text-muted);line-height:1.7;font-style:italic}
 
-  /* ── FOR WHO ── */
-  .forwhom-section {
-    background: var(--sand);
-    padding: 72px 24px;
-  }
-  .section-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 48px;
-  }
-  .section-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--brown);
-    margin-bottom: 12px;
-  }
-  .section-header h2 {
-    font-size: clamp(26px, 3.5vw, 38px);
-    color: var(--espresso);
-    margin-bottom: 14px;
-  }
-  .section-header p {
-    font-size: 16px;
-    color: var(--text-muted);
-    font-weight: 300;
-  }
-  .cards-grid {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .card {
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-  }
-  .card-icon {
-    width: 44px; height: 44px;
-    background: var(--green-light);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-    font-size: 22px;
-  }
-  .card h3 {
-    font-size: 17px;
-    color: var(--espresso);
-    margin-bottom: 8px;
-  }
-  .card p {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.65;
-  }
+/* BONUSES */
+.bonuses{background:var(--sand);padding:80px 24px}
+.bon-grid{max-width:940px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bon-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.bon-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.bon-num{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.bon-title{font-size:17px;color:var(--brown-dark);margin-bottom:9px;font-family:'Cormorant Garamond',serif;font-weight:700}
+.bon-desc{font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:16px}
+.bon-val{display:flex;align-items:center;gap:9px}
+.bon-old{font-size:12px;color:var(--text-light);text-decoration:line-through}
+.bon-free{font-size:13px;font-weight:700;color:var(--green)}
 
-  /* ── MODELS GALLERY ── */
-  .gallery-section {
-    background: var(--warm-white);
-    padding: 72px 24px;
-  }
-  .gallery-grid {
-    max-width: 900px;
-    margin: 0 auto;
-    columns: 3;
-    gap: 12px;
-  }
-  @media (max-width: 600px) { .gallery-grid { columns: 2; } }
-  .gallery-item {
-    break-inside: avoid;
-    margin-bottom: 12px;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    background: var(--sand);
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    position: relative;
-  }
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-  }
-  .gallery-item:hover img { transform: scale(1.04); }
-  .gallery-overlay {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(44,26,18,0.55));
-    padding: 16px 10px 10px;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .gallery-item:hover .gallery-overlay { opacity: 1; }
-  .gallery-overlay span {
-    color: #fff;
-    font-size: 11px;
-    font-weight: 500;
-  }
+/* PRICING */
+.pricing{background:var(--brown-dark);padding:88px 24px;position:relative;overflow:hidden}
+.pricing::before{content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(232,136,122,0.1) 0%,transparent 70%);border-radius:50%}
+.pricing .sh h2{color:#fff}
+.pricing .sh p{color:rgba(255,255,255,.5)}
+.pricing .sh-tag{background:rgba(232,136,122,0.15);color:var(--rose-mid)}
+.price-eco{text-align:center;max-width:480px;margin:0 auto 44px;background:rgba(232,136,122,0.1);border:1px solid rgba(232,136,122,0.2);border-radius:var(--radius);padding:16px 22px;font-size:14px;color:rgba(255,255,255,.6)}
+.price-eco strong{color:var(--rose-mid)}
+.plans{max-width:740px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:580px){.plans{grid-template-columns:1fr}}
+.plan{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:30px 26px;position:relative;transition:transform .2s}
+.plan:hover{transform:translateY(-3px)}
+.plan.hot{background:#fff;border:2px solid var(--rose);transform:scale(1.03)}
+.plan.hot:hover{transform:scale(1.03) translateY(-3px)}
+.plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--rose);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 18px;border-radius:20px;white-space:nowrap}
+.plan-name{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px}
+.plan:not(.hot) .plan-name{color:rgba(255,255,255,.45)}
+.plan.hot .plan-name{color:var(--rose)}
+.plan-old{font-size:12px;text-decoration:line-through}
+.plan:not(.hot) .plan-old{color:rgba(255,255,255,.25)}
+.plan.hot .plan-old{color:var(--text-light)}
+.plan-price{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;line-height:1;margin:6px 0 4px}
+.plan:not(.hot) .plan-price{color:#fff}
+.plan.hot .plan-price{color:var(--brown-dark)}
+.plan-price sup{font-size:22px;vertical-align:top;margin-top:12px;display:inline-block}
+.plan-period{font-size:12px;margin-bottom:22px}
+.plan:not(.hot) .plan-period{color:rgba(255,255,255,.35)}
+.plan.hot .plan-period{color:var(--text-muted)}
+.plan-hi{background:rgba(232,136,122,0.1);border:1px solid rgba(232,136,122,0.25);border-radius:var(--radius-sm);padding:9px 14px;font-size:12px;color:var(--rose-mid);font-weight:600;text-align:center;margin-bottom:20px}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.plan-feats li{display:flex;align-items:flex-start;gap:9px;font-size:13px;line-height:1.45}
+.plan:not(.hot) .plan-feats li{color:rgba(255,255,255,.7)}
+.plan.hot .plan-feats li{color:var(--text)}
+.plan-feats .ck{width:17px;height:17px;min-width:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;font-size:10px}
+.plan:not(.hot) .ck{background:rgba(255,255,255,.08);color:rgba(255,255,255,.5)}
+.plan.hot .ck{background:var(--rose-light);color:var(--rose)}
+.plan-feats .lk{width:17px;height:17px;min-width:17px;border-radius:50%;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;margin-top:1px;font-size:10px;color:rgba(255,255,255,.18)}
+.plan-btn{display:block;width:100%;text-align:center;padding:15px 20px;border-radius:50px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.plan-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.6)}
+.plan-btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.plan-btn-hot{background:var(--rose);color:#fff;box-shadow:0 4px 22px rgba(232,136,122,0.4)}
+.plan-btn-hot:hover{background:var(--rose-dark);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,136,122,0.45)}
+.price-note{text-align:center;margin-top:28px;font-size:12px;color:rgba(255,255,255,.3)}
 
-  /* ── LEARN SECTION ── */
-  .learn-section {
-    background: var(--sand);
-    padding: 72px 24px;
-  }
-  .learn-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-  }
-  @media (max-width: 700px) { .learn-inner { grid-template-columns: 1fr; } }
-  .learn-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .learn-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 15px;
-    color: var(--text);
-  }
-  .learn-list li::before {
-    content: '';
-    width: 20px; height: 20px;
-    min-width: 20px;
-    background: var(--green-light);
-    border-radius: 50%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%234A6741'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
-    background-size: contain;
-    margin-top: 2px;
-  }
-  .learn-video-mock {
-    background: var(--espresso);
-    border-radius: var(--radius);
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255,255,255,0.4);
-    font-size: 13px;
-    text-align: center;
-    box-shadow: var(--shadow-lg);
-    flex-direction: column;
-    gap: 10px;
-  }
+/* GUARANTEE */
+.guarantee{background:var(--warm);padding:80px 24px}
+.guar-inner{max-width:620px;margin:0 auto;text-align:center}
+.guar-badge{width:84px;height:84px;background:var(--green-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-size:36px;box-shadow:0 0 0 10px rgba(90,122,74,0.08)}
+.guar-inner h2{font-size:32px;color:var(--brown-dark);margin-bottom:14px}
+.guar-inner p{font-size:15px;color:var(--text-muted);line-height:1.75}
 
-  /* ── TESTIMONIALS ── */
-  .testimonials-section {
-    background: var(--warm-white);
-    padding: 72px 24px;
-  }
-  .testimonials-grid {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-  }
-  .testimonial-card {
-    background: var(--cream);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px;
-    box-shadow: var(--shadow);
-  }
-  .testimonial-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 14px;
-  }
-  .testimonial-avatar {
-    width: 38px; height: 38px;
-    border-radius: 50%;
-    background: var(--sand-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 13px;
-    color: var(--brown-dark);
-    flex-shrink: 0;
-  }
-  .testimonial-name { font-size: 13px; font-weight: 600; color: var(--espresso); }
-  .testimonial-stars { color: var(--gold); font-size: 11px; }
-  .testimonial-earned {
-    display: inline-block;
-    background: var(--green-light);
-    color: var(--green-mid);
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  .testimonial-text {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.65;
-    font-style: italic;
-  }
-  .testimonial-mock {
-    background: var(--sand);
-    border-radius: var(--radius-sm);
-    padding: 12px;
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 10px;
-    border: 1px solid var(--border);
-  }
+/* FAQ */
+.faq{background:var(--sand);padding:80px 24px}
+.faq-inner{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:first-of-type{border-top:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 0;font-family:'Nunito',sans-serif;font-size:15px;font-weight:600;color:var(--brown-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s}
+.faq-q:hover{color:var(--rose)}
+.faq-ic{width:24px;height:24px;min-width:24px;border-radius:50%;border:1.5px solid var(--border-mid);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text-muted);transition:all .25s;font-weight:400}
+.faq-item.open .faq-ic{background:var(--rose);border-color:var(--rose);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease,padding .32s ease}
+.faq-item.open .faq-a{max-height:320px;padding-bottom:20px}
+.faq-a p{font-size:14px;color:var(--text-muted);line-height:1.75}
 
-  /* ── BONUSES ── */
-  .bonuses-section {
-    background: var(--sand);
-    padding: 72px 24px;
-  }
-  .bonus-header-tag {
-    display: inline-block;
-    background: var(--gold-light);
-    border: 1px solid rgba(184,149,90,0.3);
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  .bonuses-grid {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .bonus-card {
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-  }
-  .bonus-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--gold);
-  }
-  .bonus-number {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .bonus-title {
-    font-size: 16px;
-    color: var(--espresso);
-    margin-bottom: 8px;
-    font-family: 'Playfair Display', serif;
-  }
-  .bonus-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 14px;
-  }
-  .bonus-value {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .bonus-value .old { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
-  .bonus-value .free { font-size: 13px; font-weight: 700; color: var(--green); }
+/* FINAL CTA */
+.fcta{background:var(--rose-light);padding:88px 24px;text-align:center;border-top:1px solid var(--border)}
+.fcta h2{font-size:clamp(28px,4.5vw,46px);color:var(--brown-dark);max-width:620px;margin:0 auto 16px}
+.fcta h2 em{font-style:italic;color:var(--rose)}
+.fcta p{font-size:16px;color:var(--text-muted);max-width:440px;margin:0 auto 32px;font-weight:400}
 
-  /* ── PRICING ── */
-  .pricing-section {
-    background: var(--espresso);
-    padding: 80px 24px;
-    position: relative;
-    overflow: hidden;
-  }
-  .pricing-section::before {
-    content: '';
-    position: absolute;
-    top: -100px; right: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(184,149,90,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .pricing-section .section-header h2 { color: #fff; }
-  .pricing-section .section-header p { color: rgba(255,255,255,0.55); }
-  .pricing-section .section-tag { color: var(--gold); }
-  .pricing-grid {
-    max-width: 720px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  @media (max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; } }
-  .plan-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    position: relative;
-    transition: transform 0.2s;
-  }
-  .plan-card:hover { transform: translateY(-3px); }
-  .plan-card.featured {
-    background: var(--warm-white);
-    border: 2px solid var(--gold);
-    transform: scale(1.02);
-  }
-  .plan-card.featured:hover { transform: scale(1.02) translateY(-3px); }
-  .plan-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--gold);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 16px;
-    border-radius: 20px;
-    white-space: nowrap;
-  }
-  .plan-name {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .plan-card:not(.featured) .plan-name { color: rgba(255,255,255,0.5); }
-  .plan-card.featured .plan-name { color: var(--brown); }
-  .plan-price-old {
-    font-size: 12px;
-    text-decoration: line-through;
-  }
-  .plan-card:not(.featured) .plan-price-old { color: rgba(255,255,255,0.3); }
-  .plan-card.featured .plan-price-old { color: var(--text-light); }
-  .plan-price {
-    font-family: 'Playfair Display', serif;
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1;
-    margin: 6px 0 4px;
-  }
-  .plan-card:not(.featured) .plan-price { color: #fff; }
-  .plan-card.featured .plan-price { color: var(--espresso); }
-  .plan-price sup { font-size: 20px; vertical-align: top; margin-top: 10px; display: inline-block; }
-  .plan-period {
-    font-size: 12px;
-    margin-bottom: 22px;
-  }
-  .plan-card:not(.featured) .plan-period { color: rgba(255,255,255,0.4); }
-  .plan-card.featured .plan-period { color: var(--text-muted); }
-  .plan-features { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
-  .plan-features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 13px;
-    line-height: 1.45;
-  }
-  .plan-card:not(.featured) .plan-features li { color: rgba(255,255,255,0.75); }
-  .plan-card.featured .plan-features li { color: var(--text); }
-  .plan-features li .check {
-    width: 16px; height: 16px;
-    min-width: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1px;
-    font-size: 10px;
-  }
-  .plan-card:not(.featured) .check { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
-  .plan-card.featured .check { background: var(--green-light); color: var(--green); }
-  .plan-features li .locked {
-    width: 16px; height: 16px;
-    min-width: 16px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1px;
-    font-size: 10px;
-    color: rgba(255,255,255,0.2);
-  }
-  .plan-highlight {
-    background: rgba(184,149,90,0.1);
-    border: 1px solid rgba(184,149,90,0.2);
-    border-radius: var(--radius-sm);
-    padding: 8px 12px;
-    font-size: 12px;
-    color: var(--gold);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 18px;
-  }
-  .btn-plan {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px 20px;
-    border-radius: 50px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.2s;
-    text-decoration: none;
-  }
-  .btn-plan-outline {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.7);
-  }
-  .btn-plan-outline:hover {
-    border-color: rgba(255,255,255,0.4);
-    color: #fff;
-  }
-  .btn-plan-featured {
-    background: var(--green);
-    color: #fff;
-    box-shadow: 0 4px 20px rgba(74,103,65,0.35);
-  }
-  .btn-plan-featured:hover {
-    background: var(--green-mid);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(74,103,65,0.4);
-  }
-  .pricing-note {
-    text-align: center;
-    margin-top: 28px;
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-  }
-  .pricing-economy {
-    text-align: center;
-    max-width: 460px;
-    margin: 0 auto 40px;
-    background: rgba(184,149,90,0.1);
-    border: 1px solid rgba(184,149,90,0.2);
-    border-radius: var(--radius);
-    padding: 16px 20px;
-  }
-  .pricing-economy p { font-size: 14px; color: rgba(255,255,255,0.6); }
-  .pricing-economy strong { color: var(--gold); }
+/* FOOTER */
+footer{background:var(--brown-dark);padding:28px 24px;text-align:center;font-size:12px;color:rgba(255,255,255,.3)}
+footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 
-  /* ── GUARANTEE ── */
-  .guarantee-section {
-    background: var(--warm-white);
-    padding: 72px 24px;
-  }
-  .guarantee-inner {
-    max-width: 620px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .guarantee-badge {
-    width: 80px; height: 80px;
-    background: var(--green-light);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 32px;
-  }
-  .guarantee-inner h2 { font-size: 28px; color: var(--espresso); margin-bottom: 14px; }
-  .guarantee-inner p { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
-
-  /* ── FAQ ── */
-  .faq-section {
-    background: var(--sand);
-    padding: 72px 24px;
-  }
-  .faq-inner { max-width: 680px; margin: 0 auto; }
-  .faq-item {
-    border-bottom: 1px solid var(--border);
-  }
-  .faq-item:first-of-type { border-top: 1px solid var(--border); }
-  .faq-q {
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    padding: 20px 0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--espresso);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    transition: color 0.2s;
-  }
-  .faq-q:hover { color: var(--green); }
-  .faq-q .icon {
-    width: 22px; height: 22px;
-    min-width: 22px;
-    border: 1.5px solid var(--border-mid);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: var(--text-muted);
-    transition: all 0.2s;
-  }
-  .faq-item.open .faq-q .icon {
-    background: var(--green);
-    border-color: var(--green);
-    color: #fff;
-    transform: rotate(45deg);
-  }
-  .faq-a {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-  }
-  .faq-item.open .faq-a { max-height: 300px; padding-bottom: 18px; }
-  .faq-a p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
-
-  /* ── FINAL CTA ── */
-  .final-cta {
-    background: var(--cream);
-    padding: 80px 24px;
-    text-align: center;
-  }
-  .final-cta h2 {
-    font-size: clamp(26px, 4vw, 40px);
-    color: var(--espresso);
-    max-width: 580px;
-    margin: 0 auto 16px;
-  }
-  .final-cta h2 em { font-style: normal; color: var(--green); }
-  .final-cta p {
-    font-size: 16px;
-    color: var(--text-muted);
-    max-width: 420px;
-    margin: 0 auto 32px;
-    font-weight: 300;
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--espresso);
-    padding: 28px 24px;
-    text-align: center;
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-  }
-  footer a { color: rgba(255,255,255,0.45); text-decoration: underline; }
-
-  /* ── UTILS ── */
-  .container { max-width: 900px; margin: 0 auto; }
-  @media (max-width: 480px) {
-    .urgency-bar { font-size: 11px; gap: 8px; }
-    .hero { padding: 52px 20px 48px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+@media(max-width:720px){
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .fw-grid,.testi-grid,.bon-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .urgency{font-size:11px;gap:8px}
+  .hero{padding:40px 18px 52px}
+}
 </style>
 </head>
 <body>
 
-<!-- URGENCY BAR -->
-<div class="urgency-bar">
-  <span>⏰ Oferta especial encerra em</span>
-  <div class="countdown">
-    <div class="cd-block" id="cd-h">00</div>
-    <span class="cd-sep">:</span>
-    <div class="cd-block" id="cd-m">59</div>
-    <span class="cd-sep">:</span>
-    <div class="cd-block" id="cd-s">00</div>
+<!-- URGENCY -->
+<div class="urgency">
+  <span>⏰ Oferta encerra em</span>
+  <div class="cd">
+    <div class="cd-b" id="cdh">23</div><span class="cd-s">:</span>
+    <div class="cd-b" id="cdm">59</div><span class="cd-s">:</span>
+    <div class="cd-b" id="cds">00</div>
   </div>
-  <span>— <span class="highlight">últimas vagas com desconto</span></span>
+  <span>— <span class="hi">últimas vagas com desconto</span></span>
 </div>
 
-<!-- HERO -->
+<!-- HERO + VSL -->
 <section class="hero">
-  <div class="hero-badge">
-    ✦ Curso de Crochê de Mesa
-  </div>
-  <h1>Aprenda crochê de mesa e comece a <em>vender em até 30 dias</em> — mesmo do zero</h1>
-  <p class="hero-sub">
-    Mais de <strong>200 modelos exclusivos</strong> de souplats, caminhos de mesa e jogos americanos. Vídeo aulas completas, do iniciante ao profissional.
-  </p>
-  <a href="#pricing" class="btn-primary">
-    Quero aprender e lucrar agora
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-  </a>
-  <p class="hero-note">🔒 Acesso imediato · 15 dias de garantia incondicional</p>
-</section>
+  <div class="hero-eyebrow">✦ Curso de Crochê de Mesa</div>
+  <h1>Aprenda crochê de mesa e comece a<br><em>vender em até 30 dias</em> — mesmo do zero</h1>
+  <p class="hero-sub">Mais de <strong>200 modelos exclusivos</strong> de souplats, caminhos de mesa e jogos americanos. Vídeo aulas completas, do iniciante ao profissional.</p>
 
-<!-- VIDEO -->
-<section class="video-section">
-  <div class="video-wrapper">
-    <p class="video-label">Assista antes de decidir</p>
-    <h2 class="video-title">Veja como funciona na prática</h2>
-    <div class="video-container" id="video-container">
-      <!-- Substitua pelo seu iframe de vídeo quando estiver pronto -->
-      <!-- Exemplo: <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=1" allowfullscreen></iframe> -->
-      <div class="video-placeholder" onclick="loadVideo()">
-        <div class="play-btn">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+  <!-- VSL NA PRIMEIRA DOBRA -->
+  <div class="vsl-wrap">
+    <div class="vsl-box" id="vsl-box">
+      <!-- Cole aqui: <iframe src="https://www.youtube.com/embed/SEU_ID?autoplay=1" allowfullscreen></iframe> -->
+      <div class="vsl-placeholder" onclick="playVsl()">
+        <div class="vsl-play">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
         </div>
-        <span>Clique para assistir</span>
+        <p>Assista até o final — vale muito a pena</p>
       </div>
     </div>
-    <p class="video-caption">Assista até o final e descubra o método completo →</p>
+    <p class="vsl-caption">👆 Veja o método completo antes de decidir</p>
   </div>
+
+  <a href="#pricing" class="btn">Quero aprender e lucrar agora →</a>
+  <p class="hero-note">🔒 Acesso imediato · 15 dias de garantia · Sem risco</p>
 </section>
 
 <!-- STATS -->
-<section class="stats-section">
-  <div class="stats-grid">
-    <div class="stat-item">
-      <div class="stat-number">+<span>3.200</span></div>
-      <div class="stat-label">alunas ativas</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">+<span>200</span></div>
-      <div class="stat-label">modelos exclusivos</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number"><span>4.9</span> ★</div>
-      <div class="stat-label">avaliação média</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">R$<span>7k</span></div>
-      <div class="stat-label">potencial mensal</div>
-    </div>
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-n">+3.200</div><div class="stat-l">alunas ativas</div></div>
+    <div class="stat"><div class="stat-n">+200</div><div class="stat-l">modelos exclusivos</div></div>
+    <div class="stat"><div class="stat-n">4.9 ★</div><div class="stat-l">avaliação média</div></div>
+    <div class="stat"><div class="stat-n">R$7k</div><div class="stat-l">potencial mensal</div></div>
   </div>
-</section>
+</div>
 
 <!-- FOR WHOM -->
-<section class="forwhom-section">
-  <div class="section-header">
-    <span class="section-tag">Para quem é este curso?</span>
-    <h2>Você se identifica com alguma dessas situações?</h2>
+<section class="forwhom">
+  <div class="sh">
+    <span class="sh-tag">Para quem é este curso?</span>
+    <h2>Você se identifica?</h2>
+    <p>Este curso foi feito para três tipos de pessoa</p>
   </div>
-  <div class="cards-grid">
-    <div class="card">
-      <div class="card-icon">🧶</div>
-      <h3>Você nunca pegou em agulha</h3>
-      <p>As aulas começam do absoluto zero. Você aprende o primeiro ponto até criar peças que vendem — sem frustração, no seu ritmo.</p>
+  <div class="fw-grid">
+    <div class="fw-card">
+      <div class="fw-icon">🧶</div>
+      <h3>Nunca pegou em agulha</h3>
+      <p>As aulas começam do zero absoluto. Você aprende o primeiro ponto até criar peças que vendem — sem frustração, no seu ritmo.</p>
     </div>
-    <div class="card">
-      <div class="card-icon">💰</div>
-      <h3>Você quer uma renda extra real</h3>
-      <p>Souplats e caminhos de mesa têm alta demanda o ano todo. Nossas alunas faturam entre R$700 e R$7.000 por mês vendendo peças prontas.</p>
+    <div class="fw-card">
+      <div class="fw-icon">💰</div>
+      <h3>Quer uma renda extra real</h3>
+      <p>Souplats e caminhos de mesa têm altíssima demanda o ano todo. Nossas alunas faturam entre R$700 e R$7.000 por mês.</p>
     </div>
-    <div class="card">
-      <div class="card-icon">📦</div>
-      <h3>Você já sabe crochê mas não vende</h3>
+    <div class="fw-card">
+      <div class="fw-icon">📦</div>
+      <h3>Já sabe crochê mas não vende</h3>
       <p>O problema não é a habilidade — é saber quais modelos têm saída. Você vai aprender exatamente o que o mercado mais pede hoje.</p>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="gallery-section">
-  <div class="section-header">
-    <span class="section-tag">Mais de 200 modelos</span>
+<section class="gallery">
+  <div class="sh">
+    <span class="sh-tag">Mais de 200 modelos</span>
     <h2>Peças que vendem antes de ficar prontas</h2>
     <p>Souplats, caminhos de mesa, jogos americanos e bônus especial de Natal</p>
   </div>
-  <div class="gallery-grid container">
-    <!-- Galeria com placeholders — substitua pelas imagens reais -->
-    <div class="gallery-item" style="aspect-ratio:1">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Souplat de crochê azul">
-      <div class="gallery-overlay"><span>Souplat redondo</span></div>
-    </div>
-    <div class="gallery-item" style="aspect-ratio:4/5">
-      <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=400&q=80" alt="Caminho de mesa">
-      <div class="gallery-overlay"><span>Caminho de mesa</span></div>
-    </div>
-    <div class="gallery-item" style="aspect-ratio:1">
-      <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400&q=80" alt="Jogo americano">
-      <div class="gallery-overlay"><span>Jogo americano floral</span></div>
-    </div>
-    <div class="gallery-item" style="aspect-ratio:4/3">
-      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Souplat decorativo">
-      <div class="gallery-overlay"><span>Souplat decorativo</span></div>
-    </div>
-    <div class="gallery-item" style="aspect-ratio:1">
-      <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400&q=80" alt="Peça de crochê">
-      <div class="gallery-overlay"><span>Souplat temático</span></div>
-    </div>
-    <div class="gallery-item" style="aspect-ratio:5/4">
-      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Mesa decorada">
-      <div class="gallery-overlay"><span>Conjunto mesa posta</span></div>
-    </div>
+  <div class="gal-grid">
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Souplat"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&q=80" alt="Mesa"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=500&q=80" alt="Jogo americano"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80" alt="Decorativo"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80" alt="Mesa posta"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&q=80" alt="Peça"></div>
   </div>
-  <div style="text-align:center; margin-top: 32px;">
-    <a href="#pricing" class="btn-primary" style="font-size:14px; padding: 13px 30px;">Ver todos os +200 modelos →</a>
+  <div style="text-align:center;margin-top:36px">
+    <a href="#pricing" class="btn" style="font-size:14px;padding:14px 32px">Ver todos os +200 modelos →</a>
   </div>
 </section>
 
 <!-- LEARN -->
-<section class="learn-section">
-  <div class="learn-inner container">
+<section class="learn">
+  <div class="learn-inner">
     <div>
-      <span class="section-tag">O que você vai aprender</span>
-      <h2 style="font-size: clamp(24px,3vw,34px); color: var(--espresso); margin: 12px 0 24px;">Do ponto inicial ao acabamento perfeito</h2>
-      <ul class="learn-list">
-        <li>Peças lindas e com alta saída no mercado</li>
-        <li>Modelos exclusivos e irresistíveis para clientes</li>
-        <li>Do ponto inicial ao acabamento profissional</li>
-        <li>Técnicas que fazem suas peças se destacarem</li>
-        <li>Materiais necessários e fornecedores baratos</li>
-        <li>Como precificar e onde vender suas peças</li>
-        <li>Do iniciante ao profissional em crochê de mesa</li>
-        <li>Souplats, caminhos de mesa e jogos americanos</li>
+      <div class="sh" style="text-align:left;margin:0 0 32px">
+        <span class="sh-tag">O que você vai aprender</span>
+        <h2>Do ponto inicial ao acabamento perfeito</h2>
+      </div>
+      <ul class="check-list">
+        <li><span class="ck">✓</span> Peças lindas e com alta saída no mercado</li>
+        <li><span class="ck">✓</span> Modelos exclusivos e irresistíveis para clientes</li>
+        <li><span class="ck">✓</span> Do ponto inicial ao acabamento profissional</li>
+        <li><span class="ck">✓</span> Técnicas que fazem suas peças se destacarem</li>
+        <li><span class="ck">✓</span> Materiais necessários e fornecedores baratos</li>
+        <li><span class="ck">✓</span> Como precificar e onde vender suas peças</li>
+        <li><span class="ck">✓</span> Do iniciante ao profissional em crochê de mesa</li>
+        <li><span class="ck">✓</span> Souplats, caminhos de mesa e jogos americanos</li>
       </ul>
     </div>
-    <div class="learn-video-mock">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="rgba(255,255,255,0.3)"><path d="M8 5v14l11-7z"/></svg>
-      <span>Aulas em vídeo<br>com passo a passo</span>
+    <div class="learn-img">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="rgba(255,255,255,0.25)"><path d="M8 5v14l11-7z"/></svg>
+      <span style="font-size:13px">Aulas em vídeo<br>passo a passo</span>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials-section">
-  <div class="section-header">
-    <span class="section-tag">Resultados reais</span>
+<section class="testi">
+  <div class="sh">
+    <span class="sh-tag">Resultados reais</span>
     <h2>O que nossas alunas estão dizendo</h2>
     <p>Mensagens reais do grupo exclusivo do WhatsApp</p>
   </div>
-  <div class="testimonials-grid container">
-    <div class="testimonial-card">
-      <div class="testimonial-header">
-        <div class="testimonial-avatar">VA</div>
-        <div>
-          <div class="testimonial-name">Valeria A.</div>
-          <div class="testimonial-stars">★★★★★</div>
-        </div>
-      </div>
-      <span class="testimonial-earned">💰 Vendeu várias encomendas</span>
-      <p class="testimonial-text">"Finalizei o souplat de mesa do Curso e já tenho várias encomendas. Está vendendo muito!"</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-av">VA</div><div><div class="testi-name">Valeria A.</div><div class="testi-stars">★★★★★</div></div></div>
+      <span class="testi-badge">💰 Várias encomendas</span>
+      <p class="testi-txt">"Finalizei o souplat de mesa do Curso e já tenho várias encomendas. Está vendendo muito!"</p>
     </div>
-    <div class="testimonial-card">
-      <div class="testimonial-header">
-        <div class="testimonial-avatar">LU</div>
-        <div>
-          <div class="testimonial-name">Lucrecia</div>
-          <div class="testimonial-stars">★★★★★</div>
-        </div>
-      </div>
-      <span class="testimonial-earned">💰 R$700 em uma semana</span>
-      <p class="testimonial-text">"Fiz esse americano de Stitch que fiz pra minha filha e faturei R$700 em uma semana fazendo crochê de mesa!"</p>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-av">LU</div><div><div class="testi-name">Lucrecia</div><div class="testi-stars">★★★★★</div></div></div>
+      <span class="testi-badge">💰 R$700 em uma semana</span>
+      <p class="testi-txt">"Faturei R$700 em uma semana fazendo crochê de mesa com o que aprendi aqui!"</p>
     </div>
-    <div class="testimonial-card">
-      <div class="testimonial-header">
-        <div class="testimonial-avatar">MA</div>
-        <div>
-          <div class="testimonial-name">Maria</div>
-          <div class="testimonial-stars">★★★★★</div>
-        </div>
-      </div>
-      <span class="testimonial-earned">💰 R$3.700 em 5 meses</span>
-      <p class="testimonial-text">"Comprei o curso tem uns 5 meses e já consegui lucrar uns R$3.700 com modelinhos de panos de mesa. Indico demais!"</p>
+    <div class="testi-card">
+      <div class="testi-top"><div class="testi-av">MA</div><div><div class="testi-name">Maria</div><div class="testi-stars">★★★★★</div></div></div>
+      <span class="testi-badge">💰 R$3.700 em 5 meses</span>
+      <p class="testi-txt">"Já consegui lucrar uns R$3.700 com modelinhos de panos de mesa. Indico demais!"</p>
     </div>
+  </div>
+  <div style="text-align:center;margin-top:40px">
+    <a href="#pricing" class="btn btn-dark">Quero esses resultados também →</a>
   </div>
 </section>
 
 <!-- BONUSES -->
-<section class="bonuses-section">
-  <div class="section-header">
-    <div><span class="bonus-header-tag">Bônus exclusivos</span></div>
+<section class="bonuses">
+  <div class="sh">
+    <span class="sh-tag">Bônus exclusivos</span>
     <h2>Se inscrever hoje você ganha 3 bônus</h2>
     <p>Somente para quem garantir a vaga agora</p>
   </div>
-  <div class="bonuses-grid container">
-    <div class="bonus-card">
-      <div class="bonus-number">Bônus 01</div>
-      <h3 class="bonus-title">Como Vender seu Artesanato e Faturar até R$7k/mês</h3>
-      <p class="bonus-desc">Descubra os melhores canais de venda, como precificar suas peças e fidelizar clientes que compram sempre.</p>
-      <div class="bonus-value">
-        <span class="old">R$97</span>
-        <span class="free">Grátis para você</span>
-      </div>
+  <div class="bon-grid">
+    <div class="bon-card">
+      <div class="bon-num">Bônus 01</div>
+      <h3 class="bon-title">Como Vender seu Artesanato e Faturar até R$7k/mês</h3>
+      <p class="bon-desc">Descubra os melhores canais de venda, como precificar suas peças e fidelizar clientes.</p>
+      <div class="bon-val"><span class="bon-old">R$97</span><span class="bon-free">Grátis para você</span></div>
     </div>
-    <div class="bonus-card">
-      <div class="bonus-number">Bônus 02</div>
-      <h3 class="bonus-title">+30 Modelos de Barras de Crochê para Pano de Copa</h3>
-      <p class="bonus-desc">Lindas barras decorativas que aumentam o valor das suas peças e abrem uma nova linha de produtos para vender.</p>
-      <div class="bonus-value">
-        <span class="old">R$67</span>
-        <span class="free">Grátis para você</span>
-      </div>
+    <div class="bon-card">
+      <div class="bon-num">Bônus 02</div>
+      <h3 class="bon-title">+30 Modelos de Barras de Crochê para Pano de Copa</h3>
+      <p class="bon-desc">Lindas barras decorativas que aumentam o valor das suas peças e ampliam sua linha.</p>
+      <div class="bon-val"><span class="bon-old">R$67</span><span class="bon-free">Grátis para você</span></div>
     </div>
-    <div class="bonus-card">
-      <div class="bonus-number">Bônus 03</div>
-      <h3 class="bonus-title">Curso de Almofadas de Animais e Personagens</h3>
-      <p class="bonus-desc">90 gráficos e receitas exclusivas de almofadas que fazem sucesso em feiras, Instagram e grupos de WhatsApp.</p>
-      <div class="bonus-value">
-        <span class="old">R$87</span>
-        <span class="free">Grátis para você</span>
-      </div>
+    <div class="bon-card">
+      <div class="bon-num">Bônus 03</div>
+      <h3 class="bon-title">Curso de Almofadas de Animais e Personagens</h3>
+      <p class="bon-desc">90 gráficos e receitas exclusivas de almofadas que fazem sucesso em feiras e Instagram.</p>
+      <div class="bon-val"><span class="bon-old">R$87</span><span class="bon-free">Grátis para você</span></div>
     </div>
   </div>
-  <div style="text-align:center; margin-top: 32px; font-size: 14px; color: var(--text-muted);">
-    Valor total dos bônus: <strong style="color: var(--espresso);">R$251</strong> — incluídos sem custo extra
-  </div>
+  <p style="text-align:center;margin-top:28px;font-size:14px;color:var(--text-muted)">Valor total dos bônus: <strong style="color:var(--brown-dark)">R$251</strong> — incluídos sem custo extra no Plano Completo</p>
 </section>
 
 <!-- PRICING -->
-<section class="pricing-section" id="pricing">
-  <div class="section-header">
-    <span class="section-tag">Escolha seu plano</span>
+<section class="pricing" id="pricing">
+  <div class="sh">
+    <span class="sh-tag">Escolha seu plano</span>
     <h2>Invista pouco, lucre muito</h2>
     <p>Acesso imediato após a confirmação do pagamento</p>
   </div>
-
-  <div class="pricing-economy">
-    <p>Os bônus sozinhos valem <strong>R$251</strong>. Você leva tudo por menos de uma janta.</p>
+  <div class="price-eco">
+    <p>Os bônus sozinhos valem <strong>R$251</strong>. Você leva tudo por menos do que uma janta fora.</p>
   </div>
-
-  <div class="pricing-grid container">
-
-    <!-- BASIC -->
-    <div class="plan-card">
+  <div class="plans">
+    <!-- ESSENCIAL -->
+    <div class="plan">
       <div class="plan-name">Plano Essencial</div>
-      <div class="plan-price-old">De R$147</div>
+      <div class="plan-old">De R$147</div>
       <div class="plan-price"><sup>R$</sup>10</div>
       <div class="plan-period">pagamento único</div>
-      <ul class="plan-features">
-        <li><span class="check">✓</span> +200 vídeo aulas de crochê de mesa</li>
-        <li><span class="check">✓</span> Gráficos e receitas exclusivas</li>
-        <li><span class="check">✓</span> Acesso por 1 ano</li>
-        <li><span class="locked">✗</span> <span style="opacity:0.45">Grupo VIP no WhatsApp</span></li>
-        <li><span class="locked">✗</span> <span style="opacity:0.45">Fornecedores exclusivos</span></li>
-        <li><span class="locked">✗</span> <span style="opacity:0.45">3 bônus exclusivos</span></li>
-        <li><span class="locked">✗</span> <span style="opacity:0.45">Atualizações semanais</span></li>
+      <ul class="plan-feats">
+        <li><span class="ck">✓</span> +200 vídeo aulas de crochê de mesa</li>
+        <li><span class="ck">✓</span> Gráficos e receitas exclusivas</li>
+        <li><span class="ck">✓</span> Acesso por 1 ano</li>
+        <li><span class="lk">✗</span><span style="opacity:.38">Grupo VIP no WhatsApp</span></li>
+        <li><span class="lk">✗</span><span style="opacity:.38">Fornecedores exclusivos</span></li>
+        <li><span class="lk">✗</span><span style="opacity:.38">3 bônus (R$251)</span></li>
+        <li><span class="lk">✗</span><span style="opacity:.38">Acesso vitalício</span></li>
       </ul>
-      <a href="https://payfast.greenn.com.br/redirect/288070" class="btn-plan btn-plan-outline">Começar com o Essencial</a>
+      <a href="https://payfast.greenn.com.br/redirect/288070" class="plan-btn plan-btn-ghost">Começar com o Essencial</a>
     </div>
-
-    <!-- PRO (FEATURED) -->
-    <div class="plan-card featured">
+    <!-- COMPLETO -->
+    <div class="plan hot">
       <div class="plan-badge">⭐ Mais popular</div>
       <div class="plan-name">Plano Completo</div>
-      <div class="plan-price-old">De R$297</div>
-      <div class="plan-price"><sup>R$</sup>19<span style="font-size:22px">,90</span></div>
+      <div class="plan-old">De R$297</div>
+      <div class="plan-price"><sup>R$</sup>19<span style="font-size:24px">,90</span></div>
       <div class="plan-period">pagamento único · acesso vitalício</div>
-      <div class="plan-highlight">Você economiza R$277 hoje</div>
-      <ul class="plan-features">
-        <li><span class="check">✓</span> +200 vídeo aulas de crochê de mesa</li>
-        <li><span class="check">✓</span> Gráficos e receitas exclusivas</li>
-        <li><span class="check">✓</span> <strong>Acesso vitalício</strong></li>
-        <li><span class="check">✓</span> <strong>Grupo VIP no WhatsApp</strong></li>
-        <li><span class="check">✓</span> <strong>Fornecedores exclusivos</strong></li>
-        <li><span class="check">✓</span> <strong>3 bônus (valor R$251)</strong></li>
-        <li><span class="check">✓</span> <strong>Atualizações semanais</strong></li>
+      <div class="plan-hi">✨ Você economiza R$277 hoje</div>
+      <ul class="plan-feats">
+        <li><span class="ck">✓</span> +200 vídeo aulas de crochê de mesa</li>
+        <li><span class="ck">✓</span> Gráficos e receitas exclusivas</li>
+        <li><span class="ck">✓</span><strong>Acesso vitalício</strong></li>
+        <li><span class="ck">✓</span><strong>Grupo VIP no WhatsApp</strong></li>
+        <li><span class="ck">✓</span><strong>Fornecedores exclusivos</strong></li>
+        <li><span class="ck">✓</span><strong>3 bônus (valor R$251)</strong></li>
+        <li><span class="ck">✓</span><strong>Atualizações semanais</strong></li>
       </ul>
-      <a href="https://payfast.greenn.com.br/redirect/288070" class="btn-plan btn-plan-featured">Quero o Plano Completo →</a>
+      <a href="https://payfast.greenn.com.br/redirect/288070" class="plan-btn plan-btn-hot">Quero o Plano Completo →</a>
     </div>
-
   </div>
-  <p class="pricing-note">🔒 Pagamento 100% seguro · Pix, cartão ou boleto · Garantia de 15 dias</p>
+  <p class="price-note">🔒 Pagamento 100% seguro · Pix, cartão ou boleto · Garantia de 15 dias</p>
 </section>
 
 <!-- GUARANTEE -->
-<section class="guarantee-section">
-  <div class="guarantee-inner">
-    <div class="guarantee-badge">🛡️</div>
+<section class="guarantee">
+  <div class="guar-inner">
+    <div class="guar-badge">🛡️</div>
     <h2>15 dias de garantia incondicional</h2>
     <p>Se por qualquer motivo você não ficar satisfeita, basta nos avisar em até 15 dias e devolvemos 100% do valor pago. Sem burocracia, sem perguntas. O risco é todo nosso.</p>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq-section">
-  <div class="section-header">
-    <span class="section-tag">Dúvidas frequentes</span>
-    <h2>Ainda tem alguma dúvida?</h2>
-  </div>
+<section class="faq">
+  <div class="sh"><span class="sh-tag">Dúvidas frequentes</span><h2>Ainda tem alguma dúvida?</h2></div>
   <div class="faq-inner">
-
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Como vou ter acesso ao conteúdo?
-        <span class="icon">+</span>
-      </button>
+      <button class="faq-q" onclick="faq(this)">Como vou ter acesso ao conteúdo?<span class="faq-ic">+</span></button>
       <div class="faq-a"><p>Após a confirmação do pagamento, você recebe um e-mail com login e senha para acessar a plataforma. O acesso é imediato, 24 horas por dia, em qualquer dispositivo — celular, tablet ou computador.</p></div>
     </div>
-
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Quais são as formas de pagamento?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-a"><p>Aceitamos Pix (aprovação imediata), cartão de crédito em até 12x e boleto bancário. O checkout é 100% seguro e criptografado.</p></div>
+      <button class="faq-q" onclick="faq(this)">Quais são as formas de pagamento?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Aceitamos Pix (aprovação imediata), cartão de crédito e boleto bancário. O checkout é 100% seguro e criptografado.</p></div>
     </div>
-
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Serve para quem nunca fez crochê?
-        <span class="icon">+</span>
-      </button>
+      <button class="faq-q" onclick="faq(this)">Serve para quem nunca fez crochê?<span class="faq-ic">+</span></button>
       <div class="faq-a"><p>Sim! O curso foi feito do zero absoluto. As primeiras aulas ensinam como segurar a agulha e fazer os pontos básicos. Em poucas semanas você já estará criando peças para vender.</p></div>
     </div>
-
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Existe garantia de que o programa funciona?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-a"><p>Sim. Além de 15 dias de garantia incondicional, temos mais de 3.200 alunas ativas com resultados comprovados. Nosso grupo de WhatsApp está cheio de prints de alunas vendendo e faturando. Você entra em uma comunidade que já funciona.</p></div>
+      <button class="faq-q" onclick="faq(this)">Qual a diferença entre o Plano Essencial e o Completo?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>O Plano Essencial dá acesso às vídeo aulas e gráficos por 1 ano. O Plano Completo inclui tudo isso mais os 3 bônus (valor R$251), grupo VIP no WhatsApp, fornecedores exclusivos e acesso vitalício. Por apenas R$9,90 a mais, o Completo é disparado a melhor escolha.</p></div>
     </div>
-
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        E se eu não tiver tempo para estudar?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-a"><p>As aulas são curtas e gravadas. Você assiste quando e onde quiser — no ônibus, no intervalo do trabalho ou enquanto as crianças dormem. Com o Plano Completo, o acesso é vitalício: sem prazo para terminar.</p></div>
+      <button class="faq-q" onclick="faq(this)">E se eu não tiver tempo para estudar?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>As aulas são curtas e gravadas. Você assiste quando e onde quiser. Com o Plano Completo, o acesso é vitalício — sem prazo para terminar.</p></div>
     </div>
-
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Posso deixar para comprar depois?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-a"><p>Você pode, mas o preço promocional e os bônus são exclusivos para esta oferta. Quando o contador zerar, o valor volta ao preço normal e os bônus não estarão mais disponíveis. Vale garantir agora.</p></div>
+      <button class="faq-q" onclick="faq(this)">Posso deixar para comprar depois?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Você pode, mas o preço promocional e os bônus são exclusivos para esta oferta. Quando o contador zerar, o valor volta ao normal e os bônus saem. Vale garantir agora.</p></div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        Qual a diferença entre o Plano Essencial e o Completo?
-        <span class="icon">+</span>
-      </button>
-      <div class="faq-a"><p>O Plano Essencial dá acesso às vídeo aulas e gráficos por 1 ano. O Plano Completo inclui tudo isso mais os 3 bônus (valor R$251), grupo VIP no WhatsApp com receitas semanais, fornecedores exclusivos com preços de atacado e acesso vitalício — ou seja, você nunca perde o acesso. Por apenas R$9,90 a mais, o Completo é disparado a melhor opção.</p></div>
-    </div>
-
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta">
+<section class="fcta">
   <h2>Sua próxima peça pode ser a primeira que <em>alguém vai pagar para ter</em></h2>
   <p>Garanta sua vaga agora e comece hoje mesmo</p>
-  <a href="#pricing" class="btn-primary">
-    Garantir minha vaga com desconto
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-  </a>
-  <p style="margin-top: 14px; font-size: 12px; color: var(--text-light);">🔒 15 dias de garantia · Acesso imediato · Pagamento seguro</p>
+  <a href="#pricing" class="btn">Garantir minha vaga com desconto →</a>
+  <p style="margin-top:14px;font-size:12px;color:var(--text-light)">🔒 15 dias de garantia · Acesso imediato · Pagamento seguro</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Crochê de Mesa — Todos os direitos reservados</p>
-  <p style="margin-top: 6px;"><a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></p>
+  <p style="margin-top:6px"><a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></p>
 </footer>
 
 <script>
-// COUNTDOWN — 24h from load
-(function() {
-  var end = new Date();
-  var stored = localStorage.getItem('crochet-countdown');
-  if (stored) {
-    end = new Date(parseInt(stored));
-  } else {
-    end.setHours(end.getHours() + 23);
-    end.setMinutes(end.getMinutes() + 59);
-    end.setSeconds(end.getSeconds() + 59);
-    localStorage.setItem('crochet-countdown', end.getTime());
+(function(){
+  var end=new Date();
+  end.setHours(end.getHours()+23,59,0,0);
+  function tick(){
+    var d=Math.max(0,end-new Date());
+    var h=Math.floor(d/3600000);
+    var m=Math.floor((d%3600000)/60000);
+    var s=Math.floor((d%60000)/1000);
+    document.getElementById('cdh').textContent=String(h).padStart(2,'0');
+    document.getElementById('cdm').textContent=String(m).padStart(2,'0');
+    document.getElementById('cds').textContent=String(s).padStart(2,'0');
+    if(d>0)setTimeout(tick,1000);
   }
-  function update() {
-    var now = new Date();
-    var diff = Math.max(0, end - now);
-    var h = Math.floor(diff / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-    if (diff > 0) requestAnimationFrame(update);
-  }
-  update();
+  tick();
 })();
 
-// FAQ
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
-  if (!isOpen) item.classList.add('open');
+function faq(btn){
+  var item=btn.parentElement;
+  var open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(e){e.classList.remove('open')});
+  if(!open)item.classList.add('open');
 }
 
-// Video placeholder
-function loadVideo() {
-  // Substitua pelo ID do seu vídeo
-  // var id = 'SEU_VIDEO_ID';
-  // var container = document.getElementById('video-container');
-  // container.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1" allowfullscreen></iframe>';
-  alert('Substitua a função loadVideo() pelo ID do seu vídeo no YouTube ou Vimeo.');
+function playVsl(){
+  // Para inserir seu vídeo, substitua SEU_VIDEO_ID pelo ID do YouTube
+  // Exemplo: https://www.youtube.com/watch?v=ABC123 → ID é ABC123
+  var id='SEU_VIDEO_ID';
+  if(id==='SEU_VIDEO_ID'){alert('Cole o ID do seu vídeo do YouTube na função playVsl() no código.');return;}
+  document.getElementById('vsl-box').innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1" allowfullscreen></iframe>';
 }
 </script>
 </body>
