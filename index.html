@@ -425,8 +425,15 @@ a{text-decoration:none;color:inherit}
 /* LEARN */
 .learn{background:var(--sand);padding:88px 24px}
 .learn-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-@media(max-width:720px){.learn-inner{grid-template-columns:1fr}}
+@media(max-width:720px){.learn-inner{grid-template-columns:1fr 1fr;gap:24px}}
 .learn-left .sh{text-align:left;margin:0 0 32px}
+@media(max-width:480px){
+  .learn-left .sh h2{font-size:18px !important;margin-bottom:10px}
+  .learn-left .sh .sh-tag{font-size:9px;padding:3px 10px;margin-bottom:8px}
+  .check-list li{font-size:13px;gap:8px}
+  .ck{width:18px;height:18px;min-width:18px;font-size:10px}
+  .learn-img img{border-width:2px;box-shadow:0 4px 16px rgba(80,40,30,0.15),3px 3px 0 var(--coral-light)}
+}
 .check-list{list-style:none;display:flex;flex-direction:column;gap:14px}
 .check-list li{
   display:flex;align-items:flex-start;gap:13px;
@@ -744,7 +751,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .testi-grid{grid-template-columns:1fr}
   .bon-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .learn-inner{grid-template-columns:1fr;gap:24px}
+  .learn-inner{grid-template-columns:1fr 1fr;gap:16px}
   .learn-img{display:block}
   .plans{grid-template-columns:1fr;gap:36px}
   .plan.hot{transform:none;margin-top:16px}
@@ -811,9 +818,9 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .gal-item{border-radius:10px}
 
   /* LEARN */
-  .learn{padding:52px 18px}
-  .learn-inner{gap:28px}
-  .learn-left .sh{margin-bottom:24px}
+  .learn{padding:40px 14px}
+  .learn-inner{grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .learn-left .sh{margin-bottom:16px}
   .learn-img{display:block}
   .check-list li{font-size:14px;gap:10px}
   .ck{width:20px;height:20px;min-width:20px}
