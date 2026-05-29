@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#3D0A0A">
+<meta name="mobile-web-app-capable" content="yes">
 <title>Crochê de Mesa que Vende — Souplats, Caminhos e Jogos Americanos</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -30,7 +32,8 @@
   --shadow:0 4px 24px rgba(107,26,26,0.08);
   --shadow-lg:0 16px 56px rgba(107,26,26,0.15);
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden;-webkit-overflow-scrolling:touch}
 body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);line-height:1.65;overflow-x:hidden}
 h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.18}
 img{max-width:100%;display:block}
@@ -208,6 +211,7 @@ a{text-decoration:none;color:inherit}
   letter-spacing:.01em;
 }
 .btn:hover{background:var(--coral-dark);transform:translateY(-3px);box-shadow:0 14px 40px rgba(255,94,58,0.5)}
+@media(max-width:480px){.btn-block{width:100%;justify-content:center}}
 .btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.25);color:rgba(255,255,255,.8);box-shadow:none}
 .btn-outline:hover{border-color:rgba(255,255,255,.5);color:#fff;transform:none;box-shadow:none}
 .btn-green{background:var(--green);box-shadow:0 8px 32px rgba(46,107,53,0.35)}
@@ -228,7 +232,7 @@ a{text-decoration:none;color:inherit}
 .ticker-inner{
   display:inline-flex;
   gap:48px;
-  animation:ticker-move 22s linear infinite;
+  animation:ticker-move 18s linear infinite;
 }
 @keyframes ticker-move{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ticker-item{
@@ -385,7 +389,7 @@ a{text-decoration:none;color:inherit}
   aspect-ratio:1;
   cursor:pointer;
 }
-.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;-webkit-backface-visibility:hidden}
 .gal-item:hover img{transform:scale(1.07)}
 .gal-label{
   position:absolute;bottom:0;left:0;right:0;
@@ -560,6 +564,7 @@ a{text-decoration:none;color:inherit}
   border:2px solid var(--coral);
   transform:scale(1.03);
 }
+@media(max-width:600px){.plan.hot{transform:none;border-width:3px}}
 .plan.hot:hover{transform:scale(1.03) translateY(-3px)}
 .plan-badge{
   position:absolute;top:-14px;left:50%;
@@ -647,6 +652,7 @@ a{text-decoration:none;color:inherit}
 .faq-q{
   width:100%;background:none;border:none;
   text-align:left;padding:22px 0;
+  min-height:56px;
   font-family:'Inter',sans-serif;font-size:16px;font-weight:600;
   color:var(--wine-dark);cursor:pointer;
   display:flex;justify-content:space-between;align-items:center;gap:16px;
@@ -701,19 +707,159 @@ footer{
 footer a{color:rgba(255,255,255,.38);text-decoration:underline}
 
 /* RESPONSIVE */
+/* ===== MOBILE FIRST — FULL OPTIMIZATION ===== */
+
+/* Tablets (max 860px) */
+@media(max-width:860px){
+  .gal-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Tablets menores (max 760px) */
 @media(max-width:760px){
+  section, .stats, .bonuses, .testi, .forwhom, .gallery, .learn, .guarantee, .faq, .fcta{
+    padding:56px 20px;
+  }
+  .hero{padding:44px 20px 56px}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:none}
   .stat:nth-child(3){border-bottom:none}
-  .fw-grid,.testi-grid,.bon-grid{grid-template-columns:1fr}
-  .gal-grid{grid-template-columns:repeat(2,1fr)}
-  .plans{grid-template-columns:1fr}
-  .plan.hot{transform:none}
+  .fw-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .bon-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .learn-inner{grid-template-columns:1fr;gap:36px}
+  .learn-img{display:none}
+  .plans{grid-template-columns:1fr;gap:36px}
+  .plan.hot{transform:none;margin-top:16px}
+  .plan-price{font-size:48px}
+  .sh h2{font-size:clamp(24px,5vw,36px)}
+  .pricing-grid{grid-template-columns:1fr}
 }
+
+/* Mobile (max 480px) */
 @media(max-width:480px){
-  .urgency{font-size:11px;gap:8px}
-  .hero{padding:48px 18px 60px}
-  .btn{font-size:15px;padding:16px 32px}
+  /* BASE */
+  body{font-size:15px}
+  
+  /* URGENCY */
+  .urgency{font-size:11px;gap:6px;padding:9px 14px}
+  .cd-b{font-size:13px;padding:2px 7px;min-width:28px}
+
+  /* HERO */
+  .hero{padding:36px 18px 48px}
+  .hero-eyebrow{font-size:10px;padding:5px 12px;margin-bottom:18px}
+  .hero h1{font-size:28px;margin-bottom:14px}
+  .hero-sub{font-size:15px;margin-bottom:22px}
+  .vsl-wrap{margin-bottom:22px}
+  .vsl-play{width:60px;height:60px}
+
+  /* BUTTONS */
+  .btn{
+    font-size:15px;
+    padding:16px 28px;
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-note{font-size:11px}
+
+  /* TICKER */
+  .ticker{padding:8px 0}
+  .ticker-item{font-size:12px}
+
+  /* STATS */
+  .stats{padding:32px 18px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:20px 12px}
+  .stat-n{font-size:30px}
+  .stat-l{font-size:12px}
+
+  /* PAIN */
+  .pain{padding:52px 18px}
+  .pain h2{font-size:24px;margin-bottom:22px}
+  .pain-list li{font-size:14px;padding:12px 14px;gap:10px}
+  .pain-turn{font-size:20px}
+
+  /* FOR WHOM */
+  .forwhom{padding:52px 18px}
+  .fw-grid{gap:16px}
+  .fw-card{padding:24px 20px}
+  .fw-icon{width:44px;height:44px;font-size:22px}
+  .fw-card h3{font-size:18px}
+  .fw-card p{font-size:14px}
+
+  /* GALLERY */
+  .gallery{padding:52px 18px}
+  .gal-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .gal-item{border-radius:10px}
+
+  /* LEARN */
+  .learn{padding:52px 18px}
+  .learn-inner{gap:28px}
+  .learn-left .sh{margin-bottom:24px}
+  .learn-img{display:none}
+  .check-list li{font-size:14px;gap:10px}
+  .ck{width:20px;height:20px;min-width:20px}
+
+  /* TESTIMONIALS */
+  .testi{padding:52px 18px}
+  .testi-grid{gap:16px}
+  .testi-card{padding:18px}
+  .testi-txt{font-size:13px}
+
+  /* BONUSES */
+  .bonuses{padding:52px 18px}
+  .bon-grid{gap:16px}
+  .bon-card{padding:22px 18px}
+  .bon-img-wrap img{max-height:130px}
+  .bon-title{font-size:16px}
+  .bon-total{font-size:18px}
+
+  /* PRICING */
+  .pricing{padding:56px 18px}
+  .price-anchor{padding:14px 16px;font-size:13px}
+  .plans{gap:20px}
+  .plan{padding:26px 20px}
+  .plan.hot{margin-top:20px}
+  .plan-price{font-size:52px}
+  .plan-name{font-size:11px}
+  .plan-feats li{font-size:13px}
+  .plan-btn{padding:15px 18px;font-size:14px}
+  .plan-highlight{font-size:12px}
+
+  /* GUARANTEE */
+  .guarantee{padding:52px 18px}
+  .guar-inner h2{font-size:26px}
+  .guar-inner p{font-size:14px}
+  .guar-badge{width:72px;height:72px;font-size:32px}
+
+  /* FAQ */
+  .faq{padding:52px 18px}
+  .faq-q{font-size:14px;padding:18px 0}
+  .faq-a p{font-size:13px}
+
+  /* FINAL CTA */
+  .fcta{padding:56px 18px}
+  .fcta h2{font-size:26px}
+  .fcta p{font-size:15px;margin-bottom:24px}
+
+  /* SECTION HEADERS */
+  .sh{margin-bottom:36px}
+  .sh h2{font-size:26px}
+  .sh p{font-size:14px}
+  .sh-tag{font-size:10px;padding:4px 12px}
+
+  /* FOOTER */
+  footer{padding:22px 18px;font-size:11px}
+}
+
+/* Extra small phones (max 360px) */
+@media(max-width:360px){
+  .hero h1{font-size:24px}
+  .btn{font-size:14px;padding:15px 22px}
+  .plan-price{font-size:44px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-n{font-size:26px}
 }
 </style>
 </head>
