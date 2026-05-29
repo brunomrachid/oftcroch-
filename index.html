@@ -497,6 +497,19 @@ a{text-decoration:none;color:inherit}
 .bon-num{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px}
 .bon-title{font-size:18px;color:var(--wine-dark);margin-bottom:10px;font-family:'Playfair Display',serif;font-weight:700}
 .bon-desc{font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:16px}
+.bon-img-wrap{
+  text-align:center;
+  margin-bottom:18px;
+}
+.bon-img-wrap img{
+  max-height:160px;
+  width:auto;
+  margin:0 auto;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 24px rgba(107,26,26,0.15));
+  transition:transform .3s ease;
+}
+.bon-card:hover .bon-img-wrap img{transform:translateY(-4px) scale(1.03)}
 .bon-val{display:flex;align-items:center;gap:10px}
 .bon-old{font-size:13px;color:var(--text-light);text-decoration:line-through}
 .bon-free{font-size:14px;font-weight:700;color:var(--green)}
@@ -912,18 +925,27 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   <div class="bon-grid">
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 01</div>
+      <div class="bon-img-wrap">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus1.png" alt="Como vender artesanato" loading="lazy">
+      </div>
       <h3 class="bon-title">Como Vender seu Artesanato e Faturar até R$7k por mês</h3>
       <p class="bon-desc">Os melhores canais de venda, como precificar suas peças e como fidelizar clientes que compram sempre.</p>
       <div class="bon-val"><span class="bon-old">R$97</span><span class="bon-free">Grátis pra você</span></div>
     </div>
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 02</div>
+      <div class="bon-img-wrap">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus2.png" alt="Barras de crochê" loading="lazy">
+      </div>
       <h3 class="bon-title">30 Modelos de Barras de Crochê para Pano de Copa</h3>
       <p class="bon-desc">Barras decorativas lindas que aumentam o valor percebido das suas peças e abrem uma nova linha de produtos.</p>
       <div class="bon-val"><span class="bon-old">R$67</span><span class="bon-free">Grátis pra você</span></div>
     </div>
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 03</div>
+      <div class="bon-img-wrap">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus3.png" alt="Almofadas de animais" loading="lazy">
+      </div>
       <h3 class="bon-title">Curso Completo de Almofadas de Animais e Personagens</h3>
       <p class="bon-desc">90 gráficos e receitas exclusivas de almofadas que fazem sucesso em feiras, Instagram e grupos de WhatsApp.</p>
       <div class="bon-val"><span class="bon-old">R$87</span><span class="bon-free">Grátis pra você</span></div>
