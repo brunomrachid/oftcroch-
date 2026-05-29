@@ -1093,6 +1093,94 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   animation:softglow 1.5s ease-in-out infinite;
 }
 
+
+/* ===== SINGLE PLAN ===== */
+.single-plan-wrap{max-width:600px;margin:0 auto}
+.single-plan{
+  background:#fff;
+  border:2px solid var(--coral);
+  border-radius:20px;
+  padding:40px 36px;
+  box-shadow:0 20px 60px rgba(80,40,30,0.18);
+  position:relative;
+  animation:border-glow 3s ease-in-out infinite;
+}
+.single-plan-badge{
+  position:absolute;
+  top:-18px;left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(135deg,#CC2200,#A01800);
+  color:#FFD700;
+  font-size:13px;font-weight:800;
+  letter-spacing:.05em;
+  padding:7px 24px;
+  border-radius:30px;
+  white-space:nowrap;
+  box-shadow:0 4px 16px rgba(204,34,0,0.4);
+}
+.single-plan-top{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:32px;
+  align-items:start;
+  margin-top:16px;
+  margin-bottom:32px;
+}
+.single-plan-name{
+  font-size:13px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--coral);margin-bottom:20px;
+}
+.single-plan-right{text-align:right;min-width:140px}
+.single-plan-old{
+  font-size:13px;color:var(--text-light);
+  text-decoration:line-through;margin-bottom:4px;
+}
+.single-plan-old span{color:var(--text-muted)}
+.single-plan-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:68px;font-weight:900;
+  color:var(--wine-dark);line-height:1;
+}
+.single-plan-price sup{font-size:26px;vertical-align:top;margin-top:16px;display:inline-block}
+.single-plan-cents{font-size:30px}
+.single-plan-period{font-size:12px;color:var(--text-muted);margin-top:4px}
+.single-plan-economy{
+  display:inline-block;
+  background:var(--green-light);
+  color:var(--green);
+  font-size:12px;font-weight:700;
+  padding:4px 12px;border-radius:20px;
+  margin-top:10px;
+}
+.single-plan-btn{
+  width:100%;
+  justify-content:center;
+  font-size:18px;
+  padding:20px 32px;
+  border-radius:50px;
+  box-shadow:0 8px 32px rgba(26,140,58,0.45);
+  margin-bottom:20px;
+  animation:pulse 2.5s infinite;
+}
+.single-plan-trust{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:12px;
+  color:var(--text-muted);
+  font-weight:600;
+}
+@media(max-width:560px){
+  .single-plan{padding:32px 20px}
+  .single-plan-top{grid-template-columns:1fr;gap:20px}
+  .single-plan-right{text-align:left}
+  .single-plan-price{font-size:56px}
+  .single-plan-btn{font-size:16px;padding:17px 24px}
+  .single-plan-trust{gap:12px;font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -1418,46 +1506,46 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <h2>Adquira o Seu Acesso Agora Mesmo</h2>
     <p>Acesso imediato logo após a confirmação do pagamento</p>
   </div>
-  <div class="price-anchor fade-up">
-    <p>São <strong>mais de 200 vídeo aulas</strong>, gráficos detalhados e 3 bônus exclusivos. Você aprende do zero mesmo que nunca tenha feito crochê antes.</p>
-  </div>
-  <div class="plans">
-    <div class="plan fade-up">
-      <div class="plan-name">Plano Essencial</div>
-      <div class="plan-old">De R$147</div>
-      <div class="plan-price"><sup>R$</sup>10</div>
-      <div class="plan-period">pagamento único</div>
-      <ul class="plan-feats">
-        <li><span class="ck">✓</span>200 vídeo aulas de crochê de mesa</li>
-        <li><span class="ck">✓</span>Gráficos e receitas exclusivas</li>
-        <li><span class="ck">✓</span>Acesso por 1 ano</li>
-        <li><span class="lk">✗</span><span style="opacity:.35">Grupo exclusivo no WhatsApp</span></li>
-        <li><span class="lk">✗</span><span style="opacity:.35">Fornecedores exclusivos</span></li>
-        <li><span class="lk">✗</span><span style="opacity:.35">3 bônus exclusivos</span></li>
-        <li><span class="lk">✗</span><span style="opacity:.35">Acesso vitalício</span></li>
-      </ul>
-      <a href="https://payfast.greenn.com.br/redirect/288070" class="plan-btn plan-btn-ghost">Quero o Plano Essencial</a>
+
+  <div class="single-plan-wrap fade-up">
+    <div class="single-plan">
+      <div class="single-plan-badge">🔥 Oferta especial por tempo limitado</div>
+
+      <div class="single-plan-top">
+        <div class="single-plan-left">
+          <div class="single-plan-name">Plano Completo</div>
+          <ul class="plan-feats">
+            <li><span class="ck">✓</span><strong>+200 vídeo aulas de crochê de mesa</strong></li>
+            <li><span class="ck">✓</span>Gráficos e receitas exclusivas</li>
+            <li><span class="ck">✓</span>Acesso vitalício</li>
+            <li><span class="ck">✓</span>Grupo exclusivo no WhatsApp</li>
+            <li><span class="ck">✓</span>Fornecedores exclusivos de materiais</li>
+            <li><span class="ck">✓</span>3 bônus exclusivos (vale R$251)</li>
+            <li><span class="ck">✓</span>Receitas novas toda semana</li>
+          </ul>
+        </div>
+        <div class="single-plan-right">
+          <div class="single-plan-old">de <span>R$297</span></div>
+          <div class="single-plan-price">
+            <sup>R$</sup>19<span class="single-plan-cents">,90</span>
+          </div>
+          <div class="single-plan-period">pagamento único</div>
+          <div class="single-plan-economy">Você economiza R$277 hoje</div>
+        </div>
+      </div>
+
+      <a href="https://payfast.greenn.com.br/redirect/288070" class="btn single-plan-btn">
+        Quero meu acesso agora
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+      </a>
+
+      <div class="single-plan-trust">
+        <span>🔒 Pagamento seguro</span>
+        <span>✅ Pix, cartão ou boleto</span>
+        <span>🛡️ 15 dias de garantia</span>
+      </div>
     </div>
-    <div class="plan hot fade-up">
-      <div class="plan-badge">Melhor escolha</div>
-      <div class="plan-name">Plano Completo</div>
-      <div class="plan-old">De R$297</div>
-      <div class="plan-price"><sup>R$</sup>19<span style="font-size:26px">,90</span></div>
-      <div class="plan-period">pagamento único e acesso vitalício</div>
-      <div class="plan-highlight">Você economiza R$277 hoje</div>
-      <ul class="plan-feats">
-        <li><span class="ck">✓</span>200 vídeo aulas de crochê de mesa</li>
-        <li><span class="ck">✓</span>Gráficos e receitas exclusivas</li>
-        <li><span class="ck">✓</span><strong>Acesso vitalício</strong></li>
-        <li><span class="ck">✓</span><strong>Grupo VIP no WhatsApp</strong></li>
-        <li><span class="ck">✓</span><strong>Fornecedores com desconto</strong></li>
-        <li><span class="ck">✓</span><strong>3 bônus (vale R$251)</strong></li>
-        <li><span class="ck">✓</span><strong>Receitas novas toda semana</strong></li>
-      </ul>
-      <a href="https://payfast.greenn.com.br/redirect/288070" class="plan-btn plan-btn-hot">Comprar agora</a>
-    </div>
   </div>
-  <p class="price-note">Fique Tranquilo, Sua Compra é Segura. Pix, cartão ou boleto. Garantia incondicional de 15 dias.</p>
 </section>
 
 
