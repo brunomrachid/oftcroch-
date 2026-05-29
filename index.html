@@ -427,17 +427,17 @@ a{text-decoration:none;color:inherit}
   border-radius:var(--radius);
   overflow:hidden;
   box-shadow:var(--shadow-lg);
-  aspect-ratio:4/3;
-  background:var(--wine-dark);
-  display:flex;align-items:center;justify-content:center;flex-direction:column;
-  gap:14px;color:rgba(255,255,255,.4);font-size:14px;text-align:center;
   position:relative;
 }
-.learn-img::before{
-  content:'';
-  position:absolute;inset:0;
-  background:radial-gradient(circle at 50% 50%,rgba(255,94,58,0.12) 0%,transparent 70%);
+.learn-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:var(--radius);
+  transition:transform .4s ease;
 }
+.learn-img:hover img{transform:scale(1.02)}
 
 /* TESTIMONIALS */
 .testi{background:#fff;padding:88px 24px}
@@ -725,8 +725,8 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .testi-grid{grid-template-columns:1fr}
   .bon-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .learn-inner{grid-template-columns:1fr;gap:36px}
-  .learn-img{display:none}
+  .learn-inner{grid-template-columns:1fr;gap:24px}
+  .learn-img{display:block}
   .plans{grid-template-columns:1fr;gap:36px}
   .plan.hot{transform:none;margin-top:16px}
   .plan-price{font-size:48px}
@@ -795,7 +795,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .learn{padding:52px 18px}
   .learn-inner{gap:28px}
   .learn-left .sh{margin-bottom:24px}
-  .learn-img{display:none}
+  .learn-img{display:block}
   .check-list li{font-size:14px;gap:10px}
   .ck{width:20px;height:20px;min-width:20px}
 
@@ -1137,8 +1137,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
       </ul>
     </div>
     <div class="learn-img fade-up">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.25)"><path d="M8 5v14l11-7z"/></svg>
-      <span style="font-size:14px;max-width:160px">Aulas em vídeo com passo a passo completo</span>
+      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.jpg" alt="Preview das aulas em vídeo" loading="lazy">
     </div>
   </div>
 </section>
