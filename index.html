@@ -861,6 +861,29 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .stat-n{font-size:26px}
 }
+
+/* ===== NATAL CAROUSEL ===== */
+.natal{background:var(--wine-dark);padding:72px 24px;text-align:center;overflow:hidden}
+.natal-header{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.25);border-radius:40px;padding:8px 20px;margin-bottom:16px}
+.natal-header span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FFD700}
+.natal h2{font-size:clamp(26px,4vw,42px);color:#fff;margin-bottom:8px;font-weight:900}
+.natal-sub{font-size:15px;color:rgba(255,255,255,.5);margin-bottom:40px}
+.carousel-track-wrap{overflow:hidden;position:relative;margin:0 -24px;padding:8px 0 16px}
+.carousel-track-wrap::before,.carousel-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.carousel-track-wrap::before{left:0;background:linear-gradient(90deg,var(--wine-dark),transparent)}
+.carousel-track-wrap::after{right:0;background:linear-gradient(-90deg,var(--wine-dark),transparent)}
+.carousel-track{display:flex;gap:18px;width:max-content;animation:carousel-slide 24s linear infinite;cursor:grab}
+.carousel-track:active{cursor:grabbing}
+.carousel-track.paused{animation-play-state:paused}
+@keyframes carousel-slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.natal-card{width:220px;flex-shrink:0;background:rgba(255,255,255,0.05);border:1px solid rgba(255,215,0,0.18);border-radius:16px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.natal-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 16px 40px rgba(0,0,0,0.35)}
+.natal-card img{width:100%;height:220px;object-fit:cover;display:block}
+.natal-card-label{padding:12px 14px;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);text-align:center;border-top:1px solid rgba(255,215,0,0.1)}
+.natal-cta{margin-top:40px}
+.btn-gold{background:linear-gradient(135deg,#D4820A,#F5B942);color:#fff;box-shadow:0 8px 28px rgba(212,130,10,0.4)}
+.btn-gold:hover{background:linear-gradient(135deg,#b86e08,#d9a030);transform:translateY(-3px);box-shadow:0 14px 36px rgba(212,130,10,0.45)}
+@media(max-width:480px){.natal{padding:52px 0}.natal h2,.natal-sub,.natal-cta{padding:0 20px}.natal-card{width:180px}.natal-card img{height:180px}}
 </style>
 </head>
 <body>
@@ -994,6 +1017,34 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   </div>
   <div style="text-align:center;margin-top:40px" class="fade-up">
     <a href="#pricing" class="btn">Quero me inscrever e ter acesso a tudo</a>
+  </div>
+</section>
+
+
+<!-- NATAL CAROUSEL -->
+<section class="natal">
+  <div class="natal-header"><span>🎄 Bônus Especial de Natal</span></div>
+  <h2>Souplats de Natal que vendem muito</h2>
+  <p class="natal-sub">Modelos exclusivos incluídos no Plano Completo</p>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" id="carousel">
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
+    </div>
+  </div>
+  <div class="natal-cta">
+    <a href="https://payfast.greenn.com.br/redirect/288070" class="btn btn-gold">Quero o Bônus de Natal + Curso Completo</a>
+    <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.3)">Incluso no Plano Completo por R$19,90</p>
   </div>
 </section>
 
@@ -1251,6 +1302,16 @@ function playVsl(){
   if(id==='SEU_VIDEO_ID'){alert('Insira o ID do seu vídeo na função playVsl() no código.');return;}
   document.getElementById('vsl-box').innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allowfullscreen allow="autoplay"></iframe>';
 }
+
+(function(){
+  var t=document.getElementById('carousel');
+  if(!t)return;
+  t.addEventListener('mouseenter',function(){t.classList.add('paused')});
+  t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
+  t.addEventListener('touchstart',function(){t.classList.add('paused')},{passive:true});
+  t.addEventListener('touchend',function(){t.classList.remove('paused')},{passive:true});
+})();
+
 </script>
 </body>
 </html>
