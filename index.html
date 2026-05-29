@@ -884,6 +884,77 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
 .btn-gold{background:linear-gradient(135deg,#D4820A,#F5B942);color:#fff;box-shadow:0 8px 28px rgba(212,130,10,0.4)}
 .btn-gold:hover{background:linear-gradient(135deg,#b86e08,#d9a030);transform:translateY(-3px);box-shadow:0 14px 36px rgba(212,130,10,0.45)}
 @media(max-width:480px){.natal{padding:52px 0}.natal h2,.natal-sub,.natal-cta{padding:0 20px}.natal-card{width:180px}.natal-card img{height:180px}}
+
+/* ===== DEPOIMENTOS WHATSAPP ===== */
+.depo-section{
+  background:var(--sand);
+  padding:80px 24px;
+  text-align:center;
+  overflow:hidden;
+}
+.depo-section .sh-tag{background:var(--green-light);color:var(--green);border-color:rgba(46,107,53,0.2)}
+.depo-carousel-wrap{
+  overflow:hidden;
+  position:relative;
+  margin:0 -24px;
+  padding:8px 0 16px;
+}
+.depo-carousel-wrap::before,.depo-carousel-wrap::after{
+  content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+}
+.depo-carousel-wrap::before{left:0;background:linear-gradient(90deg,var(--sand),transparent)}
+.depo-carousel-wrap::after{right:0;background:linear-gradient(-90deg,var(--sand),transparent)}
+.depo-track{
+  display:flex;
+  gap:20px;
+  width:max-content;
+  animation:depo-slide 28s linear infinite;
+}
+.depo-track.paused{animation-play-state:paused}
+@keyframes depo-slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.depo-card{
+  width:260px;
+  flex-shrink:0;
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 28px rgba(107,26,26,0.1);
+  border:1px solid var(--border);
+  transition:transform .25s,box-shadow .25s;
+}
+.depo-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 16px 48px rgba(107,26,26,0.16)}
+.depo-card img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  object-position:top;
+  display:block;
+}
+.depo-card-footer{
+  padding:14px 16px;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.depo-wa{
+  width:28px;height:28px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.depo-wa svg{width:16px;height:16px}
+.depo-card-name{font-size:12px;font-weight:700;color:var(--wine-dark)}
+.depo-card-sub{font-size:11px;color:var(--text-muted);margin-top:1px}
+.depo-cta{margin-top:44px}
+@media(max-width:480px){
+  .depo-section{padding:52px 0}
+  .depo-section .sh,.depo-cta{padding:0 20px}
+  .depo-card{width:220px}
+  .depo-card img{height:340px}
+}
 </style>
 </head>
 <body>
@@ -1151,6 +1222,95 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   </div>
 </section>
 
+
+<!-- DEPOIMENTOS WHATSAPP -->
+<section class="depo-section">
+  <div class="sh fade-up">
+    <span class="sh-tag">Prova real</span>
+    <h2>Veja os Trabalhos das Nossas Alunas</h2>
+    <p>Prints reais do grupo exclusivo do WhatsApp do curso</p>
+  </div>
+
+  <div class="depo-carousel-wrap">
+    <div class="depo-track" id="depo-carousel">
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Renata</div>
+            <div class="depo-card-sub">Lucro de R$700 em uma semana</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Aurora e Valeria</div>
+            <div class="depo-card-sub">Fila de encomendas de souplats</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Elisangela</div>
+            <div class="depo-card-sub">R$5.000 em encomendas em um mês</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Lucinda</div>
+            <div class="depo-card-sub">Apaixonada pelo americano de Stitch</div>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicados para loop infinito -->
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Renata</div><div class="depo-card-sub">Lucro de R$700 em uma semana</div></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Aurora e Valeria</div><div class="depo-card-sub">Fila de encomendas de souplats</div></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Elisangela</div><div class="depo-card-sub">R$5.000 em encomendas em um mês</div></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.jpg" alt="Depoimento aluna" loading="lazy">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Lucinda</div><div class="depo-card-sub">Apaixonada pelo americano de Stitch</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="depo-cta fade-up">
+    <a href="https://payfast.greenn.com.br/redirect/288070" class="btn btn-green">Quero resultados como esses também</a>
+    <p style="margin-top:12px;font-size:12px;color:var(--text-light)">Mais de 3.200 alunas já estão vendendo</p>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="sh fade-up">
@@ -1305,6 +1465,16 @@ function playVsl(){
 
 (function(){
   var t=document.getElementById('carousel');
+  if(!t)return;
+  t.addEventListener('mouseenter',function(){t.classList.add('paused')});
+  t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
+  t.addEventListener('touchstart',function(){t.classList.add('paused')},{passive:true});
+  t.addEventListener('touchend',function(){t.classList.remove('paused')},{passive:true});
+})();
+
+
+(function(){
+  var t=document.getElementById('depo-carousel');
   if(!t)return;
   t.addEventListener('mouseenter',function(){t.classList.add('paused')});
   t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
