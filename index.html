@@ -1101,14 +1101,15 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 
 
 /* ===== SINGLE PLAN ===== */
-.single-plan-wrap{max-width:600px;margin:0 auto}
+.single-plan-wrap{max-width:520px;margin:0 auto}
 .single-plan{
   background:#fff;
   border:2px solid var(--coral);
-  border-radius:20px;
-  padding:40px 36px;
-  box-shadow:0 20px 60px rgba(80,40,30,0.18);
+  border-radius:24px;
+  padding:48px 40px 40px;
+  box-shadow:0 24px 70px rgba(80,40,30,0.2);
   position:relative;
+  text-align:center;
   animation:border-glow 3s ease-in-out infinite;
 }
 .single-plan-badge{
@@ -1119,45 +1120,90 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   color:#FFD700;
   font-size:13px;font-weight:800;
   letter-spacing:.05em;
-  padding:7px 24px;
+  padding:7px 28px;
   border-radius:30px;
   white-space:nowrap;
   box-shadow:0 4px 16px rgba(204,34,0,0.4);
 }
-.single-plan-top{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:32px;
-  align-items:start;
-  margin-top:16px;
-  margin-bottom:32px;
-}
 .single-plan-name{
-  font-size:13px;font-weight:800;
-  letter-spacing:.1em;text-transform:uppercase;
-  color:var(--coral);margin-bottom:20px;
+  font-size:12px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--coral);margin-bottom:24px;
 }
-.single-plan-right{text-align:right;min-width:140px}
+.single-plan-top{
+  display:block;
+  margin-top:8px;
+  margin-bottom:28px;
+}
+.single-plan-right{text-align:center}
 .single-plan-old{
-  font-size:13px;color:var(--text-light);
-  text-decoration:line-through;margin-bottom:4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:6px;
 }
-.single-plan-old span{color:var(--text-muted)}
+.single-plan-old-label{
+  font-size:13px;
+  color:var(--text-muted);
+  font-weight:500;
+}
+.single-plan-old-val{
+  font-size:22px;
+  font-weight:700;
+  color:var(--text-light);
+  text-decoration:line-through;
+}
+.single-plan-arrow{
+  font-size:20px;
+  color:var(--coral);
+  font-weight:900;
+}
 .single-plan-price{
   font-family:'Cormorant Garamond',serif;
-  font-size:68px;font-weight:900;
+  font-size:92px;font-weight:900;
   color:var(--wine-dark);line-height:1;
+  margin:4px 0 2px;
 }
-.single-plan-price sup{font-size:26px;vertical-align:top;margin-top:16px;display:inline-block}
-.single-plan-cents{font-size:30px}
-.single-plan-period{font-size:12px;color:var(--text-muted);margin-top:4px}
+.single-plan-price sup{
+  font-size:32px;vertical-align:top;
+  margin-top:18px;display:inline-block;
+}
+.single-plan-cents{font-size:42px;vertical-align:top;margin-top:28px;display:inline-block}
+.single-plan-period{
+  font-size:13px;color:var(--text-muted);
+  margin-top:6px;font-weight:500;
+}
 .single-plan-economy{
   display:inline-block;
   background:var(--green-light);
   color:var(--green);
-  font-size:12px;font-weight:700;
-  padding:4px 12px;border-radius:20px;
-  margin-top:10px;
+  font-size:13px;font-weight:800;
+  padding:6px 18px;border-radius:20px;
+  margin-top:12px;
+  border:1px solid rgba(74,112,85,0.2);
+}
+.single-plan-divider{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:24px 0;
+}
+.plan-feats{
+  text-align:left;
+  list-style:none;
+  display:flex;flex-direction:column;gap:11px;
+  margin-bottom:28px;
+}
+.plan-feats li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:14px;color:var(--text);line-height:1.45;
+}
+.plan-feats .ck{
+  background:var(--green-light);color:var(--green);
+  width:20px;height:20px;min-width:20px;
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;
+  margin-top:1px;
 }
 .single-plan-btn{
   width:100%;
@@ -1173,19 +1219,19 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:20px;
+  gap:16px;
   flex-wrap:wrap;
   font-size:12px;
   color:var(--text-muted);
   font-weight:600;
 }
 @media(max-width:560px){
-  .single-plan{padding:32px 20px}
-  .single-plan-top{grid-template-columns:1fr;gap:20px}
-  .single-plan-right{text-align:left}
-  .single-plan-price{font-size:56px}
+  .single-plan{padding:40px 22px 32px}
+  .single-plan-price{font-size:76px}
+  .single-plan-cents{font-size:34px;margin-top:22px}
+  .single-plan-price sup{font-size:26px;margin-top:14px}
   .single-plan-btn{font-size:16px;padding:17px 24px}
-  .single-plan-trust{gap:12px;font-size:11px}
+  .single-plan-trust{gap:10px;font-size:11px}
 }
 </style>
 </head>
@@ -1517,28 +1563,34 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="single-plan">
       <div class="single-plan-badge">🔥 Oferta especial por tempo limitado</div>
 
+      <div class="single-plan-name">Acesso Completo ao Curso</div>
+
       <div class="single-plan-top">
-        <div class="single-plan-left">
-          <div class="single-plan-name">Plano Completo</div>
-          <ul class="plan-feats">
-            <li><span class="ck">✓</span><strong>+200 vídeo aulas de crochê de mesa</strong></li>
-            <li><span class="ck">✓</span>Gráficos e receitas exclusivas</li>
-            <li><span class="ck">✓</span>Acesso vitalício</li>
-            <li><span class="ck">✓</span>Grupo exclusivo no WhatsApp</li>
-            <li><span class="ck">✓</span>Fornecedores exclusivos de materiais</li>
-            <li><span class="ck">✓</span>3 bônus exclusivos (vale R$251)</li>
-            <li><span class="ck">✓</span>Receitas novas toda semana</li>
-          </ul>
-        </div>
         <div class="single-plan-right">
-          <div class="single-plan-old">de <span>R$297</span></div>
+          <div class="single-plan-old">
+            <span class="single-plan-old-label">De</span>
+            <span class="single-plan-old-val">R$297,00</span>
+            <span class="single-plan-arrow">→</span>
+          </div>
           <div class="single-plan-price">
             <sup>R$</sup>19<span class="single-plan-cents">,90</span>
           </div>
-          <div class="single-plan-period">pagamento único</div>
-          <div class="single-plan-economy">Você economiza R$277 hoje</div>
+          <div class="single-plan-period">pagamento único · acesso vitalício</div>
+          <div class="single-plan-economy">✨ Você economiza R$277 hoje</div>
         </div>
       </div>
+
+      <hr class="single-plan-divider">
+
+      <ul class="plan-feats">
+        <li><span class="ck">✓</span><strong>+200 vídeo aulas de crochê de mesa</strong></li>
+        <li><span class="ck">✓</span>Gráficos e receitas exclusivas de cada modelo</li>
+        <li><span class="ck">✓</span>Acesso vitalício — sem mensalidade, para sempre</li>
+        <li><span class="ck">✓</span>Grupo exclusivo no WhatsApp com a comunidade</li>
+        <li><span class="ck">✓</span>Fornecedores exclusivos com preço de atacado</li>
+        <li><span class="ck">✓</span>3 bônus exclusivos no valor de R$251</li>
+        <li><span class="ck">✓</span>Receitas e modelos novos toda semana</li>
+      </ul>
 
       <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn single-plan-btn">
         Quero meu acesso agora
