@@ -1233,6 +1233,104 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   .single-plan-btn{font-size:16px;padding:17px 24px}
   .single-plan-trust{gap:10px;font-size:11px}
 }
+
+/* ===== 3 MOTIVOS ===== */
+.motivos{background:var(--warm);padding:64px 24px;text-align:center}
+.motivos-grid{
+  max-width:960px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.motivo-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px 24px;
+  box-shadow:var(--shadow);
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease;
+  position:relative;overflow:hidden;
+}
+.motivo-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--coral-mid),var(--coral));
+}
+.motivo-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.motivo-icon{
+  width:56px;height:56px;
+  background:var(--coral-light);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;margin:0 auto 18px;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1);
+}
+.motivo-card:hover .motivo-icon{transform:scale(1.15) rotate(-5deg)}
+.motivo-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;color:var(--wine-dark);
+  margin-bottom:12px;font-weight:700;
+}
+.motivo-card p{font-size:14px;color:var(--text-muted);line-height:1.75}
+
+/* ===== O QUE TEM ACESSO ===== */
+.acesso{
+  background:linear-gradient(160deg,#3D1A1A 0%,#5C2A22 60%,#3D1A1A 100%);
+  padding:64px 24px;
+  text-align:center;
+}
+.acesso-inner{max-width:900px;margin:0 auto}
+.acesso-tag{
+  font-size:13px;font-weight:600;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.04em;
+  margin-bottom:12px;
+}
+.acesso-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,4vw,44px);
+  color:#fff;font-weight:900;
+  margin-bottom:40px;
+}
+.acesso-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.acesso-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  padding:28px 22px;
+  text-align:left;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .25s;
+}
+.acesso-card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.11);
+}
+.acesso-check{
+  width:36px;height:36px;
+  background:var(--coral);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:900;color:#fff;
+  margin-bottom:16px;
+  animation:heartbeat 3s ease-in-out infinite;
+}
+.acesso-card p{
+  font-size:14px;color:rgba(255,255,255,.75);
+  line-height:1.75;
+}
+.acesso-card p strong{color:#fff;font-weight:700}
+
+@media(max-width:760px){
+  .motivos-grid{grid-template-columns:1fr;gap:16px}
+  .acesso-grid{grid-template-columns:1fr;gap:16px}
+  .motivos{padding:48px 20px}
+  .acesso{padding:48px 20px}
+}
+@media(max-width:480px){
+  .motivo-card{padding:24px 18px}
+  .acesso-card{padding:22px 16px}
+  .motivo-card h3{font-size:19px}
+}
 </style>
 </head>
 <body>
@@ -1520,6 +1618,54 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <div class="depo-cta fade-up">
     <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn btn-green">Quero resultados como esses também</a>
     <p style="margin-top:12px;font-size:12px;color:var(--text-light)">Mais de 3.200 alunas já estão vendendo</p>
+  </div>
+</section>
+
+
+<!-- 3 MOTIVOS -->
+<section class="motivos fade-up">
+  <div class="sh fade-up">
+    <span class="sh-tag">Por que escolher este curso</span>
+    <h2>3 Motivos Para Fazer o <em>Curso Crochê de Mesa</em></h2>
+  </div>
+  <div class="motivos-grid">
+    <div class="motivo-card fade-up">
+      <div class="motivo-icon">🧶</div>
+      <h3>Comece sua Jornada do Zero</h3>
+      <p>Sempre tenha algo novo para criar e vender, sem precisar gastar horas procurando inspirações. As aulas começam do ponto inicial e vão até o acabamento perfeito.</p>
+    </div>
+    <div class="motivo-card fade-up">
+      <div class="motivo-icon">💰</div>
+      <h3>Potencial de Lucro Elevado</h3>
+      <p>Aumente suas vendas e fidelize seus clientes com peças lindas e exclusivas que vendem o ano todo. Nossas alunas faturam entre R$700 e R$7.000 por mês.</p>
+    </div>
+    <div class="motivo-card fade-up">
+      <div class="motivo-icon">📱</div>
+      <h3>Facilidade e Praticidade</h3>
+      <p>Todas as receitas vêm organizadas, prontas para você baixar e usar em qualquer dispositivo. Aprenda no seu ritmo, quando e onde quiser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE TEM ACESSO -->
+<section class="acesso">
+  <div class="acesso-inner">
+    <div class="acesso-tag fade-up">somente para as primeiras vagas, aproveite enquanto há tempo...</div>
+    <h2 class="acesso-title fade-up">O Que Você Vai Ter Acesso?</h2>
+    <div class="acesso-grid fade-up">
+      <div class="acesso-card">
+        <div class="acesso-check">✓</div>
+        <p><strong>+200 Vídeo Aulas</strong> de Souplats, Caminhos de Mesa e Jogos Americanos incríveis e muito vendidos, além de gráficos detalhados com o passo a passo. Do zero, mesmo que nunca tenha feito crochê antes.</p>
+      </div>
+      <div class="acesso-card">
+        <div class="acesso-check">✓</div>
+        <p><strong>+200 Vídeos, Gráficos e Receitas</strong> de crochê de mesa mais lindos e pedidos do momento pelas clientes.</p>
+      </div>
+      <div class="acesso-card">
+        <div class="acesso-check">✓</div>
+        <p><strong>Bônus com 90 Gráficos e Receitas</strong> de Almofadas e Crochê de Pano de Copa — uma linha extra de produtos para vender.</p>
+      </div>
+    </div>
   </div>
 </section>
 
