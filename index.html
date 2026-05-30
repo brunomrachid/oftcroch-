@@ -22,7 +22,13 @@ src="https://www.facebook.com/tr?id=853407021159645&ev=PageView&noscript=1"
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="theme-color" content="#3D0A0A">
 <meta name="mobile-web-app-capable" content="yes">
-<title>Crochê de Mesa que Vende — Souplats, Caminhos e Jogos Americanos</title>
+  <!-- Open Graph / Compartilhamento social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Curso Crochê de Mesa — Aprenda e Lucre">
+  <meta property="og:description" content="Mais de 200 modelos de souplats, caminhos de mesa e jogos americanos. Do primeiro ponto até a primeira venda.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.jpg">
+  <meta name="description" content="Aprenda crochê de mesa com +200 vídeo aulas e comece a vender em até 30 dias. Souplats, caminhos de mesa e jogos americanos que vendem muito.">
+  <title>Crochê de Mesa que Vende — Souplats, Caminhos e Jogos Americanos</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Lato:wght@300;400;700;900&display=swap&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -367,37 +373,8 @@ a{text-decoration:none;color:inherit}
 .sh p{font-size:16px;color:var(--text-muted);line-height:1.75}
 
 /* FOR WHOM */
-.forwhom{background:var(--sand);padding:64px 24px}
-.fw-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.fw-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:32px 28px;
-  box-shadow:var(--shadow);
-  position:relative;
-  overflow:hidden;
-  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease;
-}
-.fw-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
-.fw-card::after{
-  content:'';
-  position:absolute;
-  top:0;left:0;right:0;
-  height:4px;
-  background:linear-gradient(90deg,var(--coral-mid),var(--coral));
-}
-.fw-icon{
-  width:52px;height:52px;
-  background:var(--coral-light);
-  border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:26px;
-  margin-bottom:18px;
-  animation:sway 5s ease-in-out infinite;
-}
-.fw-card h3{font-size:20px;color:var(--wine-dark);margin-bottom:10px}
-.fw-card p{font-size:14px;color:var(--text-muted);line-height:1.75}
+
+
 
 /* GALLERY */
 .gallery{background:#fff;padding:64px 24px}
@@ -480,36 +457,7 @@ a{text-decoration:none;color:inherit}
 .learn-img:hover img{transform:scale(1.02)}
 
 /* TESTIMONIALS */
-.testi{background:#fff;padding:64px 24px}
-.testi-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.testi-card{
-  background:var(--warm);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:24px;
-  box-shadow:var(--shadow);
-  transition:transform .22s;
-}
-.testi-card:hover{transform:translateY(-4px)}
-.testi-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.testi-av{
-  width:44px;height:44px;
-  border-radius:50%;
-  background:var(--coral);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:700;font-size:14px;color:#fff;flex-shrink:0;
-}
-.testi-name{font-size:14px;font-weight:700;color:var(--wine-dark)}
-.testi-stars{color:var(--gold);font-size:13px;margin-top:1px}
-.testi-badge{
-  display:inline-block;
-  background:var(--green-light);
-  color:var(--green);
-  font-size:12px;font-weight:700;
-  padding:4px 12px;border-radius:20px;
-  margin-bottom:12px;
-}
-.testi-txt{font-size:13px;color:var(--text-muted);line-height:1.75}
+
 
 /* BONUSES */
 .bonuses{background:var(--coral-light);padding:64px 24px;border-top:2px solid var(--coral)}
@@ -761,8 +709,6 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:none}
   .stat:nth-child(3){border-bottom:none}
-  .fw-grid{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
   .bon-grid{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .learn-inner{grid-template-columns:1fr 1fr;gap:16px}
@@ -812,18 +758,9 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .stat-l{font-size:12px}
 
   /* PAIN */
-  .pain{padding:48px 18px}
-  .pain h2{font-size:24px;margin-bottom:22px}
-  .pain-list li{font-size:14px;padding:12px 14px;gap:10px}
-  .pain-turn{font-size:20px}
 
   /* FOR WHOM */
   .forwhom{padding:52px 18px}
-  .fw-grid{gap:16px}
-  .fw-card{padding:24px 20px}
-  .fw-icon{width:44px;height:44px;font-size:22px}
-  .fw-card h3{font-size:18px}
-  .fw-card p{font-size:14px}
 
   /* GALLERY */
   .gallery{padding:48px 18px}
@@ -839,10 +776,6 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .ck{width:20px;height:20px;min-width:20px}
 
   /* TESTIMONIALS */
-  .testi{padding:48px 18px}
-  .testi-grid{gap:16px}
-  .testi-card{padding:18px}
-  .testi-txt{font-size:13px}
 
   /* BONUSES */
   .bonuses{padding:48px 18px}
@@ -1386,7 +1319,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <em>em Lucro Real ainda este mês</em>
   </h1>
   <p class="hero-sub">
-    Mais de <strong>200 modelos exclusivos</strong> em vídeo aulas completas. Do primeiro ponto até a venda, mesmo que você nunca tenha pegado em uma agulha antes.
+    Mais de <strong>200 modelos exclusivos</strong> em vídeo aulas completas. Do primeiro ponto até a primeira venda, mesmo que você nunca tenha pegado em uma agulha na vida.
   </p>
 
   <div class="vsl-wrap">
@@ -1431,8 +1364,8 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <div class="stats-inner">
     <div class="stat fade-up"><div class="stat-n">+3.200</div><div class="stat-l">alunas ativas</div></div>
     <div class="stat fade-up"><div class="stat-n">+200</div><div class="stat-l">modelos exclusivos</div></div>
-    <div class="stat fade-up"><div class="stat-n">4.9 ★</div><div class="stat-l">avaliação média</div></div>
-    <div class="stat fade-up"><div class="stat-n">R$7k</div><div class="stat-l">potencial por mês</div></div>
+    <div class="stat fade-up"><div class="stat-n">4.9 ★</div><div class="stat-l">avaliação das alunas</div></div>
+    <div class="stat fade-up"><div class="stat-n">R$7k</div><div class="stat-l">faturamento possível/mês</div></div>
   </div>
 </div>
 
@@ -1457,7 +1390,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
       </ul>
     </div>
     <div class="learn-img fade-up">
-      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.jpg" alt="Preview das aulas em vídeo" loading="lazy">
+      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.jpg" alt="Preview das aulas em vídeo" loading="lazy" fetchpriority="high">
       <div class="learn-badge">
         <span class="learn-badge-icon">🎬</span>
         <div>
@@ -1682,7 +1615,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 <!-- O QUE TEM ACESSO -->
 <section class="acesso">
   <div class="acesso-inner">
-    <div class="acesso-tag fade-up">somente para as primeiras vagas, aproveite enquanto há tempo...</div>
+    <div class="acesso-tag fade-up">Somente para as primeiras vagas — aproveite enquanto há tempo</div>
     <h2 class="acesso-title fade-up">O Que Você Vai Ter Acesso?</h2>
     <div class="acesso-grid fade-up">
       <div class="acesso-card">
@@ -1762,8 +1695,8 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 <section class="guarantee">
   <div class="guar-inner fade-up">
     <img class="guar-badge" src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/garantia.webp" alt="7 dias de garantia" loading="lazy">
-    <h2>Risco <em>Zero</em> pra Você</h2>
-    <p>O Código de Defesa do Consumidor garante 7 dias para solicitar reembolso. E nós honramos isso: <strong>7 dias de garantia incondicional</strong>. Se não ficar satisfeita por qualquer motivo, devolvemos 100% do valor pago. Sem burocracia e sem perguntas.</p>
+    <h2>Garantia de <em>7 Dias</em> ou seu Dinheiro de Volta</h2>
+    <p>Compre com total tranquilidade. Se em até <strong>7 dias</strong> você não ficar satisfeita por qualquer motivo, devolvemos <strong>100% do seu dinheiro</strong>. Sem burocracia, sem perguntas, sem enrolação. O risco é completamente nosso.</p>
   </div>
 </section>
 
@@ -1789,7 +1722,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="faq(this)">Existe alguma garantia que o programa funciona?<span class="faq-ic">+</span></button>
-      <div class="faq-a"><p>Sim. Você tem 7 dias de garantia incondicional. Se não ficar satisfeita por qualquer motivo, devolvemos 100% do valor pago. Sem perguntas. Além disso, temos mais de 3.200 alunas ativas com resultados comprovados.</p></div>
+      <div class="faq-a"><p>Sim. Você tem 7 dias de garantia incondicional. Comprou, entrou, não gostou por qualquer motivo — manda mensagem e devolvemos 100% do valor. Sem questionamentos. Além disso, temos mais de 3.200 alunas ativas com resultados comprovados todos os dias no grupo.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="faq(this)">E se eu não tiver tempo para estudar?<span class="faq-ic">+</span></button>
@@ -1810,7 +1743,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 <!-- FINAL CTA -->
 <section class="fcta">
   <h2>Sua primeira venda pode acontecer <em>ainda essa semana</em></h2>
-  <p>Garanta sua vaga agora enquanto o desconto está ativo.</p>
+  <p>Garanta agora enquanto o desconto ainda está ativo.</p>
   <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn">Quero Me Inscrever Agora</a>
   <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.3);position:relative">Acesso imediato. 7 dias de garantia. Pagamento 100% seguro.</p>
 </section>
