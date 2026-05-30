@@ -176,9 +176,10 @@ a{text-decoration:none;color:inherit}
   width:100%;
   padding-top:56.25%;
   border-radius:var(--radius);
-  overflow:hidden;
+  overflow:hidden !important;
   box-shadow:0 24px 80px rgba(0,0,0,0.5);
-  border:2px solid rgba(255,94,58,0.35);
+  border:2px solid rgba(196,115,106,0.35);
+  background:#000;
 }
 .vsl-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
 .vsl-placeholder{
@@ -1281,8 +1282,8 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   .acesso-card{padding:22px 16px}
   .motivo-card h3{font-size:19px}
 }
-.yt-facade{position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;background:#000;overflow:hidden}
-.yt-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .2s;display:block}
+.yt-facade{position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;background:#000;overflow:hidden;border-radius:var(--radius)}
+.yt-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;transition:opacity .2s;display:block;border-radius:0}
 .yt-facade:hover img{opacity:.7}
 .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;transition:transform .2s;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));pointer-events:none}
 .yt-facade:hover .yt-play{transform:translate(-50%,-50%) scale(1.08)}
@@ -1807,7 +1808,7 @@ function faq(btn){
 // VSL
 function loadYT(){
   var box = document.getElementById('vsl-box');
-  box.innerHTML = '<iframe src="https://www.youtube.com/embed/_NvcZdVR0Gs?autoplay=1&rel=0&modestbranding=1" title="Curso Crochê de Mesa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>';
+  box.innerHTML = '<iframe src="https://www.youtube.com/embed/_NvcZdVR0Gs?autoplay=1&rel=0&modestbranding=1" title="Curso Crochê de Mesa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:14px"></iframe>';
 }
 function playVsl(){
   // Troque SEU_VIDEO_ID pelo ID do seu vídeo do YouTube
