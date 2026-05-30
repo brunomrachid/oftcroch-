@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '853407021159645');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=853407021159645&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="theme-color" content="#3D0A0A">
@@ -33,35 +16,35 @@ src="https://www.facebook.com/tr?id=853407021159645&ev=PageView&noscript=1"
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* Rosa antigo — acolhedor, feminino, maduro */
+  
   --coral:#C4736A;
   --coral-dark:#A85C54;
   --coral-light:#FDF0EE;
   --coral-mid:#D4918A;
 
-  /* Vinho suave — elegante, não pesado */
+  
   --wine:#6B2E2E;
   --wine-dark:#3D1A1A;
 
-  /* Fundos quentes — papel antigo, linho, algodão */
+  
   --cream:#FEFAF6;
   --warm:#FDF5F0;
   --sand:#F5EBE0;
 
-  /* Texto */
+  
   --text:#2A1A14;
   --text-muted:#7A5A50;
   --text-light:#B09080;
 
-  /* Ouro envelhecido */
+  
   --gold:#B8892A;
   --gold-light:#FBF3E0;
 
-  /* Verde musgo */
+  
   --green:#4A7055;
   --green-light:#EAF2EC;
 
-  /* Bordas suaves */
+  
   --border:rgba(180,115,106,0.15);
   --border-mid:rgba(180,115,106,0.28);
 
@@ -164,7 +147,6 @@ a{text-decoration:none;color:inherit}
 }
 .hero-sub strong{color:#fff;font-weight:700}
 
-/* VSL */
 .vsl-wrap{
   max-width:740px;
   margin:0 auto 32px;
@@ -216,7 +198,6 @@ a{text-decoration:none;color:inherit}
   margin-top:12px;
 }
 
-/* BUTTONS */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -355,7 +336,6 @@ a{text-decoration:none;color:inherit}
   border-top:1px solid rgba(255,255,255,.08);
 }
 
-/* SECTION HEADER */
 .sh{text-align:center;max-width:680px;margin:0 auto 40px}
 .sh-tag{
   display:inline-block;
@@ -372,10 +352,6 @@ a{text-decoration:none;color:inherit}
 }
 .sh h2{font-size:clamp(30px,4vw,46px);color:var(--wine-dark);margin-bottom:14px;letter-spacing:-0.01em}
 .sh p{font-size:16px;color:var(--text-muted);line-height:1.75}
-
-/* FOR WHOM */
-
-
 
 /* GALLERY */
 .gallery{background:#fff;padding:64px 24px}
@@ -457,10 +433,6 @@ a{text-decoration:none;color:inherit}
 }
 .learn-img:hover img{transform:scale(1.02)}
 
-/* TESTIMONIALS */
-
-
-/* BONUSES */
 .bonuses{background:var(--coral-light);padding:64px 24px;border-top:2px solid var(--coral)}
 .bon-total{
   text-align:center;
@@ -657,7 +629,6 @@ a{text-decoration:none;color:inherit}
 .faq-item.open .faq-a{max-height:360px;padding-bottom:22px}
 .faq-a p{font-size:15px;color:var(--text-muted);line-height:1.8}
 
-/* FINAL CTA */
 .fcta{
   background:var(--wine-dark);
   padding:96px 24px;
@@ -683,7 +654,6 @@ a{text-decoration:none;color:inherit}
   line-height:1.7;position:relative;
 }
 
-/* FOOTER */
 footer{
   background:#0d0000;
   padding:30px 24px;
@@ -693,15 +663,12 @@ footer{
 }
 footer a{color:rgba(255,255,255,.38);text-decoration:underline}
 
-/* RESPONSIVE */
 /* ===== MOBILE FIRST — FULL OPTIMIZATION ===== */
 
-/* Tablets (max 860px) */
 @media(max-width:860px){
   .gal-grid{grid-template-columns:repeat(3,1fr)}
 }
 
-/* Tablets menores (max 760px) */
 @media(max-width:760px){
   section, .stats, .bonuses, .testi, .forwhom, .gallery, .learn, .guarantee, .faq, .fcta{
     padding:56px 20px;
@@ -721,9 +688,8 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .pricing-grid{grid-template-columns:1fr}
 }
 
-/* Mobile (max 480px) */
 @media(max-width:480px){
-  /* BASE */
+  
   body{font-size:15px}
   
   /* URGENCY */
@@ -737,7 +703,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .vsl-wrap{margin-bottom:22px}
   .vsl-play{width:60px;height:60px}
 
-  /* BUTTONS */
+  
   .btn{
     font-size:15px;
     padding:16px 28px;
@@ -760,7 +726,7 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
 
   /* PAIN */
 
-  /* FOR WHOM */
+  
   .forwhom{padding:52px 18px}
 
   /* GALLERY */
@@ -776,9 +742,9 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .check-list li{font-size:14px;gap:10px}
   .ck{width:20px;height:20px;min-width:20px}
 
-  /* TESTIMONIALS */
+  
 
-  /* BONUSES */
+  
   .bonuses{padding:48px 18px}
   .bon-grid{gap:16px}
   .bon-card{padding:22px 18px}
@@ -809,22 +775,21 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
   .faq-q{font-size:14px;padding:18px 0}
   .faq-a p{font-size:13px}
 
-  /* FINAL CTA */
+  
   .fcta{padding:48px 18px}
   .fcta h2{font-size:26px}
   .fcta p{font-size:15px;margin-bottom:24px}
 
-  /* SECTION HEADERS */
+  
   .sh{margin-bottom:28px}
   .sh h2{font-size:26px}
   .sh p{font-size:14px}
   .sh-tag{font-size:10px;padding:4px 12px}
 
-  /* FOOTER */
+  
   footer{padding:22px 18px;font-size:11px}
 }
 
-/* Extra small phones (max 360px) */
 @media(max-width:360px){
   .hero h1{font-size:24px}
   .btn{font-size:14px;padding:15px 22px}
@@ -929,7 +894,6 @@ footer a{color:rgba(255,255,255,.38);text-decoration:underline}
 
 /* ===== MICRO-INTERAÇÕES PARA PÚBLICO 45+ ===== */
 
-/* Textura sutil no fundo */
 body::before{
   content:'';
   position:fixed;
@@ -940,21 +904,17 @@ body::before{
 }
 body > *{position:relative;z-index:1}
 
-/* Links e botões com cursor pointer grande */
 .btn,.plan-btn,.faq-q,.natal-card,.depo-card,.fw-card,.bon-card{
   cursor:pointer;
 }
 
-/* Focus visible acessível para 45+ */
 .btn:focus-visible,.plan-btn:focus-visible,.faq-q:focus-visible{
   outline:3px solid var(--coral-mid);
   outline-offset:3px;
 }
 
-/* Scroll suave para seções */
 section{scroll-margin-top:60px}
 
-/* Cards com borda esquerda colorida nos checks */
 .check-list li:hover .ck{
   background:var(--coral);
   color:#fff;
@@ -962,12 +922,10 @@ section{scroll-margin-top:60px}
   transition:all .25s cubic-bezier(.34,1.56,.64,1);
 }
 
-/* Botão principal — pulsa suavemente no idle */
 .btn-primary-pulse{
   animation:pulse 3s ease-in-out infinite;
 }
 
-/* Stats — contagem animada ao entrar na tela */
 .stat-n{
   transition:transform .4s cubic-bezier(.34,1.56,.64,1);
 }
@@ -983,7 +941,6 @@ section{scroll-margin-top:60px}
   transition:border-left .3s ease, padding-left .3s ease;
 }
 
-/* Bonus card — brilho suave no hover */
 .bon-card::after{
   content:'';
   position:absolute;
@@ -995,23 +952,19 @@ section{scroll-margin-top:60px}
 }
 .bon-card:hover::after{opacity:1}
 
-/* Imagem das aulas — moldura quente */
 .learn-img img{
   border:3px solid var(--sand);
   box-shadow:0 8px 40px rgba(80,40,30,0.18), 6px 6px 0 var(--coral-light);
 }
 
-/* Galeria — label sempre visível no mobile */
 @media(max-width:480px){
   .gal-label{opacity:1 !important}
 }
 
-/* Seção de fundo escuro — texto mais legível */
 .pricing .sh h2,.fcta h2{
   text-shadow:0 2px 12px rgba(0,0,0,0.25);
 }
 
-/* Plano featured — brilho animado na borda */
 @keyframes border-glow{
   0%,100%{box-shadow:0 0 0 0 rgba(196,115,106,0.4),0 16px 40px rgba(80,40,30,0.2)}
   50%{box-shadow:0 0 0 6px rgba(196,115,106,0.15),0 16px 40px rgba(80,40,30,0.2)}
@@ -1020,21 +973,17 @@ section{scroll-margin-top:60px}
   animation:border-glow 3s ease-in-out infinite;
 }
 
-/* Urgency countdown — mais legível */
 .cd-b{
   font-size:16px !important;
   letter-spacing:.05em;
 }
 
-/* Seção depoimentos whatsapp — fundo mais quente */
 .depo-section{
   background:linear-gradient(160deg,var(--sand) 0%,var(--warm) 100%) !important;
 }
 
-/* Footer links — hover suave */
 footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 
-/* Scroll indicator no hero */
 .hero-scroll{
   position:absolute;
   bottom:24px;left:50%;
@@ -1049,7 +998,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   border-radius:50%;
   animation:softglow 1.5s ease-in-out infinite;
 }
-
 
 /* ===== SINGLE PLAN ===== */
 .single-plan-wrap{max-width:520px;margin:0 auto}
@@ -1288,6 +1236,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;transition:transform .2s;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));pointer-events:none}
 .yt-facade:hover .yt-play{transform:translate(-50%,-50%) scale(1.08)}
 .yt-caption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:rgba(255,255,255,.85);font-size:14px;font-weight:600;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.6);pointer-events:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media(max-width:480px){.btn,.single-plan,.plan-btn-hot{animation:none}}
 </style>
 <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
@@ -1318,7 +1267,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <span><span class="hi">Últimas vagas disponíveis</span></span>
 </div>
 
-
 <!-- HERO -->
 <section class="hero">
   <h1>
@@ -1333,10 +1281,11 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="vsl-box" id="vsl-box">
       <div class="yt-facade" id="yt-facade" onclick="loadYT()" role="button" aria-label="Assistir vídeo">
         <img 
-          src="https://i.ytimg.com/vi/_NvcZdVR0Gs/maxresdefault.jpg" 
-          alt="Assistir vídeo do curso" 
+          src="https://i.ytimg.com/vi/_NvcZdVR0Gs/maxresdefault.jpg"
+          alt="Assistir vídeo do curso"
           loading="eager"
           fetchpriority="high"
+          width="1280" height="720"
           onerror="this.src='https://i.ytimg.com/vi/_NvcZdVR0Gs/hqdefault.jpg'"
         >
         <div class="yt-play">
@@ -1357,7 +1306,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   </div>
 </section>
 
-
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker-inner" id="ticker">
@@ -1374,7 +1322,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   </div>
 </div>
 
-
 <!-- STATS -->
 <div class="stats">
   <div class="stats-inner">
@@ -1384,7 +1331,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="stat fade-up"><div class="stat-n">R$7k</div><div class="stat-l">faturamento possível/mês</div></div>
   </div>
 </div>
-
 
 <!-- O QUE VAI RECEBER -->
 <section class="learn">
@@ -1406,7 +1352,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
       </ul>
     </div>
     <div class="learn-img fade-up">
-      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.webp" alt="Preview das aulas em vídeo" loading="lazy" fetchpriority="high">
+      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.webp" alt="Preview das aulas em vídeo" loading="lazy" fetchpriority="high" width="900" height="675">
       <div class="learn-badge">
         <span class="learn-badge-icon">🎬</span>
         <div>
@@ -1417,7 +1363,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     </div>
   </div>
 </section>
-
 
 <!-- GALLERY -->
 <section class="gallery">
@@ -1443,8 +1388,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   </div>
 </section>
 
-
-
 <!-- NATAL CAROUSEL -->
 <section class="natal">
   <div class="natal-header"><span>🎄 Bônus Especial de Natal</span></div>
@@ -1452,18 +1395,18 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <p class="natal-sub">Modelos exclusivos incluídos no Plano Completo</p>
   <div class="carousel-track-wrap">
     <div class="carousel-track" id="carousel">
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Souplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
     </div>
   </div>
   <div class="natal-cta">
@@ -1471,7 +1414,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.3)">Incluso no Plano Completo por R$19,90</p>
   </div>
 </section>
-
 
 <!-- BONUSES -->
 <section class="bonuses">
@@ -1485,7 +1427,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 01</div>
       <div class="bon-img-wrap">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus1.webp" alt="Como vender artesanato" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus1.webp" width="400" height="560" alt="Como vender artesanato" loading="lazy">
       </div>
       <h3 class="bon-title">Como Vender seu Artesanato e Faturar até R$7k por mês</h3>
       <p class="bon-desc">Os melhores canais de venda, como precificar suas peças e como fidelizar clientes que compram sempre.</p>
@@ -1494,7 +1436,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 02</div>
       <div class="bon-img-wrap">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus2.webp" alt="Barras de crochê" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus2.webp" width="400" height="560" alt="Barras de crochê" loading="lazy">
       </div>
       <h3 class="bon-title">30 Modelos de Barras de Crochê para Pano de Copa</h3>
       <p class="bon-desc">Barras decorativas lindas que aumentam o valor percebido das suas peças e abrem uma nova linha de produtos.</p>
@@ -1503,7 +1445,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 03</div>
       <div class="bon-img-wrap">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus3.webp" alt="Almofadas de animais" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus3.webp" width="400" height="400" alt="Almofadas de animais" loading="lazy">
       </div>
       <h3 class="bon-title">Curso Completo de Almofadas de Animais e Personagens</h3>
       <p class="bon-desc">90 gráficos e receitas exclusivas de almofadas que fazem sucesso em feiras, Instagram e grupos de WhatsApp.</p>
@@ -1511,8 +1453,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     </div>
   </div>
 </section>
-
-
 
 <!-- DEPOIMENTOS WHATSAPP -->
 <section class="depo-section">
@@ -1525,7 +1465,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <div class="depo-carousel-wrap">
     <div class="depo-track" id="depo-carousel">
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420" decoding="async">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1535,7 +1475,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1545,7 +1485,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1555,7 +1495,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1566,28 +1506,28 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
       </div>
       <!-- Duplicados para loop infinito -->
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420" decoding="async">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Renata</div><div class="depo-card-sub">Lucro de R$700 em uma semana</div></div>
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Aurora e Valeria</div><div class="depo-card-sub">Fila de encomendas de souplats</div></div>
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Elisangela</div><div class="depo-card-sub">R$5.000 em encomendas em um mês</div></div>
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Lucinda</div><div class="depo-card-sub">Apaixonada pelo americano de Stitch</div></div>
@@ -1601,7 +1541,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <p style="margin-top:12px;font-size:12px;color:var(--text-light)">Mais de 3.200 alunas já estão vendendo</p>
   </div>
 </section>
-
 
 <!-- 3 MOTIVOS -->
 <section class="motivos fade-up">
@@ -1649,7 +1588,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     </div>
   </div>
 </section>
-
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
@@ -1706,16 +1644,14 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   </div>
 </section>
 
-
 <!-- GUARANTEE -->
 <section class="guarantee">
   <div class="guar-inner fade-up">
-    <img class="guar-badge" src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/garantia.webp" alt="7 dias de garantia" loading="lazy">
+    <img class="guar-badge" src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/garantia.webp" alt="7 dias de garantia" loading="lazy" width="160" height="160">
     <h2>Garantia de <em>7 Dias</em> ou seu Dinheiro de Volta</h2>
     <p>Compre com total tranquilidade. Se em até <strong>7 dias</strong> você não ficar satisfeita por qualquer motivo, devolvemos <strong>100% do seu dinheiro</strong>. Sem burocracia, sem perguntas, sem enrolação. O risco é completamente nosso.</p>
   </div>
 </section>
-
 
 <!-- FAQ -->
 <section class="faq">
@@ -1755,7 +1691,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   </div>
 </section>
 
-
 <!-- FINAL CTA -->
 <section class="fcta">
   <h2>Sua primeira venda pode acontecer <em>ainda essa semana</em></h2>
@@ -1763,8 +1698,6 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn">Quero Me Inscrever Agora</a>
   <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.3);position:relative">Acesso imediato. 7 dias de garantia. Pagamento 100% seguro.</p>
 </section>
-
-
 
 <footer>
   <p>© 2026 Crochê de Mesa. Todos os direitos reservados.</p>
@@ -1820,13 +1753,21 @@ function playVsl(){
 
 (function(){
   var t=document.getElementById('carousel');
-  if(!t)return;
-  t.addEventListener('mouseenter',function(){t.classList.add('paused')});
-  t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
-  t.addEventListener('touchstart',function(){t.classList.add('paused')},{passive:true});
-  t.addEventListener('touchend',function(){t.classList.remove('paused')},{passive:true});
+  var d=document.getElementById('depo-carousel');
+  [t,d].forEach(function(track){
+    if(!track)return;
+    track.addEventListener('mouseenter',function(){track.classList.add('paused')});
+    track.addEventListener('mouseleave',function(){track.classList.remove('paused')});
+    track.addEventListener('touchstart',function(){track.classList.add('paused')},{passive:true});
+    track.addEventListener('touchend',function(){track.classList.remove('paused')},{passive:true});
+    // Pausar quando fora de view
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(e){
+        track.classList.toggle('paused',!e[0].isIntersecting);
+      },{threshold:0.1}).observe(track.parentElement||track);
+    }
+  });
 })();
-
 
 (function(){
   var t=document.getElementById('depo-carousel');
@@ -1838,6 +1779,23 @@ function playVsl(){
 })();
 
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '853407021159645');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=853407021159645&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </body>
 
 </html>
