@@ -26,7 +26,7 @@ src="https://www.facebook.com/tr?id=853407021159645&ev=PageView&noscript=1"
   <meta property="og:type" content="website">
   <meta property="og:title" content="Curso Crochê de Mesa — Aprenda e Lucre">
   <meta property="og:description" content="Mais de 200 modelos de souplats, caminhos de mesa e jogos americanos. Do primeiro ponto até a primeira venda.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.webp">
   <meta name="description" content="Aprenda crochê de mesa com +200 vídeo aulas e comece a vender em até 30 dias. Souplats, caminhos de mesa e jogos americanos que vendem muito.">
   <title>Crochê de Mesa que Vende — Souplats, Caminhos e Jogos Americanos</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Lato:wght@300;400;700;900&display=swap&display=swap" rel="stylesheet">
@@ -190,7 +190,7 @@ a{text-decoration:none;color:inherit}
 }
 .vsl-thumb{
   position:absolute;inset:0;
-  background:url('https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/hero-bg.jpg') center/cover;
+  background:url('https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/hero-bg.webp') center/cover;
   opacity:.25;
 }
 .vsl-play{
@@ -1324,13 +1324,23 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 
   <div class="vsl-wrap">
     <div class="vsl-box" id="vsl-box">
-      <iframe 
-        src="https://www.youtube.com/embed/_NvcZdVR0Gs?rel=0&modestbranding=1" 
-        title="Curso Crochê de Mesa" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
+      <div class="yt-facade" id="yt-facade" onclick="loadYT()" role="button" aria-label="Assistir vídeo">
+        <img 
+          src="https://i.ytimg.com/vi/_NvcZdVR0Gs/maxresdefault.jpg" 
+          alt="Assistir vídeo do curso" 
+          loading="eager"
+          fetchpriority="high"
+          width="720" height="405"
+          onerror="this.src='https://i.ytimg.com/vi/_NvcZdVR0Gs/hqdefault.jpg'"
+        >
+        <div class="yt-play">
+          <svg width="68" height="48" viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M66.5 7.5C65.7 4.8 63.6 2.7 60.9 1.9 55.6 0 34 0 34 0S12.4 0 7.1 1.9C4.4 2.7 2.3 4.8 1.5 7.5 0 12.8 0 24 0 24s0 11.2 1.5 16.5c.8 2.7 2.9 4.8 5.6 5.6C12.4 48 34 48 34 48s21.6 0 26.9-1.9c2.7-.8 4.8-2.9 5.6-5.6C68 35.2 68 24 68 24s0-11.2-1.5-16.5z" fill="#FF0000"/>
+            <path d="M27 34l18-10-18-10v20z" fill="white"/>
+          </svg>
+        </div>
+        <div class="yt-caption">Assista até o final — vale muito a pena</div>
+      </div>
     </div>
     <p class="vsl-caption">Veja o método completo antes de decidir</p>
   </div>
@@ -1390,7 +1400,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
       </ul>
     </div>
     <div class="learn-img fade-up">
-      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.jpg" alt="Preview das aulas em vídeo" loading="lazy" fetchpriority="high">
+      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.webp" alt="Preview das aulas em vídeo" loading="lazy" fetchpriority="high">
       <div class="learn-badge">
         <span class="learn-badge-icon">🎬</span>
         <div>
@@ -1411,16 +1421,16 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <p>Souplats, caminhos de mesa, jogos americanos e bônus especial de Natal</p>
   </div>
   <div class="gal-grid fade-up">
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.jpg" loading="lazy" alt="Souplat rosa"><div class="gal-label">Souplat rosa bordado</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7315.jpg" loading="lazy" alt="Souplat azul marinho"><div class="gal-label">Souplat azul marinho</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7317.jpg" loading="lazy" alt="Souplat azul dourado"><div class="gal-label">Souplat azul e dourado</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7329.jpg" loading="lazy" alt="Souplat verde corações"><div class="gal-label">Souplat verde com corações</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7331.jpg" loading="lazy" alt="Jogo americano floral"><div class="gal-label">Jogo americano floral</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7486.jpg" loading="lazy" alt="Caminho de mesa rosas"><div class="gal-label">Caminho com rosas 3D</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7492.jpg" loading="lazy" alt="Caminho amarelo"><div class="gal-label">Caminho de mesa amarelo</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7519.jpg" loading="lazy" alt="Jogo vermelho"><div class="gal-label">Jogo americano vermelho</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7525.jpg" loading="lazy" alt="Caminho uva"><div class="gal-label">Caminho temático uva</div></div>
-    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7561.jpg" loading="lazy" alt="Souplat animais"><div class="gal-label">Souplat panda e girafa</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.webp" loading="lazy" width="400" height="400" alt="Souplat rosa"><div class="gal-label">Souplat rosa bordado</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7315.webp" loading="lazy" width="400" height="400" alt="Souplat azul marinho"><div class="gal-label">Souplat azul marinho</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7317.webp" loading="lazy" width="400" height="400" alt="Souplat azul dourado"><div class="gal-label">Souplat azul e dourado</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7329.webp" loading="lazy" width="400" height="400" alt="Souplat verde corações"><div class="gal-label">Souplat verde com corações</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7331.webp" loading="lazy" width="400" height="400" alt="Jogo americano floral"><div class="gal-label">Jogo americano floral</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7486.webp" loading="lazy" width="400" height="400" alt="Caminho de mesa rosas"><div class="gal-label">Caminho com rosas 3D</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7492.webp" loading="lazy" width="400" height="400" alt="Caminho amarelo"><div class="gal-label">Caminho de mesa amarelo</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7519.webp" loading="lazy" width="400" height="400" alt="Jogo vermelho"><div class="gal-label">Jogo americano vermelho</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7525.webp" loading="lazy" width="400" height="400" alt="Caminho uva"><div class="gal-label">Caminho temático uva</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7561.webp" loading="lazy" width="400" height="400" alt="Souplat animais"><div class="gal-label">Souplat panda e girafa</div></div>
   </div>
   <div style="text-align:center;margin-top:40px" class="fade-up">
     <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn">Quero me inscrever e ter acesso a tudo</a>
@@ -1436,18 +1446,18 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <p class="natal-sub">Modelos exclusivos incluídos no Plano Completo</p>
   <div class="carousel-track-wrap">
     <div class="carousel-track" id="carousel">
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
-      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.jpg" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Souplat Natal" loading="lazy"><div class="natal-card-label">Souplat Verde e Dourado</div></div>
     </div>
   </div>
   <div class="natal-cta">
@@ -1469,7 +1479,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 01</div>
       <div class="bon-img-wrap">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus1.png" alt="Como vender artesanato" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus1.webp" alt="Como vender artesanato" loading="lazy">
       </div>
       <h3 class="bon-title">Como Vender seu Artesanato e Faturar até R$7k por mês</h3>
       <p class="bon-desc">Os melhores canais de venda, como precificar suas peças e como fidelizar clientes que compram sempre.</p>
@@ -1478,7 +1488,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 02</div>
       <div class="bon-img-wrap">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus2.png" alt="Barras de crochê" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus2.webp" alt="Barras de crochê" loading="lazy">
       </div>
       <h3 class="bon-title">30 Modelos de Barras de Crochê para Pano de Copa</h3>
       <p class="bon-desc">Barras decorativas lindas que aumentam o valor percebido das suas peças e abrem uma nova linha de produtos.</p>
@@ -1487,7 +1497,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
     <div class="bon-card fade-up">
       <div class="bon-num">Bônus 03</div>
       <div class="bon-img-wrap">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus3.png" alt="Almofadas de animais" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus3.webp" alt="Almofadas de animais" loading="lazy">
       </div>
       <h3 class="bon-title">Curso Completo de Almofadas de Animais e Personagens</h3>
       <p class="bon-desc">90 gráficos e receitas exclusivas de almofadas que fazem sucesso em feiras, Instagram e grupos de WhatsApp.</p>
@@ -1509,7 +1519,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   <div class="depo-carousel-wrap">
     <div class="depo-track" id="depo-carousel">
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1519,7 +1529,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1529,7 +1539,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1539,7 +1549,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div>
@@ -1550,28 +1560,28 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
       </div>
       <!-- Duplicados para loop infinito -->
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Renata</div><div class="depo-card-sub">Lucro de R$700 em uma semana</div></div>
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Aurora e Valeria</div><div class="depo-card-sub">Fila de encomendas de souplats</div></div>
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Elisangela</div><div class="depo-card-sub">R$5.000 em encomendas em um mês</div></div>
         </div>
       </div>
       <div class="depo-card">
-        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.jpg" alt="Depoimento aluna" loading="lazy">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy">
         <div class="depo-card-footer">
           <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
           <div><div class="depo-card-name">Lucinda</div><div class="depo-card-sub">Apaixonada pelo americano de Stitch</div></div>
@@ -1790,6 +1800,10 @@ function faq(btn){
 }
 
 // VSL
+function loadYT(){
+  var box = document.getElementById('vsl-box');
+  box.innerHTML = '<iframe src="https://www.youtube.com/embed/_NvcZdVR0Gs?autoplay=1&rel=0&modestbranding=1" title="Curso Crochê de Mesa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"></iframe>';
+}
 function playVsl(){
   // Troque SEU_VIDEO_ID pelo ID do seu vídeo do YouTube
   // Ex: https://youtube.com/watch?v=ABC123 → id é ABC123
