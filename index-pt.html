@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#3D0A0A">
+<meta name="mobile-web-app-capable" content="yes">
+  <!-- Open Graph / Compartilhamento social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Curso Crochet de Mesa — Aprenda e Lucre">
+  <meta property="og:description" content="Mais de 200 modelos de sousplats, caminhos de mesa e jogos americanos. Do primeiro ponto até à primeira venda.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.webp">
+  <meta name="description" content="Aprenda crochet de mesa com +200 vídeo aulas e comece a vender em até 30 dias. Sousplats, caminhos de mesa e jogos americanos que vendem muito.">
+  <title>Crochet de Mesa que Vende — Sousplats, Caminhos e Jogos Americanos</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Lato:wght@300;400;700;900&display=swap&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  
+  --coral:#C4736A;
+  --coral-dark:#A85C54;
+  --coral-light:#FDF0EE;
+  --coral-mid:#D4918A;
+
+  
+  --wine:#6B2E2E;
+  --wine-dark:#3D1A1A;
+
+  
+  --cream:#FEFAF6;
+  --warm:#FDF5F0;
+  --sand:#F5EBE0;
+
+  
+  --text:#2A1A14;
+  --text-muted:#7A5A50;
+  --text-light:#B09080;
+
+  
+  --gold:#B8892A;
+  --gold-light:#FBF3E0;
+
+  
+  --green:#4A7055;
+  --green-light:#EAF2EC;
+
+  
+  --border:rgba(180,115,106,0.15);
+  --border-mid:rgba(180,115,106,0.28);
+
+  --radius:16px;
+  --shadow:0 4px 28px rgba(80,40,30,0.08);
+  --shadow-lg:0 16px 56px rgba(80,40,30,0.14);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden;-webkit-overflow-scrolling:touch}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--text);line-height:1.75;overflow-x:hidden;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.18}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(196,115,106,0.45)}70%{box-shadow:0 0 0 16px rgba(196,115,106,0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}14%{transform:scale(1.08)}28%{transform:scale(1)}}
+@keyframes softglow{0%,100%{opacity:0.7}50%{opacity:1}}
+
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* URGENCY BAR */
+.urgency{
+  background:#CC2200;
+  color:#fff;
+  padding:11px 20px;
+  text-align:center;
+  font-size:13px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:3px solid #A01800;
+}
+.urgency .hi{color:#FFD700;font-weight:800;text-shadow:0 1px 4px rgba(0,0,0,0.3)}
+.cd{display:flex;gap:5px;align-items:center}
+.cd-b{
+  background:#FFD700;
+  color:#CC2200;
+  border-radius:5px;
+  padding:3px 10px;
+  font-weight:900;
+  font-size:15px;
+  min-width:34px;
+  text-align:center;
+  animation:pulse 2s infinite;
+}
+.cd-s{opacity:.9;font-weight:900;color:#FFD700}
+
+/* HERO */
+.hero{
+  background:linear-gradient(160deg,#3D1A1A 0%,#5C2A22 50%,#3D1A1A 100%);
+  padding:52px 24px 60px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 60% 40%,rgba(196,115,106,0.22) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.hero h1{
+  font-size:clamp(36px,5.5vw,60px);
+  color:#fff;
+  max-width:820px;
+  margin:0 auto 18px;
+  font-weight:900;
+  animation:fadeUp .7s ease .1s forwards;
+  opacity:0;
+  text-shadow:0 2px 20px rgba(0,0,0,0.3);
+}
+.hero h1 em{
+  font-style:italic;
+  color:var(--coral-mid);
+  display:block;
+}
+.hero-sub{
+  font-size:clamp(15px,2vw,19px);
+  color:rgba(255,255,255,.72);
+  max-width:600px;
+  margin:0 auto 32px;
+  font-weight:300;
+  line-height:1.8;
+  animation:fadeUp .7s ease .2s forwards;
+  opacity:0;
+}
+.hero-sub strong{color:#fff;font-weight:700}
+
+.vsl-wrap{
+  max-width:740px;
+  margin:0 auto 32px;
+  animation:fadeUp .7s ease .3s forwards;
+  opacity:0;
+}
+.vsl-box{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;
+  border-radius:var(--radius);
+  overflow:hidden !important;
+  box-shadow:0 24px 80px rgba(0,0,0,0.5);
+  border:2px solid rgba(196,115,106,0.35);
+  background:#000;
+}
+.vsl-box iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.vsl-placeholder{
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  background:linear-gradient(135deg,#2a0a04 0%,#0d0000 100%);
+  cursor:pointer;
+}
+.vsl-thumb{
+  position:absolute;inset:0;
+  background:url('https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/hero-bg.webp') center/cover;
+  opacity:.25;
+}
+.vsl-play{
+  width:80px;height:80px;
+  background:var(--coral);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;
+  animation:pulse 2.5s infinite, float 3s ease-in-out infinite;
+  box-shadow:0 8px 32px rgba(255,94,58,0.5);
+}
+.vsl-placeholder p{
+  color:rgba(255,255,255,.8);
+  font-size:15px;
+  font-weight:600;
+  position:relative;z-index:1;
+}
+.vsl-caption{
+  font-size:13px;
+  color:rgba(255,255,255,.45);
+  text-align:center;
+  margin-top:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:linear-gradient(135deg,#1A8C3A 0%,#145F2A 100%);
+  color:#fff;
+  font-family:'Lato',sans-serif;
+  font-size:17px;
+  font-weight:700;
+  padding:18px 44px;
+  border-radius:50px;
+  border:none;
+  cursor:pointer;
+  transition:all .28s cubic-bezier(.34,1.56,.64,1);
+  box-shadow:0 6px 28px rgba(26,140,58,0.4);
+  text-decoration:none;
+  letter-spacing:.02em;
+  animation:btn-breathe 3s ease-in-out infinite;
+}
+.btn:hover{
+  background:linear-gradient(135deg,#145F2A 0%,#0D3D1A 100%);
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 14px 40px rgba(26,140,58,0.5);
+  animation:none;
+}
+@keyframes btn-breathe{
+  0%,100%{box-shadow:0 6px 28px rgba(26,140,58,0.4);transform:translateY(0) scale(1)}
+  50%{box-shadow:0 10px 36px rgba(26,140,58,0.55);transform:translateY(-2px) scale(1.01)}
+}
+@media(max-width:480px){.btn-block{width:100%;justify-content:center}}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.25);color:rgba(255,255,255,.8);box-shadow:none}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);color:#fff;transform:none;box-shadow:none}
+.btn-green{background:linear-gradient(135deg,#1A8C3A,#145F2A);box-shadow:0 8px 32px rgba(26,140,58,0.4)}
+.btn-green:hover{background:#245429;box-shadow:0 14px 40px rgba(46,107,53,0.4)}
+.hero-cta-wrap{
+  animation:fadeUp .7s ease .45s forwards;
+  opacity:0;
+}
+.hero-note{margin-top:13px;font-size:12px;color:rgba(255,255,255,.35);font-weight:400}
+
+/* SOCIAL PROOF TICKER */
+.ticker{
+  background:linear-gradient(90deg,var(--wine) 0%,var(--coral) 50%,var(--wine) 100%);
+  padding:10px 0;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.ticker-inner{
+  display:inline-flex;
+  gap:48px;
+  animation:ticker-move 18s linear infinite;
+}
+@keyframes ticker-move{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-item{
+  font-size:13px;
+  font-weight:600;
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* STATS */
+.stats{background:#fff;padding:52px 24px;border-bottom:1px solid var(--border)}
+.stats-inner{
+  max-width:900px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.stat{
+  background:#fff;
+  padding:28px 16px;
+  text-align:center;
+  border-right:1px solid var(--border);
+  transition:background .2s;
+}
+.stat:last-child{border-right:none}
+.stat:hover{background:var(--warm)}
+.stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:40px;
+  font-weight:900;
+  color:var(--coral);
+  line-height:1;
+  margin-bottom:6px;
+}
+.stat-l{font-size:13px;color:var(--text-muted);font-weight:500}
+
+/* PAIN SECTION */
+.pain{
+  background:var(--wine-dark);
+  padding:80px 24px;
+  text-align:center;
+}
+.pain-inner{max-width:700px;margin:0 auto}
+.pain h2{
+  font-size:clamp(28px,4vw,44px);
+  color:#fff;
+  margin-bottom:28px;
+  font-weight:700;
+}
+.pain h2 span{color:var(--coral-mid);font-style:italic}
+.pain-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  text-align:left;
+  margin-bottom:36px;
+}
+.pain-list li{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
+  padding:14px 18px;
+  font-size:15px;
+  color:rgba(255,255,255,.8);
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  font-weight:400;
+}
+.pain-list li .ico{font-size:18px;flex-shrink:0;margin-top:1px}
+.pain-turn{
+  font-size:clamp(20px,3vw,30px);
+  color:var(--coral-mid);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:700;
+  padding:20px 0;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.sh{text-align:center;max-width:680px;margin:0 auto 40px}
+.sh-tag{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--coral);
+  margin-bottom:12px;
+  padding:5px 16px;
+  background:var(--coral-light);
+  border-radius:20px;
+  border:1px solid rgba(255,94,58,0.18);
+}
+.sh h2{font-size:clamp(30px,4vw,46px);color:var(--wine-dark);margin-bottom:14px;letter-spacing:-0.01em}
+.sh p{font-size:16px;color:var(--text-muted);line-height:1.75}
+
+/* GALLERY */
+.gallery{background:#fff;padding:64px 24px}
+.gal-grid{
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+@media(max-width:860px){.gal-grid{grid-template-columns:repeat(3,1fr)}}
+.gal-item{
+  border-radius:var(--radius);
+  overflow:hidden;
+  position:relative;
+  background:var(--sand);
+  aspect-ratio:1;
+  cursor:pointer;
+}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;-webkit-backface-visibility:hidden}
+.gal-item:hover img{transform:scale(1.07)}
+.gal-label{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(61,10,10,0.75));
+  padding:24px 14px 14px;
+  color:#fff;
+  font-size:12px;
+  font-weight:600;
+  opacity:0;
+  transition:opacity .25s;
+}
+.gal-item:hover .gal-label{opacity:1}
+
+/* LEARN */
+.learn{background:var(--sand);padding:64px 24px}
+.learn-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+@media(max-width:720px){.learn-inner{grid-template-columns:1fr 1fr;gap:24px}}
+.learn-left .sh{text-align:left;margin:0 0 32px}
+@media(max-width:480px){
+  .learn-left .sh h2{font-size:17px !important;margin-bottom:8px;line-height:1.3}
+  .learn-left .sh .sh-tag{font-size:9px;padding:3px 8px;margin-bottom:6px}
+  .check-list{gap:10px}
+  .check-list li{font-size:13px;gap:7px;line-height:1.4}
+  .ck{width:18px;height:18px;min-width:18px;font-size:9px}
+  .learn-img img{border-width:2px;box-shadow:0 4px 16px rgba(80,40,30,0.15),2px 2px 0 var(--coral-light)}
+  .learn-badge{padding:8px 12px;gap:7px}
+  .learn-badge-num{font-size:22px}
+  .learn-badge-txt{font-size:11px}
+  .learn-badge-icon{font-size:18px}
+}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.check-list li{
+  display:flex;align-items:flex-start;gap:13px;
+  font-size:15px;color:var(--text);font-weight:500;
+}
+.ck{
+  width:24px;height:24px;min-width:24px;
+  background:var(--coral-light);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:1px;
+  font-size:12px;
+  color:var(--coral);
+  font-weight:700;
+}
+.learn-img{
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  position:relative;
+}
+.learn-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius:var(--radius);
+  transition:transform .4s ease;
+}
+.learn-img:hover img{transform:scale(1.02)}
+
+.bonuses{background:var(--coral-light);padding:64px 24px;border-top:2px solid var(--coral)}
+.bon-total{
+  text-align:center;
+  font-size:clamp(18px,2.5vw,26px);
+  font-family:'Cormorant Garamond',serif;
+  color:var(--wine-dark);
+  font-weight:700;
+  margin-bottom:44px;
+}
+.bon-total span{color:var(--coral);font-style:italic}
+.bon-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bon-card{
+  background:#fff;
+  border:1px solid rgba(255,94,58,0.15);
+  border-radius:var(--radius);
+  padding:28px 24px;
+  box-shadow:var(--shadow);
+  position:relative;overflow:hidden;
+  transition:transform .22s;
+}
+.bon-card:hover{transform:translateY(-4px)}
+.bon-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;
+  height:4px;background:var(--gold);
+}
+.bon-num{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px}
+.bon-title{font-size:18px;color:var(--wine-dark);margin-bottom:10px;font-family:'Cormorant Garamond',serif;font-weight:700}
+.bon-desc{font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:16px}
+.bon-img-wrap{
+  text-align:center;
+  margin-bottom:18px;
+}
+.bon-img-wrap img{
+  max-height:160px;
+  width:auto;
+  margin:0 auto;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 24px rgba(107,26,26,0.15));
+  transition:transform .3s ease;
+}
+.bon-card:hover .bon-img-wrap img{transform:translateY(-4px) scale(1.03)}
+.bon-val{display:flex;align-items:center;gap:10px}
+.bon-old{font-size:13px;color:var(--text-light);text-decoration:line-through}
+.bon-free{font-size:14px;font-weight:700;color:var(--green)}
+
+/* PRICING */
+.pricing{
+  background:linear-gradient(160deg,#3D1A1A 0%,#5C2A22 60%,#3D1A1A 100%);
+  padding:64px 24px;
+  position:relative;overflow:hidden;
+}
+.pricing::before{
+  content:'';
+  position:absolute;top:-120px;right:-120px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(255,94,58,0.1) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.pricing .sh h2{color:#fff}
+.pricing .sh p{color:rgba(255,255,255,.5)}
+.pricing .sh-tag{background:rgba(255,94,58,0.15);color:var(--coral-mid);border-color:rgba(255,94,58,0.3)}
+.price-anchor{
+  text-align:center;
+  max-width:500px;
+  margin:0 auto 48px;
+  background:rgba(255,94,58,0.08);
+  border:1px solid rgba(255,94,58,0.2);
+  border-radius:var(--radius);
+  padding:18px 24px;
+  font-size:15px;
+  color:rgba(255,255,255,.65);
+  line-height:1.6;
+}
+.price-anchor strong{color:var(--coral-mid)}
+.plans{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:600px){.plans{grid-template-columns:1fr}}
+.plan{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);
+  padding:32px 28px;
+  position:relative;
+  transition:transform .22s;
+}
+.plan:hover{transform:translateY(-3px)}
+.plan.hot{
+  background:#fff;
+  border:2px solid var(--coral);
+  transform:scale(1.03);
+}
+@media(max-width:600px){.plan.hot{transform:none;border-width:3px}}
+.plan.hot:hover{transform:scale(1.03) translateY(-3px)}
+.plan-badge{
+  position:absolute;top:-14px;left:50%;
+  transform:translateX(-50%);
+  background:var(--coral);
+  color:#fff;
+  font-size:10px;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 20px;border-radius:20px;
+  white-space:nowrap;
+  box-shadow:0 4px 14px rgba(255,94,58,0.4);
+}
+.plan-name{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:20px}
+.plan:not(.hot) .plan-name{color:rgba(255,255,255,.4)}
+.plan.hot .plan-name{color:var(--coral)}
+.plan-old{font-size:13px;text-decoration:line-through}
+.plan:not(.hot) .plan-old{color:rgba(255,255,255,.22)}
+.plan.hot .plan-old{color:var(--text-light)}
+.plan-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:58px;font-weight:900;
+  line-height:1;margin:8px 0 5px;
+}
+.plan:not(.hot) .plan-price{color:#fff}
+.plan.hot .plan-price{color:var(--wine-dark)}
+.plan-price sup{font-size:24px;vertical-align:top;margin-top:14px;display:inline-block}
+.plan-period{font-size:12px;margin-bottom:24px;font-weight:400}
+.plan:not(.hot) .plan-period{color:rgba(255,255,255,.3)}
+.plan.hot .plan-period{color:var(--text-muted)}
+.plan-highlight{
+  background:rgba(255,94,58,0.08);
+  border:1px solid rgba(255,94,58,0.22);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:13px;
+  color:var(--coral-mid);
+  font-weight:600;
+  text-align:center;
+  margin-bottom:22px;
+}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px}
+.plan-feats li{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}
+.plan:not(.hot) .plan-feats li{color:rgba(255,255,255,.68)}
+.plan.hot .plan-feats li{color:var(--text)}
+.plan-feats .ck{width:18px;height:18px;min-width:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px;font-size:10px;font-weight:700}
+.plan:not(.hot) .ck{background:rgba(255,255,255,.08);color:rgba(255,255,255,.5)}
+.plan.hot .ck{background:var(--coral-light);color:var(--coral)}
+.plan-feats .lk{width:18px;height:18px;min-width:18px;border-radius:50%;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;margin-top:1px;font-size:10px;color:rgba(255,255,255,.15)}
+.plan-btn{
+  display:block;width:100%;text-align:center;
+  padding:16px 20px;border-radius:50px;
+  font-family:'Lato',sans-serif;font-size:15px;font-weight:700;
+  cursor:pointer;border:none;transition:all .2s;text-decoration:none;
+}
+.plan-btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.55)}
+.plan-btn-ghost:hover{border-color:rgba(255,255,255,.38);color:rgba(255,255,255,.85)}
+.plan-btn-hot{
+  background:var(--coral);color:#fff;
+  box-shadow:0 6px 24px rgba(255,94,58,0.45);
+  animation:pulse 2.5s infinite;
+}
+.plan-btn-hot:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.price-note{text-align:center;margin-top:28px;font-size:12px;color:rgba(255,255,255,.28)}
+
+/* GUARANTEE */
+.guarantee{background:var(--warm);padding:64px 24px;border-top:1px solid var(--border)}
+.guar-inner{max-width:640px;margin:0 auto;text-align:center}
+.guar-badge{
+  width:160px;height:160px;
+  margin:0 auto 28px;
+  display:block;
+  filter:drop-shadow(0 8px 28px rgba(212,130,10,0.35));
+  animation:float 4s ease-in-out infinite, softglow 3s ease-in-out infinite;
+}
+.guar-inner h2{font-size:34px;color:var(--wine-dark);margin-bottom:16px}
+.guar-inner p{font-size:16px;color:var(--text-muted);line-height:1.8;max-width:520px;margin:0 auto}
+
+/* FAQ */
+.faq{background:var(--sand);padding:64px 24px}
+.faq-inner{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:first-of-type{border-top:1px solid var(--border)}
+.faq-q{
+  width:100%;background:none;border:none;
+  text-align:left;padding:22px 0;
+  min-height:56px;
+  font-family:'Lato',sans-serif;font-size:16px;font-weight:600;
+  color:var(--wine-dark);cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--wine)}
+.faq-ic{
+  width:26px;height:26px;min-width:26px;
+  border-radius:50%;border:1.5px solid var(--border-mid);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--text-muted);transition:all .25s;font-weight:300;
+}
+.faq-item.open .faq-ic{background:var(--wine);border-color:var(--wine);color:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease,padding .32s ease}
+.faq-item.open .faq-a{max-height:360px;padding-bottom:22px}
+.faq-a p{font-size:15px;color:var(--text-muted);line-height:1.8}
+
+.fcta{
+  background:var(--wine-dark);
+  padding:96px 24px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.fcta::before{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 80%,rgba(255,94,58,0.15) 0%,transparent 65%);
+  pointer-events:none;
+}
+.fcta h2{
+  font-size:clamp(30px,4.5vw,52px);
+  color:#fff;max-width:680px;
+  margin:0 auto 18px;font-weight:900;
+  position:relative;
+}
+.fcta h2 em{font-style:italic;color:var(--coral-mid)}
+.fcta p{
+  font-size:17px;color:rgba(255,255,255,.6);
+  max-width:480px;margin:0 auto 36px;
+  line-height:1.7;position:relative;
+}
+
+footer{
+  background:#0d0000;
+  padding:30px 24px;
+  text-align:center;
+  font-size:12px;
+  color:rgba(255,255,255,.25);
+}
+footer a{color:rgba(255,255,255,.38);text-decoration:underline}
+
+/* ===== MOBILE FIRST — FULL OPTIMIZATION ===== */
+
+@media(max-width:860px){
+  .gal-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:760px){
+  section, .stats, .bonuses, .testi, .forwhom, .gallery, .learn, .guarantee, .faq, .fcta{
+    padding:56px 20px;
+  }
+  .hero{padding:44px 20px 56px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(3){border-bottom:none}
+  .bon-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .learn-inner{grid-template-columns:1fr 1fr;gap:16px}
+  .learn-img{display:block}
+  .plans{grid-template-columns:1fr;gap:36px}
+  .plan.hot{transform:none;margin-top:16px}
+  .plan-price{font-size:48px}
+  .sh h2{font-size:clamp(24px,5vw,36px)}
+  .pricing-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:480px){
+  
+  body{font-size:15px}
+  
+  /* URGENCY */
+  .urgency{font-size:11px;gap:6px;padding:9px 14px}
+  .cd-b{font-size:13px;padding:2px 7px;min-width:28px}
+
+  /* HERO */
+  .hero{padding:36px 18px 48px}
+  .hero h1{font-size:28px;margin-bottom:14px}
+  .hero-sub{font-size:15px;margin-bottom:22px}
+  .vsl-wrap{margin-bottom:22px}
+  .vsl-play{width:60px;height:60px}
+
+  
+  .btn{
+    font-size:15px;
+    padding:16px 28px;
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-note{font-size:11px}
+
+  /* TICKER */
+  .ticker{padding:8px 0}
+  .ticker-item{font-size:12px}
+
+  /* STATS */
+  .stats{padding:32px 18px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:20px 12px}
+  .stat-n{font-size:30px}
+  .stat-l{font-size:12px}
+
+  /* PAIN */
+
+  
+  .forwhom{padding:52px 18px}
+
+  /* GALLERY */
+  .gallery{padding:48px 18px}
+  .gal-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .gal-item{border-radius:10px}
+
+  /* LEARN */
+  .learn{padding:40px 14px}
+  .learn-inner{grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .learn-left .sh{margin-bottom:16px}
+  .learn-img{display:block}
+  .check-list li{font-size:14px;gap:10px}
+  .ck{width:20px;height:20px;min-width:20px}
+
+  
+
+  
+  .bonuses{padding:48px 18px}
+  .bon-grid{gap:16px}
+  .bon-card{padding:22px 18px}
+  .bon-img-wrap img{max-height:130px}
+  .bon-title{font-size:16px}
+  .bon-total{font-size:18px}
+
+  /* PRICING */
+  .pricing{padding:56px 18px}
+  .price-anchor{padding:14px 16px;font-size:13px}
+  .plans{gap:20px}
+  .plan{padding:26px 20px}
+  .plan.hot{margin-top:20px}
+  .plan-price{font-size:52px}
+  .plan-name{font-size:11px}
+  .plan-feats li{font-size:13px}
+  .plan-btn{padding:15px 18px;font-size:14px}
+  .plan-highlight{font-size:12px}
+
+  /* GUARANTEE */
+  .guarantee{padding:48px 18px}
+  .guar-inner h2{font-size:26px}
+  .guar-inner p{font-size:14px}
+  .guar-badge{width:130px;height:130px}
+
+  /* FAQ */
+  .faq{padding:48px 18px}
+  .faq-q{font-size:14px;padding:18px 0}
+  .faq-a p{font-size:13px}
+
+  
+  .fcta{padding:48px 18px}
+  .fcta h2{font-size:26px}
+  .fcta p{font-size:15px;margin-bottom:24px}
+
+  
+  .sh{margin-bottom:28px}
+  .sh h2{font-size:26px}
+  .sh p{font-size:14px}
+  .sh-tag{font-size:10px;padding:4px 12px}
+
+  
+  footer{padding:22px 18px;font-size:11px}
+}
+
+@media(max-width:360px){
+  .hero h1{font-size:24px}
+  .btn{font-size:14px;padding:15px 22px}
+  .plan-price{font-size:44px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-n{font-size:26px}
+}
+
+/* ===== NATAL CAROUSEL ===== */
+.natal{background:var(--wine-dark);padding:56px 24px;text-align:center;overflow:hidden}
+.natal-header{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,215,0,0.25);border-radius:40px;padding:8px 20px;margin-bottom:16px}
+.natal-header span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FFD700}
+.natal h2{font-size:clamp(26px,4vw,42px);color:#fff;margin-bottom:8px;font-weight:900}
+.natal-sub{font-size:15px;color:rgba(255,255,255,.5);margin-bottom:40px}
+.carousel-track-wrap{overflow:hidden;position:relative;margin:0 -24px;padding:8px 0 16px}
+.carousel-track-wrap::before,.carousel-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.carousel-track-wrap::before{left:0;background:linear-gradient(90deg,var(--wine-dark),transparent)}
+.carousel-track-wrap::after{right:0;background:linear-gradient(-90deg,var(--wine-dark),transparent)}
+.carousel-track{display:flex;gap:18px;width:max-content;animation:carousel-slide 24s linear infinite;cursor:grab}
+.carousel-track:active{cursor:grabbing}
+.carousel-track.paused{animation-play-state:paused}
+@keyframes carousel-slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.natal-card{width:220px;flex-shrink:0;background:rgba(255,255,255,0.05);border:1px solid rgba(255,215,0,0.18);border-radius:16px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.natal-card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 16px 40px rgba(0,0,0,0.35)}
+.natal-card img{width:100%;height:220px;object-fit:cover;display:block}
+.natal-card-label{padding:12px 14px;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);text-align:center;border-top:1px solid rgba(255,215,0,0.1)}
+.natal-cta{margin-top:40px}
+.btn-gold{background:linear-gradient(135deg,#D4820A,#F5B942);color:#fff;box-shadow:0 8px 28px rgba(212,130,10,0.4)}
+.btn-gold:hover{background:linear-gradient(135deg,#b86e08,#d9a030);transform:translateY(-3px);box-shadow:0 14px 36px rgba(212,130,10,0.45)}
+@media(max-width:480px){.natal{padding:52px 0}.natal h2,.natal-sub,.natal-cta{padding:0 20px}.natal-card{width:180px}.natal-card img{height:180px}}
+
+/* ===== DEPOIMENTOS WHATSAPP ===== */
+.depo-section{
+  background:var(--sand);
+  padding:80px 24px;
+  text-align:center;
+  overflow:hidden;
+}
+.depo-section .sh-tag{background:var(--green-light);color:var(--green);border-color:rgba(46,107,53,0.2)}
+.depo-carousel-wrap{
+  overflow:hidden;
+  position:relative;
+  margin:0 -24px;
+  padding:8px 0 16px;
+}
+.depo-carousel-wrap::before,.depo-carousel-wrap::after{
+  content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+}
+.depo-carousel-wrap::before{left:0;background:linear-gradient(90deg,var(--sand),transparent)}
+.depo-carousel-wrap::after{right:0;background:linear-gradient(-90deg,var(--sand),transparent)}
+.depo-track{
+  display:flex;
+  gap:20px;
+  width:max-content;
+  animation:depo-slide 28s linear infinite;
+}
+.depo-track.paused{animation-play-state:paused}
+@keyframes depo-slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.depo-card{
+  width:260px;
+  flex-shrink:0;
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 28px rgba(107,26,26,0.1);
+  border:1px solid var(--border);
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease;
+}
+.depo-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 16px 48px rgba(107,26,26,0.16)}
+.depo-card img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  object-position:top;
+  display:block;
+}
+.depo-card-footer{
+  padding:14px 16px;
+  background:#fff;
+  border-top:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.depo-wa{
+  width:28px;height:28px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.depo-wa svg{width:16px;height:16px}
+.depo-card-name{font-size:12px;font-weight:700;color:var(--wine-dark)}
+.depo-card-sub{font-size:11px;color:var(--text-muted);margin-top:1px}
+.depo-cta{margin-top:44px}
+@media(max-width:480px){
+  .depo-section{padding:52px 0}
+  .depo-section .sh,.depo-cta{padding:0 20px}
+  .depo-card{width:220px}
+  .depo-card img{height:340px}
+}
+
+/* ===== MICRO-INTERAÇÕES PARA PÚBLICO 45+ ===== */
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4736a' fill-opacity='0.022'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
+body > *{position:relative;z-index:1}
+
+.btn,.plan-btn,.faq-q,.natal-card,.depo-card,.fw-card,.bon-card{
+  cursor:pointer;
+}
+
+.btn:focus-visible,.plan-btn:focus-visible,.faq-q:focus-visible{
+  outline:3px solid var(--coral-mid);
+  outline-offset:3px;
+}
+
+section{scroll-margin-top:60px}
+
+.check-list li:hover .ck{
+  background:var(--coral);
+  color:#fff;
+  transform:scale(1.1);
+  transition:all .25s cubic-bezier(.34,1.56,.64,1);
+}
+
+.btn-primary-pulse{
+  animation:pulse 3s ease-in-out infinite;
+}
+
+.stat-n{
+  transition:transform .4s cubic-bezier(.34,1.56,.64,1);
+}
+.stat:hover .stat-n{
+  transform:scale(1.12);
+  color:var(--wine);
+}
+
+/* FAQ — linha colorida ao abrir */
+.faq-item.open{
+  border-left:3px solid var(--coral-mid);
+  padding-left:12px;
+  transition:border-left .3s ease, padding-left .3s ease;
+}
+
+.bon-card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.04) 0%,transparent 60%);
+  opacity:0;
+  transition:opacity .3s ease;
+  pointer-events:none;
+}
+.bon-card:hover::after{opacity:1}
+
+.learn-img img{
+  border:3px solid var(--sand);
+  box-shadow:0 8px 40px rgba(80,40,30,0.18), 6px 6px 0 var(--coral-light);
+}
+
+@media(max-width:480px){
+  .gal-label{opacity:1 !important}
+}
+
+.pricing .sh h2,.fcta h2{
+  text-shadow:0 2px 12px rgba(0,0,0,0.25);
+}
+
+@keyframes border-glow{
+  0%,100%{box-shadow:0 0 0 0 rgba(196,115,106,0.4),0 16px 40px rgba(80,40,30,0.2)}
+  50%{box-shadow:0 0 0 6px rgba(196,115,106,0.15),0 16px 40px rgba(80,40,30,0.2)}
+}
+.plan.hot{
+  animation:border-glow 3s ease-in-out infinite;
+}
+
+.cd-b{
+  font-size:16px !important;
+  letter-spacing:.05em;
+}
+
+.depo-section{
+  background:linear-gradient(160deg,var(--sand) 0%,var(--warm) 100%) !important;
+}
+
+footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
+
+.hero-scroll{
+  position:absolute;
+  bottom:24px;left:50%;
+  transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  color:rgba(255,255,255,.3);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  animation:float 2.5s ease-in-out infinite;
+}
+.hero-scroll-dot{
+  width:6px;height:6px;
+  background:rgba(255,255,255,.3);
+  border-radius:50%;
+  animation:softglow 1.5s ease-in-out infinite;
+}
+
+/* ===== SINGLE PLAN ===== */
+.single-plan-wrap{max-width:520px;margin:0 auto}
+.single-plan{
+  background:#fff;
+  border:2px solid var(--coral);
+  border-radius:24px;
+  padding:48px 40px 40px;
+  box-shadow:0 24px 70px rgba(80,40,30,0.2);
+  position:relative;
+  text-align:center;
+  animation:border-glow 3s ease-in-out infinite;
+}
+.single-plan-badge{
+  position:absolute;
+  top:-18px;left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(135deg,#CC2200,#A01800);
+  color:#FFD700;
+  font-size:13px;font-weight:800;
+  letter-spacing:.05em;
+  padding:7px 28px;
+  border-radius:30px;
+  white-space:nowrap;
+  box-shadow:0 4px 16px rgba(204,34,0,0.4);
+}
+.single-plan-name{
+  font-size:12px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--coral);margin-bottom:24px;
+}
+.single-plan-top{
+  display:block;
+  margin-top:8px;
+  margin-bottom:28px;
+}
+.single-plan-right{text-align:center}
+.single-plan-old{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:6px;
+}
+.single-plan-old-label{
+  font-size:13px;
+  color:var(--text-muted);
+  font-weight:500;
+}
+.single-plan-old-val{
+  font-size:22px;
+  font-weight:700;
+  color:var(--text-light);
+  text-decoration:line-through;
+}
+.single-plan-arrow{
+  font-size:20px;
+  color:var(--coral);
+  font-weight:900;
+}
+.single-plan-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:92px;font-weight:900;
+  color:var(--wine-dark);line-height:1;
+  margin:4px 0 2px;
+}
+.single-plan-price sup{
+  font-size:32px;vertical-align:top;
+  margin-top:18px;display:inline-block;
+}
+.single-plan-cents{font-size:42px;vertical-align:top;margin-top:28px;display:inline-block}
+.single-plan-period{
+  font-size:13px;color:var(--text-muted);
+  margin-top:6px;font-weight:500;
+}
+.single-plan-economy{
+  display:inline-block;
+  background:var(--green-light);
+  color:var(--green);
+  font-size:13px;font-weight:800;
+  padding:6px 18px;border-radius:20px;
+  margin-top:12px;
+  border:1px solid rgba(74,112,85,0.2);
+}
+.single-plan-divider{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:24px 0;
+}
+.plan-feats{
+  text-align:left;
+  list-style:none;
+  display:flex;flex-direction:column;gap:11px;
+  margin-bottom:28px;
+}
+.plan-feats li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:14px;color:var(--text);line-height:1.45;
+}
+.plan-feats .ck{
+  background:var(--green-light);color:var(--green);
+  width:20px;height:20px;min-width:20px;
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:11px;font-weight:700;
+  margin-top:1px;
+}
+.single-plan-btn{
+  width:100%;
+  justify-content:center;
+  font-size:18px;
+  padding:20px 32px;
+  border-radius:50px;
+  box-shadow:0 8px 32px rgba(26,140,58,0.45);
+  margin-bottom:20px;
+  animation:pulse 2.5s infinite;
+}
+.single-plan-trust{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  font-size:12px;
+  color:var(--text-muted);
+  font-weight:600;
+}
+@media(max-width:560px){
+  .single-plan{padding:40px 22px 32px}
+  .single-plan-price{font-size:76px}
+  .single-plan-cents{font-size:34px;margin-top:22px}
+  .single-plan-price sup{font-size:26px;margin-top:14px}
+  .single-plan-btn{font-size:16px;padding:17px 24px}
+  .single-plan-trust{gap:10px;font-size:11px}
+}
+
+/* ===== 3 MOTIVOS ===== */
+.motivos{background:var(--warm);padding:64px 24px;text-align:center}
+.motivos-grid{
+  max-width:960px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.motivo-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px 24px;
+  box-shadow:var(--shadow);
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s ease;
+  position:relative;overflow:hidden;
+}
+.motivo-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--coral-mid),var(--coral));
+}
+.motivo-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.motivo-icon{
+  width:56px;height:56px;
+  background:var(--coral-light);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;margin:0 auto 18px;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1);
+}
+.motivo-card:hover .motivo-icon{transform:scale(1.15) rotate(-5deg)}
+.motivo-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;color:var(--wine-dark);
+  margin-bottom:12px;font-weight:700;
+}
+.motivo-card p{font-size:14px;color:var(--text-muted);line-height:1.75}
+
+/* ===== O QUE TEM ACESSO ===== */
+.acesso{
+  background:linear-gradient(160deg,#3D1A1A 0%,#5C2A22 60%,#3D1A1A 100%);
+  padding:64px 24px;
+  text-align:center;
+}
+.acesso-inner{max-width:900px;margin:0 auto}
+.acesso-tag{
+  font-size:13px;font-weight:600;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.04em;
+  margin-bottom:12px;
+}
+.acesso-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,4vw,44px);
+  color:#fff;font-weight:900;
+  margin-bottom:40px;
+}
+.acesso-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.acesso-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  padding:28px 22px;
+  text-align:left;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),background .25s;
+}
+.acesso-card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.11);
+}
+.acesso-check{
+  width:36px;height:36px;
+  background:var(--coral);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:900;color:#fff;
+  margin-bottom:16px;
+  animation:heartbeat 3s ease-in-out infinite;
+}
+.acesso-card p{
+  font-size:14px;color:rgba(255,255,255,.75);
+  line-height:1.75;
+}
+.acesso-card p strong{color:#fff;font-weight:700}
+
+@media(max-width:760px){
+  .motivos-grid{grid-template-columns:1fr;gap:16px}
+  .acesso-grid{grid-template-columns:1fr;gap:16px}
+  .motivos{padding:48px 20px}
+  .acesso{padding:48px 20px}
+}
+@media(max-width:480px){
+  .motivo-card{padding:24px 18px}
+  .acesso-card{padding:22px 16px}
+  .motivo-card h3{font-size:19px}
+}
+.yt-facade{position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;background:#000;overflow:hidden;border-radius:var(--radius)}
+.yt-facade img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;transition:opacity .2s;display:block;border-radius:0}
+.yt-facade:hover img{opacity:.7}
+.yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;transition:transform .2s;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));pointer-events:none}
+.yt-facade:hover .yt-play{transform:translate(-50%,-50%) scale(1.08)}
+.yt-caption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:rgba(255,255,255,.85);font-size:14px;font-weight:600;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.6);pointer-events:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media(max-width:480px){.btn,.single-plan,.plan-btn-hot{animation:none}}
+</style>
+
+
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency">
+  <span>Oferta com desconto encerra em</span>
+  <div class="cd">
+    <div class="cd-b" id="cdh">23</div><span class="cd-s">:</span>
+    <div class="cd-b" id="cdm">59</div><span class="cd-s">:</span>
+    <div class="cd-b" id="cds">00</div>
+  </div>
+  <span><span class="hi">Últimas vagas disponíveis</span></span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    Transforme Crochet de Mesa
+    <em>em Lucro Real ainda este mês</em>
+  </h1>
+  <p class="hero-sub">
+    Mais de <strong>200 modelos exclusivos</strong> em vídeo aulas completas. Do primeiro ponto até a primeira venda, mesmo que nunca tenha pegado em uma agulha na vida.
+  </p>
+
+  <div class="vsl-wrap">
+    <div class="vsl-box" id="vsl-box">
+      <div class="yt-facade" id="yt-facade" onclick="loadYT()" role="button" aria-label="Assistir vídeo">
+        <img 
+          src="https://i.ytimg.com/vi/_NvcZdVR0Gs/maxresdefault.jpg"
+          alt="Assistir vídeo do curso"
+          loading="eager"
+          fetchpriority="high"
+          width="1280" height="720"
+          onerror="this.src='https://i.ytimg.com/vi/_NvcZdVR0Gs/hqdefault.jpg'"
+        >
+        <div class="yt-play">
+          <svg width="68" height="48" viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M66.5 7.5C65.7 4.8 63.6 2.7 60.9 1.9 55.6 0 34 0 34 0S12.4 0 7.1 1.9C4.4 2.7 2.3 4.8 1.5 7.5 0 12.8 0 24 0 24s0 11.2 1.5 16.5c.8 2.7 2.9 4.8 5.6 5.6C12.4 48 34 48 34 48s21.6 0 26.9-1.9c2.7-.8 4.8-2.9 5.6-5.6C68 35.2 68 24 68 24s0-11.2-1.5-16.5z" fill="#FF0000"/>
+            <path d="M27 34l18-10-18-10v20z" fill="white"/>
+          </svg>
+        </div>
+        <div class="yt-caption">Assista até o final — vale muito a pena</div>
+      </div>
+    </div>
+    <p class="vsl-caption">Veja o método completo antes de decidir</p>
+  </div>
+
+  <div class="hero-cta-wrap">
+    <a href="#pricing" class="btn">Quero me inscrever agora</a>
+    <p class="hero-note">Oferta válida por tempo limitado. Acesso imediato. 7 dias de garantia.</p>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">🎉 Lucrecia faturou €140 em uma semana</span>
+    <span class="ticker-item">🧶 Maria ganhou €740 em 5 meses</span>
+    <span class="ticker-item">🔥 Valeria já tem fila de encomendas</span>
+    <span class="ticker-item">💰 Ana vendeu 12 sousplats no primeiro mês</span>
+    <span class="ticker-item">⭐ Mais de 3.200 alunas ativas</span>
+    <span class="ticker-item">🎉 Lucrecia faturou €140 em uma semana</span>
+    <span class="ticker-item">🧶 Maria ganhou €740 em 5 meses</span>
+    <span class="ticker-item">🔥 Valeria já tem fila de encomendas</span>
+    <span class="ticker-item">💰 Ana vendeu 12 sousplats no primeiro mês</span>
+    <span class="ticker-item">⭐ Mais de 3.200 alunas ativas</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat fade-up"><div class="stat-n">+3.200</div><div class="stat-l">alunas ativas</div></div>
+    <div class="stat fade-up"><div class="stat-n">+200</div><div class="stat-l">modelos exclusivos</div></div>
+    <div class="stat fade-up"><div class="stat-n">4.9 ★</div><div class="stat-l">avaliação das alunas</div></div>
+    <div class="stat fade-up"><div class="stat-n">€1.400</div><div class="stat-l">faturamento possível/mês</div></div>
+  </div>
+</div>
+
+<!-- O QUE VAI RECEBER -->
+<section class="learn">
+  <div class="learn-inner">
+    <div class="learn-left">
+      <div class="sh fade-up">
+        <span class="sh-tag">Tenha Acesso às Vídeo Aulas com Todo o Passo a Passo</span>
+        <h2>Do <em>Primeiro Ponto</em> ao Acabamento Perfeito</h2>
+      </div>
+      <ul class="check-list fade-up">
+        <li><span class="ck">✓</span>Peças lindas que vendem rápido</li>
+        <li><span class="ck">✓</span>Modelos exclusivos e irresistíveis</li>
+        <li><span class="ck">✓</span>Do Ponto Inicial ao Acabamento Perfeito</li>
+        <li><span class="ck">✓</span>Técnicas que fazem suas peças se destacarem</li>
+        <li><span class="ck">✓</span>Materiais necessários e fornecedores baratos</li>
+        <li><span class="ck">✓</span>Transforme seu crochet em renda</li>
+        <li><span class="ck">✓</span>Do iniciante ao profissional em crochet de mesa</li>
+        <li><span class="ck">✓</span>Sousplats, caminhos de mesa e jogos americanos incríveis</li>
+      </ul>
+    </div>
+    <div class="learn-img fade-up">
+      <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/aulas-preview.webp" alt="Preview das aulas em vídeo" loading="lazy" fetchpriority="high" width="900" height="675">
+      <div class="learn-badge">
+        <span class="learn-badge-icon">🎬</span>
+        <div>
+          <div class="learn-badge-num">+200 aulas</div>
+          <div class="learn-badge-txt">em vídeo com passo a passo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="sh fade-up">
+    <span class="sh-tag">Veja Alguns dos Modelos Que Você Vai Ter Acesso</span>
+    <h2>Veja o que você vai aprender a fazer</h2>
+    <p>Sousplats, caminhos de mesa, jogos americanos e bônus especial de Natal</p>
+  </div>
+  <div class="gal-grid fade-up">
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7307.webp" loading="lazy" width="400" height="400" alt="Sousplat rosa"><div class="gal-label">Sousplat rosa bordado</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7315.webp" loading="lazy" width="400" height="400" alt="Sousplat azul marinho"><div class="gal-label">Sousplat azul marinho</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7317.webp" loading="lazy" width="400" height="400" alt="Sousplat azul dourado"><div class="gal-label">Sousplat azul e dourado</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7329.webp" loading="lazy" width="400" height="400" alt="Sousplat verde corações"><div class="gal-label">Sousplat verde com corações</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7331.webp" loading="lazy" width="400" height="400" alt="Jogo americano floral"><div class="gal-label">Jogo americano floral</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7486.webp" loading="lazy" width="400" height="400" alt="Caminho de mesa rosas"><div class="gal-label">Caminho com rosas 3D</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7492.webp" loading="lazy" width="400" height="400" alt="Caminho amarelo"><div class="gal-label">Caminho de mesa amarelo</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7519.webp" loading="lazy" width="400" height="400" alt="Jogo vermelho"><div class="gal-label">Jogo americano vermelho</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7525.webp" loading="lazy" width="400" height="400" alt="Caminho uva"><div class="gal-label">Caminho temático uva</div></div>
+    <div class="gal-item"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/IMG_7561.webp" loading="lazy" width="400" height="400" alt="Sousplat animais"><div class="gal-label">Sousplat panda e girafa</div></div>
+  </div>
+  <div style="text-align:center;margin-top:40px" class="fade-up">
+    <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn">Quero me inscrever e ter acesso a tudo</a>
+  </div>
+</section>
+
+<!-- NATAL CAROUSEL -->
+<section class="natal">
+  <div class="natal-header"><span>🎄 Bônus Especial de Natal</span></div>
+  <h2>Sousplats de Natal que vendem muito</h2>
+  <p class="natal-sub">Modelos exclusivos incluídos no Plano Completo</p>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" id="carousel">
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Verde e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal1.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Vermelho e Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal2.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Natalino Tradicional</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal3.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat com Árvore de Natal</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal4.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat com Laço Dourado</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal5.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Branco Natalino</div></div>
+      <div class="natal-card"><img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/natal6.webp" alt="Sousplat Natal" loading="lazy" width="300" height="300"><div class="natal-card-label">Sousplat Verde e Dourado</div></div>
+    </div>
+  </div>
+  <div class="natal-cta">
+    <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn btn-gold">Quero o Bônus de Natal + Curso Completo</a>
+    <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.3)">Incluso no Plano Completo por €9,90</p>
+  </div>
+</section>
+
+<!-- BONUSES -->
+<section class="bonuses">
+  <div class="sh fade-up">
+    <span class="sh-tag" style="background:var(--gold-light);color:var(--gold);border-color:rgba(212,130,10,0.2)">Bônus exclusivos</span>
+    <h2>3 Bônus Exclusivos <em>Grátis</em> pra Você</h2>
+    <p>Preparamos 3 bônus exclusivos para quem se inscrever hoje!</p>
+  </div>
+  <p class="bon-total fade-up">Descubra onde vender, como criar e o que o mercado mais pede. Tudo incluso com <span>€50 em bônus</span> de graça.</p>
+  <div class="bon-grid">
+    <div class="bon-card fade-up">
+      <div class="bon-num">Bônus 01</div>
+      <div class="bon-img-wrap">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus1.webp" width="400" height="560" alt="Como vender artesanato" loading="lazy">
+      </div>
+      <h3 class="bon-title">Como Vender seu Artesanato e Faturar até €1.400 por mês</h3>
+      <p class="bon-desc">Os melhores canais de venda, como precificar suas peças e como fidelizar clientes que compram sempre.</p>
+      <div class="bon-val"><span class="bon-old">€20</span><span class="bon-free">Grátis para si</span></div>
+    </div>
+    <div class="bon-card fade-up">
+      <div class="bon-num">Bônus 02</div>
+      <div class="bon-img-wrap">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus2.webp" width="400" height="560" alt="Barras de crochet" loading="lazy">
+      </div>
+      <h3 class="bon-title">30 Modelos de Barras de Crochet para Pano de Cozinha</h3>
+      <p class="bon-desc">Barras decorativas lindas que aumentam o valor percebido das suas peças e abrem uma nova linha de produtos.</p>
+      <div class="bon-val"><span class="bon-old">€14</span><span class="bon-free">Grátis para si</span></div>
+    </div>
+    <div class="bon-card fade-up">
+      <div class="bon-num">Bônus 03</div>
+      <div class="bon-img-wrap">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/bonus3.webp" width="400" height="400" alt="Almofadas de animais" loading="lazy">
+      </div>
+      <h3 class="bon-title">Curso Completo de Almofadas de Animais e Personagens</h3>
+      <p class="bon-desc">90 gráficos e receitas exclusivas de almofadas que fazem sucesso em feiras, Instagram e grupos de WhatsApp.</p>
+      <div class="bon-val"><span class="bon-old">€18</span><span class="bon-free">Grátis para si</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS WHATSAPP -->
+<section class="depo-section">
+  <div class="sh fade-up">
+    <span class="sh-tag">Prova real</span>
+    <h2>Alunas que já estão <em>vendendo de verdade</em></h2>
+    <p>Prints reais do grupo exclusivo do WhatsApp do curso</p>
+  </div>
+
+  <div class="depo-carousel-wrap">
+    <div class="depo-track" id="depo-carousel">
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420" decoding="async">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Renata</div>
+            <div class="depo-card-sub">Lucro de €140 em uma semana</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Aurora e Valeria</div>
+            <div class="depo-card-sub">Fila de encomendas de sousplats</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Elisangela</div>
+            <div class="depo-card-sub">R$5.000 em encomendas em um mês</div>
+          </div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div>
+            <div class="depo-card-name">Lucinda</div>
+            <div class="depo-card-sub">Apaixonada pelo americano de Stitch</div>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicados para loop infinito -->
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo1.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420" decoding="async">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Renata</div><div class="depo-card-sub">Lucro de €140 em uma semana</div></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo2.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Aurora e Valeria</div><div class="depo-card-sub">Fila de encomendas de sousplats</div></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo3.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Elisangela</div><div class="depo-card-sub">R$5.000 em encomendas em um mês</div></div>
+        </div>
+      </div>
+      <div class="depo-card">
+        <img src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/depo4.webp" alt="Depoimento aluna" loading="lazy" width="260" height="420">
+        <div class="depo-card-footer">
+          <div class="depo-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.112 1.523 5.84L.057 23.926l6.244-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.213-3.706.853.87-3.606-.233-.37A9.818 9.818 0 1112 21.818z"/></svg></div>
+          <div><div class="depo-card-name">Lucinda</div><div class="depo-card-sub">Apaixonada pelo americano de Stitch</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="depo-cta fade-up">
+    <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn btn-green">Quero resultados como esses também</a>
+    <p style="margin-top:12px;font-size:12px;color:var(--text-light)">Mais de 3.200 alunas já estão vendendo</p>
+  </div>
+</section>
+
+<!-- 3 MOTIVOS -->
+<section class="motivos fade-up">
+  <div class="sh fade-up">
+    <span class="sh-tag">Por que escolher este curso</span>
+    <h2>3 Motivos Para Fazer o <em>Curso Crochet de Mesa</em></h2>
+  </div>
+  <div class="motivos-grid">
+    <div class="motivo-card fade-up">
+      <div class="motivo-icon">🧶</div>
+      <h3>Comece sua Jornada do Zero</h3>
+      <p>Sempre tenha algo novo para criar e vender, sem precisar gastar horas procurando inspirações. As aulas começam do ponto inicial e vão até o acabamento perfeito.</p>
+    </div>
+    <div class="motivo-card fade-up">
+      <div class="motivo-icon">💰</div>
+      <h3>Potencial de Lucro Elevado</h3>
+      <p>Aumente suas vendas e fidelize seus clientes com peças lindas e exclusivas que vendem o ano todo. Nossas alunas faturam entre €140 e €1.400 por mês.</p>
+    </div>
+    <div class="motivo-card fade-up">
+      <div class="motivo-icon">📱</div>
+      <h3>Facilidade e Praticidade</h3>
+      <p>Todas as receitas vêm organizadas, prontas para si baixar e usar em qualquer dispositivo. Aprenda no seu ritmo, quando e onde quiser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE TEM ACESSO -->
+<section class="acesso">
+  <div class="acesso-inner">
+    <div class="acesso-tag fade-up">Somente para as primeiras vagas — aproveite enquanto há tempo</div>
+    <h2 class="acesso-title fade-up">O Que Você Vai Ter Acesso?</h2>
+    <div class="acesso-grid fade-up">
+      <div class="acesso-card">
+        <div class="acesso-check">✓</div>
+        <p><strong>+200 Vídeo Aulas</strong> de Sousplats, Caminhos de Mesa e Jogos Americanos incríveis e muito vendidos, além de gráficos detalhados com o passo a passo. Do zero, mesmo que nunca tenha feito crochet antes.</p>
+      </div>
+      <div class="acesso-card">
+        <div class="acesso-check">✓</div>
+        <p><strong>+200 Vídeos, Gráficos e Receitas</strong> de crochet de mesa mais lindos e pedidos do momento pelas clientes.</p>
+      </div>
+      <div class="acesso-card">
+        <div class="acesso-check">✓</div>
+        <p><strong>Bônus com 90 Gráficos e Receitas</strong> de Almofadas e Crochet de Pano de Cozinha — uma linha extra de produtos para vender.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="sh fade-up">
+    <span class="sh-tag">Somente Para as Primeiras Vagas</span>
+    <h2>Comece Hoje por <em>Apenas €9,90</em></h2>
+    <p>Acesso imediato logo após a confirmação do pagamento</p>
+  </div>
+
+  <div class="single-plan-wrap fade-up">
+    <div class="single-plan">
+      <div class="single-plan-badge">🔥 Oferta especial por tempo limitado</div>
+
+      <div class="single-plan-name">Acesso Completo ao Curso</div>
+
+      <div class="single-plan-top">
+        <div class="single-plan-right">
+          <div class="single-plan-old">
+            <span class="single-plan-old-label">De</span>
+            <span class="single-plan-old-val">€97,00</span>
+            <span class="single-plan-arrow">→</span>
+          </div>
+          <div class="single-plan-price">
+            <sup>€</sup>9<span class="single-plan-cents">,90</span>
+          </div>
+          <div class="single-plan-period">pagamento único · acesso vitalício</div>
+          <div class="single-plan-economy">✨ Você economiza €87 hoje</div>
+        </div>
+      </div>
+
+      <hr class="single-plan-divider">
+
+      <ul class="plan-feats">
+        <li><span class="ck">✓</span><strong>+200 vídeo aulas de crochet de mesa</strong></li>
+        <li><span class="ck">✓</span>Gráficos e receitas exclusivas de cada modelo</li>
+        <li><span class="ck">✓</span>Acesso vitalício — sem mensalidade, para sempre</li>
+        <li><span class="ck">✓</span>Grupo exclusivo no WhatsApp com a comunidade</li>
+        <li><span class="ck">✓</span>Fornecedores exclusivos com preço de atacado</li>
+        <li><span class="ck">✓</span>3 bônus exclusivos no valor de €50</li>
+        <li><span class="ck">✓</span>Receitas e modelos novos toda semana</li>
+      </ul>
+
+      <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn single-plan-btn">
+        Quero meu acesso agora
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+      </a>
+
+      <div class="single-plan-trust">
+        <span>🔒 Pagamento seguro</span>
+        <span>✅ MB Way, cartão ou Multibanco</span>
+        <span>🛡️ 7 dias de garantia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guar-inner fade-up">
+    <img class="guar-badge" src="https://raw.githubusercontent.com/brunomrachid/oftcroch-/main/images/garantia.webp" alt="7 dias de garantia" loading="lazy" width="160" height="160">
+    <h2>Garantia de <em>7 Dias</em> ou seu Dinheiro de Volta</h2>
+    <p>Compre com total tranquilidade. Se em até <strong>7 dias</strong> você não ficar satisfeita por qualquer motivo, devolvemos <strong>100% do seu dinheiro</strong>. Sem burocracia, sem perguntas, sem enrolação. O risco é completamente nosso.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="sh fade-up">
+    <span class="sh-tag">Dúvidas frequentes</span>
+    <h2>Dúvidas Frequentes</h2>
+  </div>
+  <div class="faq-inner">
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Como eu vou ter acesso ao conteúdo?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Assim que o pagamento for confirmado, você recebe um e-mail com login e senha para acessar a plataforma imediatamente. Funciona 24 horas por dia em qualquer dispositivo: telemóvel, tablet ou computador.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Quais as formas de pagamento?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Aceitamos MB Way, cartão de crédito e Multibanco. O checkout é 100% seguro e encriptado.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Serve para iniciantes?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Sim! O curso começa do zero absoluto. As primeiras aulas ensinam como segurar a agulha e fazer os pontos básicos. Em poucas semanas você já vai estar criando peças para vender.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Existe alguma garantia que o programa funciona?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Sim. Você tem 7 dias de garantia incondicional. Comprou, entrou, não gostou por qualquer motivo — manda mensagem e devolvemos 100% do valor. Sem questionamentos. Além disso, temos mais de 3.200 alunas ativas com resultados comprovados todos os dias no grupo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">E se eu não tiver tempo para estudar?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>As aulas são curtas e gravadas. Você assiste quando puder, no seu ritmo, pelo telemóvel. No ônibus, no intervalo do trabalho ou enquanto as crianças dormem. Com o Plano Completo o acesso é vitalício e você nunca perde o conteúdo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Posso deixar para comprar depois?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Você pode, mas o preço com desconto e os 3 bônus são exclusivos para esta oferta. Quando o contador zerar, o valor volta ao preço normal e os bônus saem. Cada dia sem aprender é um dia sem vender.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Como vou receber acesso ao método?<span class="faq-ic">+</span></button>
+      <div class="faq-a"><p>Após a confirmação do pagamento, você recebe um e-mail com seus dados de acesso. É só entrar na plataforma e começar a assistir. Tudo organizado, fácil de achar e disponível 24 horas por dia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="fcta">
+  <h2>Sua primeira venda pode acontecer <em>ainda essa semana</em></h2>
+  <p>Garanta agora enquanto o desconto ainda está ativo.</p>
+  <a href="https://pay.wiapy.com/F7t3SI5ubz" class="btn">Quero Me Inscrever Agora</a>
+  <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.3);position:relative">Acesso imediato. 7 dias de garantia. Pagamento 100% seguro.</p>
+</section>
+
+<footer>
+  <p>© 2026 Crochet de Mesa. Todos os direitos reservados.</p>
+  <p style="margin-top:7px"><a href="#">Política de Privacidade</a> &nbsp;·&nbsp; <a href="#">Termos de Uso</a></p>
+</footer>
+
+<script>
+// COUNTDOWN
+(function(){
+  var k='crochet-cd-end-v3';
+  var stored=localStorage.getItem(k);
+  var end;
+  if(stored){end=new Date(parseInt(stored))}
+  else{end=new Date();end.setHours(end.getHours()+23,59,59,0);localStorage.setItem(k,end.getTime())}
+  function tick(){
+    var d=Math.max(0,end-new Date());
+    document.getElementById('cdh').textContent=String(Math.floor(d/3600000)).padStart(2,'0');
+    document.getElementById('cdm').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+    document.getElementById('cds').textContent=String(Math.floor((d%60000)/1000)).padStart(2,'0');
+    if(d>0)setTimeout(tick,1000);
+  }
+  tick();
+})();
+
+// SCROLL ANIMATIONS
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-up').forEach(function(el){observer.observe(el)});
+
+// FAQ
+function faq(btn){
+  var item=btn.parentElement;
+  var open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(e){e.classList.remove('open')});
+  if(!open)item.classList.add('open');
+}
+
+// VSL
+function loadYT(){
+  var box = document.getElementById('vsl-box');
+  box.innerHTML = '<iframe src="https://www.youtube.com/embed/_NvcZdVR0Gs?autoplay=1&rel=0&modestbranding=1" title="Curso Crochet de Mesa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:14px"></iframe>';
+}
+function playVsl(){
+  // Troque SEU_VIDEO_ID pelo ID do seu vídeo do YouTube
+  // Ex: https://youtube.com/watch?v=ABC123 → id é ABC123
+  var id='SEU_VIDEO_ID';
+  if(id==='SEU_VIDEO_ID'){alert('Insira o ID do seu vídeo na função playVsl() no código.');return;}
+  document.getElementById('vsl-box').innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" allowfullscreen allow="autoplay"></iframe>';
+}
+
+(function(){
+  var t=document.getElementById('carousel');
+  var d=document.getElementById('depo-carousel');
+  [t,d].forEach(function(track){
+    if(!track)return;
+    track.addEventListener('mouseenter',function(){track.classList.add('paused')});
+    track.addEventListener('mouseleave',function(){track.classList.remove('paused')});
+    track.addEventListener('touchstart',function(){track.classList.add('paused')},{passive:true});
+    track.addEventListener('touchend',function(){track.classList.remove('paused')},{passive:true});
+    // Pausar quando fora de view
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(e){
+        track.classList.toggle('paused',!e[0].isIntersecting);
+      },{threshold:0.1}).observe(track.parentElement||track);
+    }
+  });
+})();
+
+(function(){
+  var t=document.getElementById('depo-carousel');
+  if(!t)return;
+  t.addEventListener('mouseenter',function(){t.classList.add('paused')});
+  t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
+  t.addEventListener('touchstart',function(){t.classList.add('paused')},{passive:true});
+  t.addEventListener('touchend',function(){t.classList.remove('paused')},{passive:true});
+})();
+
+</script>
+</body>
+
+</html>
