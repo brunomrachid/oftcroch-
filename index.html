@@ -226,7 +226,7 @@ a{text-decoration:none;color:inherit}
 }
 @keyframes btn-breathe{
   0%,100%{box-shadow:0 6px 28px rgba(26,140,58,0.4);transform:translateY(0) scale(1)}
-  50%{box-shadow:0 10px 36px rgba(26,140,58,0.55);transform:translateY(-2px) scale(1.01)}
+  50%{box-shadow:0 12px 40px rgba(26,140,58,0.65);transform:translateY(-3px) scale(1.025)}
 }
 @media(max-width:480px){.btn-block{width:100%;justify-content:center}}
 .btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.25);color:rgba(255,255,255,.8);box-shadow:none}
@@ -1113,7 +1113,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
   border-radius:50px;
   box-shadow:0 8px 32px rgba(26,140,58,0.45);
   margin-bottom:20px;
-  animation:pulse 2.5s infinite;
+  animation:btn-breathe 2s ease-in-out infinite;
 }
 .single-plan-trust{
   display:flex;
@@ -1237,7 +1237,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;transition:transform .2s;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));pointer-events:none}
 .yt-facade:hover .yt-play{transform:translate(-50%,-50%) scale(1.08)}
 .yt-caption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:rgba(255,255,255,.85);font-size:14px;font-weight:600;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.6);pointer-events:none}
-@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media(max-width:480px){.btn,.single-plan,.plan-btn-hot{animation:none}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media(max-width:480px){.single-plan{animation:none}}
 </style>
 
 
