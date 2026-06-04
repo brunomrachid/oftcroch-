@@ -1255,7 +1255,7 @@ footer a:hover{color:var(--coral-mid) !important;transition:color .2s}
 .yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;transition:transform .2s;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.5));pointer-events:none}
 .yt-facade:hover .yt-play{transform:translate(-50%,-50%) scale(1.08)}
 .yt-caption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:rgba(255,255,255,.85);font-size:14px;font-weight:600;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.6);pointer-events:none}
-@media(prefers-reduced-motion:reduce){*:not(.ticker-inner):not(.carousel-track):not(.depo-track){animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media(max-width:480px){.single-plan{animation:none}.btn{animation:btn-breathe 1.8s ease-in-out infinite !important;width:100%;justify-content:center}.btn:active{transform:scale(0.96) !important;animation:none !important}}
+/* prefers-reduced-motion removido para garantir animações */@media(max-width:480px){.btn{animation:btn-breathe 1.8s ease-in-out infinite;width:100%;justify-content:center}.btn:active{transform:scale(0.96)}}
 </style>
 
 
@@ -1778,19 +1778,16 @@ function playVsl(){
 }
 
 (function(){
-  var t=document.getElementById('carousel');
-  var d=document.getElementById('depo-carousel');
-  [t,d].forEach(function(track){
-    if(!track)return;
-    // Garantir que arranca sem pausa
-    track.classList.remove('paused');
-    // Pausa apenas ao hover/touch
-    track.addEventListener('mouseenter',function(){track.classList.add('paused')});
-    track.addEventListener('mouseleave',function(){track.classList.remove('paused')});
-    track.addEventListener('touchstart',function(){track.classList.add('paused')},{passive:true});
-    track.addEventListener('touchend',function(){
-      setTimeout(function(){track.classList.remove('paused')},1000);
-    },{passive:true});
+  // Garantir que todos os carrosséis arrancam
+  ['carousel','depo-carousel'].forEach(function(id){
+    var t=document.getElementById(id);
+    if(!t)return;
+    t.classList.remove('paused');
+    t.addEventListener('mouseenter',function(){t.classList.add('paused')});
+    t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
+    // Mobile: pausa ao toque, retoma ao largar
+    t.addEventListener('touchstart',function(){t.classList.add('paused')},{passive:true});
+    t.addEventListener('touchend',function(){setTimeout(function(){t.classList.remove('paused')},800)},{passive:true});
   });
 })();
 
