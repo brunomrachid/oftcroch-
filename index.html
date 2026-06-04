@@ -1780,24 +1780,17 @@ function playVsl(){
 (function(){
   var t=document.getElementById('carousel');
   var d=document.getElementById('depo-carousel');
-  // Nota: id="ticker" é a faixa de texto, não o carrossel - não incluir aqui
   [t,d].forEach(function(track){
     if(!track)return;
-    // Hover/touch pause
+    // Garantir que arranca sem pausa
+    track.classList.remove('paused');
+    // Pausa apenas ao hover/touch
     track.addEventListener('mouseenter',function(){track.classList.add('paused')});
     track.addEventListener('mouseleave',function(){track.classList.remove('paused')});
     track.addEventListener('touchstart',function(){track.classList.add('paused')},{passive:true});
     track.addEventListener('touchend',function(){
-      setTimeout(function(){track.classList.remove('paused')},1200);
+      setTimeout(function(){track.classList.remove('paused')},1000);
     },{passive:true});
-    // Pausar fora de view — mas nunca iniciar pausado
-    if('IntersectionObserver' in window){
-      var seen=false;
-      new IntersectionObserver(function(e){
-        if(e[0].isIntersecting){seen=true;track.classList.remove('paused');}
-        else if(seen){track.classList.add('paused');}
-      },{threshold:0.1}).observe(track.parentElement||track);
-    }
   });
 })();
 
