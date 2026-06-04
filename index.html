@@ -1781,14 +1781,19 @@ function playVsl(){
   var d=document.getElementById('depo-carousel');
   [t,d].forEach(function(track){
     if(!track)return;
+    // Hover/touch pause
     track.addEventListener('mouseenter',function(){track.classList.add('paused')});
     track.addEventListener('mouseleave',function(){track.classList.remove('paused')});
     track.addEventListener('touchstart',function(){track.classList.add('paused')},{passive:true});
-    track.addEventListener('touchend',function(){track.classList.remove('paused')},{passive:true});
-    // Pausar quando fora de view
+    track.addEventListener('touchend',function(){
+      setTimeout(function(){track.classList.remove('paused')},1200);
+    },{passive:true});
+    // Pausar fora de view — mas nunca iniciar pausado
     if('IntersectionObserver' in window){
+      var seen=false;
       new IntersectionObserver(function(e){
-        track.classList.toggle('paused',!e[0].isIntersecting);
+        if(e[0].isIntersecting){seen=true;track.classList.remove('paused');}
+        else if(seen){track.classList.add('paused');}
       },{threshold:0.1}).observe(track.parentElement||track);
     }
   });
