@@ -63,6 +63,24 @@ src="https://www.facebook.com/tr?id=1511632463601547&ev=PageView&noscript=1"
   border-color:rgba(255,215,0,0.3);
   color:#FFD700;
 }
+
+.date-urgency{
+  background:linear-gradient(135deg,#CC2200,#A01800);
+  color:#fff;
+  text-align:center;
+  padding:10px 20px;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.01em;
+  border-bottom:2px solid #8B1000;
+}
+.date-urgency span{
+  color:#FFD700;
+  font-weight:800;
+}
+@media(max-width:480px){
+  .date-urgency{font-size:13px;padding:9px 16px}
+}
 </style>
 <script>
   window.pixelId = "6a206c0fd12a0ce2f806f128";
@@ -91,6 +109,11 @@ src="https://www.facebook.com/tr?id=1511632463601547&ev=PageView&noscript=1"
     <div class="cd-b" id="cds">00</div>
   </div>
   <span><span class="hi">Últimas vagas disponíveis</span></span>
+</div>
+
+<!-- DATA URGÊNCIA -->
+<div class="date-urgency" id="date-urgency">
+  ⏰ Oferta válida apenas até hoje, <span id="pt-date">carregando...</span> — garanta já o seu acesso
 </div>
 
 <!-- HERO -->
@@ -608,6 +631,44 @@ function playVsl(){
   t.addEventListener('mouseleave',function(){t.classList.remove('paused')});
   t.addEventListener('touchstart',function(){t.classList.add('paused')},{passive:true});
   t.addEventListener('touchend',function(){t.classList.remove('paused')},{passive:true});
+})();
+
+
+// Data em fuso de Portugal (Europe/Lisbon)
+(function(){
+  var months = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  var weekdays = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+  
+  function getPortugalDate(){
+    // Portugal: Europe/Lisbon (UTC+0 inverno, UTC+1 verão)
+    var now = new Date();
+    var ptDate = new Date(now.toLocaleString('en-US', {timeZone:'Europe/Lisbon'}));
+    var day = ptDate.getDate();
+    var month = months[ptDate.getMonth()];
+    var year = ptDate.getFullYear();
+    return day + ' de ' + month + ' de ' + year;
+  }
+  
+  function updateDate(){
+    var el = document.getElementById('pt-date');
+    if(el) el.textContent = getPortugalDate();
+  }
+  
+  updateDate();
+  
+  // Recalcular à meia-noite em Portugal
+  function scheduleNextUpdate(){
+    var now = new Date();
+    var ptNow = new Date(now.toLocaleString('en-US', {timeZone:'Europe/Lisbon'}));
+    var ptMidnight = new Date(ptNow);
+    ptMidnight.setHours(24, 0, 0, 0);
+    var msUntilMidnight = ptMidnight - ptNow;
+    setTimeout(function(){
+      updateDate();
+      scheduleNextUpdate();
+    }, msUntilMidnight);
+  }
+  scheduleNextUpdate();
 })();
 
 </script>
